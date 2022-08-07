@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/new/window_style">
+        <file>SpyBot.qss</file>
+    </qresource>
+</RCC>
