@@ -8,6 +8,8 @@ static int isnum(char c);
 
 void parser(char *fileName, info *src) {
     // int error = 0;
+    src->indexF = 0;
+    src->indexV = 0;
     FILE *file = fopen(fileName, "r");
     if (file == NULL) {
         printf("FILE ERROR\n");
