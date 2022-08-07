@@ -3,7 +3,6 @@
 #include <QScreen>
 #include <QRect>
 #include <QFileDialog>
-#include <QDir>
 #include <Qt3DCore>
 #include <Qt3DExtras>
 #include <QMainWindow>
@@ -38,12 +37,14 @@ MainWindow::MainWindow(QWidget *parent)
         Qt3DExtras::QOrbitCameraController(rootEntity);
     camController->setCamera(cameraEntity);
 
+
+    // надо переписать эту часть
     Qt3DCore::QEntity *sceneLoaderEntity = new Qt3DCore::QEntity(rootEntity);
     Qt3DRender::QSceneLoader *sceneLoader = new Qt3DRender::QSceneLoader(sceneLoaderEntity);
     sceneLoader->setObjectName("cow.obj");
     sceneLoaderEntity->addComponent(sceneLoader);
     sceneLoader->setSource(QUrl(QString("file:/home/darika/view/src/viewer/cow.obj")));
-
+    // конец
 
     ui->FileName->setStyleSheet("background-color: transparent; color: lavender");
     ui->LineVert->setStyleSheet("background-color: transparent;");
