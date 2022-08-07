@@ -45,7 +45,7 @@
      </spacer>
     </item>
     <item row="4" column="0" rowspan="2">
-     <layout class="QGridLayout" name="gridLayout_2" rowstretch="0,0,0,0" columnstretch="1,10,1" columnminimumwidth="1,10,1">
+     <layout class="QGridLayout" name="gridLayout_2" rowstretch="0,0,0,0" columnstretch="1,10,4" columnminimumwidth="1,10,4">
       <property name="sizeConstraint">
        <enum>QLayout::SetDefaultConstraint</enum>
       </property>
@@ -77,7 +77,7 @@
         </property>
         <property name="font">
          <font>
-          <family>Sans Serif</family>
+          <family>Arial</family>
           <pointsize>14</pointsize>
          </font>
         </property>
@@ -87,8 +87,10 @@
        <widget class="QLabel" name="label_12">
         <property name="font">
          <font>
-          <family>Sans Serif</family>
+          <family>Arial</family>
           <pointsize>14</pointsize>
+          <bold>true</bold>
+          <stylestrategy>PreferAntialias</stylestrategy>
          </font>
         </property>
         <property name="text">
@@ -128,7 +130,7 @@
         </property>
         <property name="font">
          <font>
-          <family>Sans Serif</family>
+          <family>Arial</family>
           <pointsize>14</pointsize>
          </font>
         </property>
@@ -151,8 +153,10 @@
        <widget class="QLabel" name="label_11">
         <property name="font">
          <font>
-          <family>Sans Serif</family>
+          <family>Arial</family>
           <pointsize>14</pointsize>
+          <bold>true</bold>
+          <stylestrategy>PreferAntialias</stylestrategy>
          </font>
         </property>
         <property name="text">
@@ -182,8 +186,10 @@
         </property>
         <property name="font">
          <font>
-          <family>Sans Serif</family>
+          <family>Arial</family>
           <pointsize>14</pointsize>
+          <bold>true</bold>
+          <stylestrategy>PreferAntialias</stylestrategy>
          </font>
         </property>
         <property name="text">
@@ -210,7 +216,7 @@
         </property>
         <property name="font">
          <font>
-          <family>Sans Serif</family>
+          <family>Arial</family>
           <pointsize>14</pointsize>
          </font>
         </property>
@@ -239,8 +245,9 @@
         </property>
         <property name="font">
          <font>
-          <family>Sans Serif</family>
+          <family>Arial</family>
           <pointsize>14</pointsize>
+          <stylestrategy>PreferAntialias</stylestrategy>
          </font>
         </property>
         <property name="text">
@@ -280,7 +287,7 @@
      </spacer>
     </item>
     <item row="7" column="0">
-     <layout class="QGridLayout" name="gridLayout_7" columnstretch="1,10,1" columnminimumwidth="1,10,1">
+     <layout class="QGridLayout" name="gridLayout_7" columnstretch="1,10,4" columnminimumwidth="1,10,4">
       <property name="leftMargin">
        <number>12</number>
       </property>
@@ -306,7 +313,7 @@
         </property>
         <property name="font">
          <font>
-          <family>Sans Serif</family>
+          <family>Arial</family>
           <pointsize>14</pointsize>
          </font>
         </property>
@@ -328,7 +335,7 @@
         </property>
         <property name="font">
          <font>
-          <family>Sans Serif</family>
+          <family>Arial</family>
           <pointsize>14</pointsize>
          </font>
         </property>
@@ -338,8 +345,10 @@
        <widget class="QLabel" name="label_15">
         <property name="font">
          <font>
-          <family>Sans Serif</family>
+          <family>Arial</family>
           <pointsize>14</pointsize>
+          <bold>true</bold>
+          <stylestrategy>PreferAntialias</stylestrategy>
          </font>
         </property>
         <property name="text">
@@ -367,8 +376,10 @@
        <widget class="QLabel" name="label_13">
         <property name="font">
          <font>
-          <family>Sans Serif</family>
+          <family>Arial</family>
           <pointsize>14</pointsize>
+          <bold>true</bold>
+          <stylestrategy>PreferAntialias</stylestrategy>
          </font>
         </property>
         <property name="text">
@@ -383,8 +394,10 @@
        <widget class="QLabel" name="label_14">
         <property name="font">
          <font>
-          <family>Sans Serif</family>
+          <family>Arial</family>
           <pointsize>14</pointsize>
+          <bold>true</bold>
+          <stylestrategy>PreferAntialias</stylestrategy>
          </font>
         </property>
         <property name="text">
@@ -411,7 +424,7 @@
         </property>
         <property name="font">
          <font>
-          <family>Sans Serif</family>
+          <family>Arial</family>
           <pointsize>14</pointsize>
          </font>
         </property>
@@ -453,8 +466,9 @@
         </property>
         <property name="font">
          <font>
-          <family>Sans Serif</family>
+          <family>Arial</family>
           <pointsize>14</pointsize>
+          <stylestrategy>PreferAntialias</stylestrategy>
          </font>
         </property>
         <property name="text">
@@ -481,7 +495,7 @@
      </spacer>
     </item>
     <item row="9" column="0">
-     <layout class="QGridLayout" name="gridLayout_8" columnstretch="10,1" columnminimumwidth="10,1">
+     <layout class="QGridLayout" name="gridLayout_8" columnstretch="12,4" columnminimumwidth="12,4">
       <property name="leftMargin">
        <number>12</number>
       </property>
@@ -520,7 +534,7 @@
         </property>
         <property name="font">
          <font>
-          <family>Sans Serif</family>
+          <family>Arial</family>
           <pointsize>14</pointsize>
          </font>
         </property>
@@ -536,8 +550,9 @@
         </property>
         <property name="font">
          <font>
-          <family>Sans Serif</family>
+          <family>Arial</family>
           <pointsize>14</pointsize>
+          <stylestrategy>PreferAntialias</stylestrategy>
          </font>
         </property>
         <property name="text">
@@ -566,8 +581,10 @@
       </property>
       <property name="font">
        <font>
-        <family>Sans Serif</family>
+        <family>Arial</family>
         <pointsize>14</pointsize>
+        <bold>true</bold>
+        <stylestrategy>PreferAntialias</stylestrategy>
        </font>
       </property>
       <property name="text">
@@ -590,7 +607,7 @@
        <widget class="QLineEdit" name="LineVert">
         <property name="font">
          <font>
-          <family>Sans Serif</family>
+          <family>Arial</family>
           <pointsize>14</pointsize>
          </font>
         </property>
@@ -600,7 +617,7 @@
        <widget class="QLineEdit" name="LineEdges">
         <property name="font">
          <font>
-          <family>Sans Serif</family>
+          <family>Arial</family>
           <pointsize>14</pointsize>
          </font>
         </property>
@@ -610,8 +627,8 @@
        <widget class="QLabel" name="label_3">
         <property name="font">
          <font>
-          <family>Sans Serif</family>
-          <pointsize>10</pointsize>
+          <family>Arial</family>
+          <pointsize>25</pointsize>
           <bold>true</bold>
          </font>
         </property>
@@ -636,7 +653,7 @@
        <widget class="QLabel" name="label_2">
         <property name="font">
          <font>
-          <family>Sans Serif</family>
+          <family>Arial</family>
           <pointsize>25</pointsize>
           <bold>true</bold>
          </font>
@@ -704,7 +721,7 @@
        <widget class="QLineEdit" name="FileName">
         <property name="font">
          <font>
-          <family>Sans Serif</family>
+          <family>Arial</family>
           <pointsize>14</pointsize>
          </font>
         </property>
