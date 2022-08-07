@@ -33,7 +33,7 @@ QWidget
 QLabel
 {
 	background-color: transparent;
-	color: #c2c7d5;
+        color: lavender;
         font-size: 16px;
 
 }
