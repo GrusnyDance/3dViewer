@@ -31,7 +31,7 @@ MainWindow::MainWindow(QWidget *parent)
     OGLW *OGLWidget = new OGLW;
     ui->gridLayout_4->addWidget(OGLWidget, 1, 0);
 
-//    OGLWidget->paintFigure();
+    OGLWidget->
 
     connect(ui->FileButton, SIGNAL(pressed()), this, SLOT(FilePressed()));
 

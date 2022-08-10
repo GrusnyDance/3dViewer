@@ -7,14 +7,17 @@
 #include <QOpenGLFunctions>
 
 
-class OGLW : public QOpenGLWidget {
+class OGLW : public QOpenGLWidget, protected QOpenGLFunctions {
   Q_OBJECT
 
  public:
     OGLW(QWidget *parent = nullptr);
     ~OGLW();
-  void paintGL();
   void paintFigure();
+
+protected:
+  void initializeGL() override;
+  void paintGL() override;
 
 };
 
