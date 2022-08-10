@@ -21,6 +21,6 @@ private slots:
 
 private:
     Ui::MainWindow *ui;
-    Qt3DCore::QEntity *rootEntity;
+
 };
 #endif // MAINWINDOW_H

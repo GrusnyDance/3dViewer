@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>3dViewer</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QGridLayout" name="gridLayout" rowstretch="3,20,10,7,20,0,10,20,10,0,20,20,2" columnstretch="2,10,0" rowminimumheight="3,20,10,7,20,0,10,20,10,0,20,20,2" columnminimumwidth="2,10,0">

@@ -22,6 +22,7 @@ MainWindow::MainWindow(QWidget *parent)
     QWidget *container = QWidget::createWindowContainer(view);
     ui->gridLayout_4->addWidget(container,1,0);
 
+    // надо переписать эту часть
     Qt3DRender::QCamera *cameraEntity = view->camera();
     // X+ -> right
     // Y+ -> away
@@ -31,6 +32,7 @@ MainWindow::MainWindow(QWidget *parent)
     cameraEntity->setPosition(QVector3D(0, -5, 5.0f));
     cameraEntity->setUpVector(QVector3D(0, 0, 1));
     cameraEntity->setViewCenter(QVector3D(0, 0, 0));
+    // конец
 
 
     Qt3DExtras::QOrbitCameraController *camController = new
@@ -55,6 +57,8 @@ MainWindow::MainWindow(QWidget *parent)
     int height = screenGeometry.height();
     int width = screenGeometry.width();
     resize(width * 0.8, height * 0.9);
+
+
 
     connect(ui->FileButton, SIGNAL(pressed()), this, SLOT(FilePressed()));
 

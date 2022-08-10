@@ -1,4 +1,4 @@
-QT       += core gui 3dcore 3drender 3dinput 3dextras
+QT       += core gui opengl openglwidgets 3dcore 3dextras
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -8,13 +8,17 @@ greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
 SOURCES += \
     main.cpp \
-    mainwindow.cpp
+    mainwindow.cpp \
+    ogl.cpp
 
 HEADERS += \
-    mainwindow.h
+    mainwindow.h \
+    ogl.h
 
 FORMS += \
     mainwindow.ui
+
+#LIBS += -lOpenGL
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
