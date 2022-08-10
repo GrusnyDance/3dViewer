@@ -14,10 +14,23 @@ class OGLW : public QOpenGLWidget, protected QOpenGLFunctions {
     OGLW(QWidget *parent = nullptr);
     ~OGLW();
   void paintFigure();
+  void drawCude(float a);
 
 protected:
   void initializeGL() override;
   void paintGL() override;
+  void resizeGL(int w, int h) override;
+
+private:
+  float z;
+  QTimer tmr;
+  float xRot, yRot, zRot;
+  QPoint mPos;
+  void mousePressEvent(QMouseEvent*) override;
+  void mouseMoveEvent(QMouseEvent*) override;
+
+public slots:
+  void changeZ();
 
 };
 

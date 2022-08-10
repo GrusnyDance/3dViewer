@@ -18,7 +18,7 @@ MainWindow::MainWindow(QWidget *parent)
 {
     ui->setupUi(this);
 
-    ui->FileName->setStyleSheet("background-color: transparent; color: lavender");
+    ui->FileName->setStyleSheet("background-color: transparent; color: lavender;");
     ui->LineVert->setStyleSheet("background-color: transparent;");
     ui->LineEdges->setStyleSheet("background-color: transparent;");
 
@@ -30,8 +30,6 @@ MainWindow::MainWindow(QWidget *parent)
 
     OGLW *OGLWidget = new OGLW;
     ui->gridLayout_4->addWidget(OGLWidget, 1, 0);
-
-    OGLWidget->
 
     connect(ui->FileButton, SIGNAL(pressed()), this, SLOT(FilePressed()));
 
