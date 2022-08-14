@@ -20,6 +20,9 @@ void OGLW::changeZ() {
 void OGLW::initializeGL() {
     initializeOpenGLFunctions();
     glEnable(GL_DEPTH_TEST);
+
+    char filename[] = "/home/darika/view/src/parser/objectives/monkey2.obj";
+    parserr(filename, &inff);
 }
 
 void OGLW::paintGL() {
@@ -33,7 +36,7 @@ void OGLW::paintGL() {
     glRotatef(xRot, 1, 0, 0);
     glRotatef(yRot, 0, 1, 0);
 
-    drawCude(0.5);
+    drawFigure();
 }
 
 void OGLW::resizeGL(int w, int h) {
@@ -55,7 +58,7 @@ void OGLW::mouseMoveEvent(QMouseEvent *mo) {
     update();
 }
 
-void OGLW::drawCude(float a) {
+void OGLW::drawFigure() {
 //    float ver_cub[] = {
 //        -a, -a, a,     a, -a, a,     a, a, a,     -a, a, a,
 //        a, -a, -a,     -a, -a, -a,   -a, a, -a,   a, a, -a,
@@ -71,8 +74,7 @@ void OGLW::drawCude(float a) {
 //        glColor3d(174.0/255.0, 109.0/255.0, 217.0/255);
 //        glDrawArrays(GL_QUADS, 0, 24);
 //    glDisableClientState(GL_VERTEX_ARRAY);
-    char filename[] = "/home/darika/view/src/parser/objectives/monkey2.obj";
-    parserr(filename, &inff);
+
 //    glBegin(GL_LINE_STRIP);
     for (uint k = 0; k < inff.indexF; k++) {
           glBegin(GL_LINE_LOOP);
@@ -87,17 +89,3 @@ void OGLW::drawCude(float a) {
 //    glEnd();
 }
 
-
-void OGLW::renew() {
-    qDebug() << "Hello";
-    for (uint k = 0; k < inff.indexF; k++) {
-          glBegin(GL_LINE_LOOP);
-          glColor3d(125.0/255.0, 110.0/255.0, 175.0/255);
-          int g = 0;
-          while (inff.polygon[k][g] != 0) {
-              glVertex3f(inff.array[inff.polygon[k][g] - 1][0], inff.array[inff.polygon[k][g] - 1][1], inff.array[inff.polygon[k][g] - 1][2]);
-              g++;
-          }
-          glEnd();
-    }
-}

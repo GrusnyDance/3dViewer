@@ -78,8 +78,6 @@ void MainWindow::MovePressed() {
     this->findChild<QLineEdit *>(findQEdit)->setText(displayVal);
 
     CallMove(sliderName.right(1), sliderVal);
-    OGLWidget->renew();  // не работает:(
-//    OGLWidget->update();  /// ПОПРОБОВАТЬ ЗАКОМЕНТИТЬ ЕСЛИ ФУНКЦИЯ CALLMOVE РАБОТАЕТ ПРАВИЛЬНО ИЛИ НЕПРАВИЛЬНО
 }
 
 
@@ -103,7 +101,6 @@ void MainWindow::RotatePressed() {
     this->findChild<QLineEdit *>(findQEdit)->setText(displayVal);
 
     CallRotate(sliderName.right(1), sliderVal);
-    OGLWidget->update();  /// ПОПРОБОВАТЬ ЗАКОМЕНТИТЬ ЕСЛИ ФУНКЦИЯ CALLROTATE РАБОТАЕТ ПРАВИЛЬНО ИЛИ НЕПРАВИЛЬНО
 }
 
 void MainWindow::CallRotate(QString str, int val) {
@@ -118,15 +115,12 @@ void MainWindow::CallRotate(QString str, int val) {
 
 void MainWindow::ScalePressed() {
     QSlider *mySlider = (QSlider *)sender();
-//    QString sliderName = sender()->objectName();
-//    QString findQEdit = "Display" + sliderName;
 
     int sliderVal = mySlider->value();
     QString displayVal = QString::number(sliderVal);
     this->findChild<QLineEdit *>("DisplayScale")->setText(displayVal);
 
     scale(&(OGLWidget->inff), sliderVal);
-    OGLWidget->update();  /// ПОПРОБОВАТЬ ЗАКОМЕНТИТЬ ЕСЛИ ФУНКЦИЯ SCALE РАБОТАЕТ ПРАВИЛЬНО ИЛИ НЕПРАВИЛЬНО
 }
 
 void MainWindow::MoveUserInput() {
@@ -143,7 +137,6 @@ void MainWindow::MoveUserInput() {
         else if (sliderVal < -360) this->findChild<QSlider *>(mySliderName)->setValue(-360);
         else this->findChild<QSlider *>(mySliderName)->setValue(sliderVal);
         CallMove(mySliderName.right(1), sliderVal);
-        OGLWidget->update();  /// ПОПРОБОВАТЬ ЗАКОМЕНТИТЬ ЕСЛИ ФУНКЦИЯ CALL РАБОТАЕТ ПРАВИЛЬНО ИЛИ НЕПРАВИЛЬНО
 
     } else {
         this->findChild<QLineEdit *>(myQLineName)->setText("");
@@ -166,7 +159,6 @@ void MainWindow::RotateUserInput() {
         else if (sliderVal < 0) this->findChild<QSlider *>(mySliderName)->setValue(0);
         else this->findChild<QSlider *>(mySliderName)->setValue(sliderVal);
         CallRotate(mySliderName.right(1), sliderVal);
-        OGLWidget->update();  /// ПОПРОБОВАТЬ ЗАКОМЕНТИТЬ ЕСЛИ ФУНКЦИЯ CALL РАБОТАЕТ ПРАВИЛЬНО ИЛИ НЕПРАВИЛЬНО
 
     } else {
         this->findChild<QLineEdit *>(myQLineName)->setText("");
@@ -186,7 +178,6 @@ void MainWindow::ScaleUserInput() {
         else if (sliderVal > 10) this->findChild<QSlider *>("Scale")->setValue(10);
         else this->findChild<QSlider *>("Scale")->setValue(sliderVal);
         scale(&(OGLWidget->inff), sliderVal);
-        OGLWidget->update();  /// ПОПРОБОВАТЬ ЗАКОМЕНТИТЬ ЕСЛИ ФУНКЦИЯ SCALE РАБОТАЕТ ПРАВИЛЬНО ИЛИ НЕПРАВИЛЬНО
 
     } else {
         this->findChild<QLineEdit *>("DisplayScale")->setText("");

@@ -18,9 +18,8 @@ class OGLW : public QOpenGLWidget, protected QOpenGLFunctions {
     OGLW(QWidget *parent = nullptr);
     ~OGLW();
   void paintFigure();
-  void drawCude(float a);
+  void drawFigure();
 
-  void renew();
   info inff; // переписать на указатель когда будет готов остальной код
 
 protected:

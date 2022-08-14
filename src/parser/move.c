@@ -2,11 +2,9 @@
 #include "3d.h"
 
 void move_x(info *src, int shift) {
-    printf("shift is %d\n", shift);
-    printf("some data from arr is %f\n", src->array[0][0]);
-//    for (unsigned int k = 0; k < src->indexV; k++) {
-//        src->array[k][0] += shift;
-//    }
+    for (unsigned int k = 0; k < src->indexV; k++) {
+        src->array[k][0] += shift;
+    }
 }
 
 void move_y(info *src, int shift) {
