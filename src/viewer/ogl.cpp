@@ -86,3 +86,18 @@ void OGLW::drawCude(float a) {
     }
 //    glEnd();
 }
+
+
+void OGLW::renew() {
+    qDebug() << "Hello";
+    for (uint k = 0; k < inff.indexF; k++) {
+          glBegin(GL_LINE_LOOP);
+          glColor3d(125.0/255.0, 110.0/255.0, 175.0/255);
+          int g = 0;
+          while (inff.polygon[k][g] != 0) {
+              glVertex3f(inff.array[inff.polygon[k][g] - 1][0], inff.array[inff.polygon[k][g] - 1][1], inff.array[inff.polygon[k][g] - 1][2]);
+              g++;
+          }
+          glEnd();
+    }
+}

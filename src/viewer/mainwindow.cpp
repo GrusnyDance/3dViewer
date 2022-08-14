@@ -78,8 +78,10 @@ void MainWindow::MovePressed() {
     this->findChild<QLineEdit *>(findQEdit)->setText(displayVal);
 
     CallMove(sliderName.right(1), sliderVal);
-    OGLWidget->update();  /// ПОПРОБОВАТЬ ЗАКОМЕНТИТЬ ЕСЛИ ФУНКЦИЯ CALLMOVE РАБОТАЕТ ПРАВИЛЬНО ИЛИ НЕПРАВИЛЬНО
+    OGLWidget->renew();  // не работает:(
+//    OGLWidget->update();  /// ПОПРОБОВАТЬ ЗАКОМЕНТИТЬ ЕСЛИ ФУНКЦИЯ CALLMOVE РАБОТАЕТ ПРАВИЛЬНО ИЛИ НЕПРАВИЛЬНО
 }
+
 
 void MainWindow::CallMove(QString str, int val) {
     if (str[0] == 'X') {

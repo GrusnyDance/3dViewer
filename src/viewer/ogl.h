@@ -20,6 +20,7 @@ class OGLW : public QOpenGLWidget, protected QOpenGLFunctions {
   void paintFigure();
   void drawCude(float a);
 
+  void renew();
   info inff; // переписать на указатель когда будет готов остальной код
 
 protected:
