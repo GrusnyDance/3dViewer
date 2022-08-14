@@ -22,6 +22,10 @@ private slots:
     void RotatePressed();
     void ScalePressed();
 
+    void MoveUserInput();
+    void RotateUserInput();
+    void ScaleUserInput();
+
 private:
     Ui::MainWindow *ui;
 

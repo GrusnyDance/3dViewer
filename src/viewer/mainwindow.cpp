@@ -44,6 +44,15 @@ MainWindow::MainWindow(QWidget *parent)
 
     connect(ui->Scale, SIGNAL(valueChanged(int)), this, SLOT(ScalePressed()));
 
+    connect(ui->DisplayMoveX, SIGNAL(returnPressed()), this, SLOT(MoveUserInput()));
+    connect(ui->DisplayMoveY, SIGNAL(returnPressed()), this, SLOT(MoveUserInput()));
+    connect(ui->DisplayMoveZ, SIGNAL(returnPressed()), this, SLOT(MoveUserInput()));
+
+    connect(ui->DisplayRotateX, SIGNAL(returnPressed()), this, SLOT(RotateUserInput()));
+    connect(ui->DisplayRotateY, SIGNAL(returnPressed()), this, SLOT(RotateUserInput()));
+    connect(ui->DisplayRotateZ, SIGNAL(returnPressed()), this, SLOT(RotateUserInput()));
+
+    connect(ui->DisplayScale, SIGNAL(returnPressed()), this, SLOT(ScaleUserInput()));
 }
 
 MainWindow::~MainWindow()
@@ -88,7 +97,59 @@ void MainWindow::ScalePressed() {
     this->findChild<QLineEdit *>(findQEdit)->setText(displayVal);
 }
 
+void MainWindow::MoveUserInput() {
+    QLineEdit *myQLine = (QLineEdit *)sender();
+    QString lineVal = myQLine->text();
+    QString myQLineName = sender()->objectName();
+
+    QString mySliderName = myQLineName.right(5);
+
+    bool isNum;
+    int sliderVal = lineVal.toInt(&isNum);
+    if (isNum) {
+        if (sliderVal > 360) this->findChild<QSlider *>(mySliderName)->setValue(360);
+        else if (sliderVal < -360) this->findChild<QSlider *>(mySliderName)->setValue(-360);
+        else this->findChild<QSlider *>(mySliderName)->setValue(sliderVal);
+    } else {
+        this->findChild<QLineEdit *>(myQLineName)->setText("");
+        return;
+    }
+}
 
 
+void MainWindow::RotateUserInput() {
+    QLineEdit *myQLine = (QLineEdit *)sender();
+    QString lineVal = myQLine->text();
+    QString myQLineName = sender()->objectName();
 
+    QString mySliderName = myQLineName.right(7);
+
+    bool isNum;
+    int sliderVal = lineVal.toInt(&isNum);
+    if (isNum) {
+        if (sliderVal > 720) this->findChild<QSlider *>(mySliderName)->setValue(720);
+        else if (sliderVal < 0) this->findChild<QSlider *>(mySliderName)->setValue(0);
+        else this->findChild<QSlider *>(mySliderName)->setValue(sliderVal);
+    } else {
+        this->findChild<QLineEdit *>(myQLineName)->setText("");
+        return;
+    }
+}
+
+
+void MainWindow::ScaleUserInput() {
+    QLineEdit *myQLine = (QLineEdit *)sender();
+    QString lineVal = myQLine->text();
+
+    bool isNum;
+    int sliderVal = lineVal.toInt(&isNum);
+    if (isNum) {
+        if (sliderVal < -10) this->findChild<QSlider *>("Scale")->setValue(-10);
+        else if (sliderVal > 10) this->findChild<QSlider *>("Scale")->setValue(10);
+        else this->findChild<QSlider *>("Scale")->setValue(sliderVal);
+    } else {
+        this->findChild<QLineEdit *>("DisplayScale")->setText("");
+        return;
+    }
+}
 
