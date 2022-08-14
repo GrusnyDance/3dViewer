@@ -30,38 +30,38 @@ public:
     QSpacerItem *verticalSpacer_6;
     QSpacerItem *verticalSpacer_3;
     QGridLayout *gridLayout_2;
-    QLineEdit *lineEdit_2;
+    QLineEdit *DisplayMoveY;
     QLabel *label_12;
-    QSlider *horizontalSlider;
-    QLineEdit *lineEdit;
-    QSlider *horizontalSlider_3;
+    QSlider *MoveY;
+    QLineEdit *DisplayMoveX;
+    QSlider *MoveX;
     QLabel *label_11;
     QLabel *label;
-    QLineEdit *lineEdit_3;
-    QSlider *horizontalSlider_2;
+    QLineEdit *DisplayMoveZ;
+    QSlider *MoveZ;
     QLabel *label_10;
     QSpacerItem *verticalSpacer_4;
     QSpacerItem *verticalSpacer_2;
     QGridLayout *gridLayout_7;
-    QLineEdit *lineEdit_5;
-    QLineEdit *lineEdit_4;
+    QLineEdit *DisplayRotateY;
+    QLineEdit *DisplayRotateX;
     QLabel *label_15;
-    QSlider *horizontalSlider_4;
+    QSlider *RotateX;
     QLabel *label_13;
     QLabel *label_14;
-    QLineEdit *lineEdit_6;
-    QSlider *horizontalSlider_5;
-    QSlider *horizontalSlider_6;
+    QLineEdit *DisplayRotateZ;
+    QSlider *RotateY;
+    QSlider *RotateZ;
     QLabel *label_8;
     QSpacerItem *verticalSpacer_5;
     QGridLayout *gridLayout_8;
-    QSlider *horizontalSlider_7;
-    QLineEdit *lineEdit_7;
+    QSlider *Scale;
+    QLineEdit *DisplayScale;
     QLabel *label_9;
     QPushButton *FileButton;
     QGridLayout *gridLayout_3;
-    QLineEdit *LineVert;
-    QLineEdit *LineEdges;
+    QLineEdit *DisplayVertices;
+    QLineEdit *DisplayEdges;
     QLabel *label_3;
     QLabel *label_2;
     QSpacerItem *verticalSpacer;
@@ -92,20 +92,20 @@ public:
         gridLayout_2->setHorizontalSpacing(18);
         gridLayout_2->setVerticalSpacing(20);
         gridLayout_2->setContentsMargins(12, 0, -1, -1);
-        lineEdit_2 = new QLineEdit(centralwidget);
-        lineEdit_2->setObjectName(QString::fromUtf8("lineEdit_2"));
+        DisplayMoveY = new QLineEdit(centralwidget);
+        DisplayMoveY->setObjectName(QString::fromUtf8("DisplayMoveY"));
         QSizePolicy sizePolicy(QSizePolicy::Preferred, QSizePolicy::Fixed);
         sizePolicy.setHorizontalStretch(0);
         sizePolicy.setVerticalStretch(0);
-        sizePolicy.setHeightForWidth(lineEdit_2->sizePolicy().hasHeightForWidth());
-        lineEdit_2->setSizePolicy(sizePolicy);
-        lineEdit_2->setMaximumSize(QSize(16777215, 16777215));
+        sizePolicy.setHeightForWidth(DisplayMoveY->sizePolicy().hasHeightForWidth());
+        DisplayMoveY->setSizePolicy(sizePolicy);
+        DisplayMoveY->setMaximumSize(QSize(16777215, 16777215));
         QFont font;
         font.setFamilies({QString::fromUtf8("Arial")});
         font.setPointSize(14);
-        lineEdit_2->setFont(font);
+        DisplayMoveY->setFont(font);
 
-        gridLayout_2->addWidget(lineEdit_2, 2, 2, 1, 1);
+        gridLayout_2->addWidget(DisplayMoveY, 2, 2, 1, 1);
 
         label_12 = new QLabel(centralwidget);
         label_12->setObjectName(QString::fromUtf8("label_12"));
@@ -119,42 +119,42 @@ public:
 
         gridLayout_2->addWidget(label_12, 2, 0, 1, 1);
 
-        horizontalSlider = new QSlider(centralwidget);
-        horizontalSlider->setObjectName(QString::fromUtf8("horizontalSlider"));
+        MoveY = new QSlider(centralwidget);
+        MoveY->setObjectName(QString::fromUtf8("MoveY"));
         QSizePolicy sizePolicy1(QSizePolicy::Preferred, QSizePolicy::Preferred);
         sizePolicy1.setHorizontalStretch(0);
         sizePolicy1.setVerticalStretch(0);
-        sizePolicy1.setHeightForWidth(horizontalSlider->sizePolicy().hasHeightForWidth());
-        horizontalSlider->setSizePolicy(sizePolicy1);
-        horizontalSlider->setMinimum(-360);
-        horizontalSlider->setMaximum(360);
-        horizontalSlider->setOrientation(Qt::Horizontal);
-        horizontalSlider->setInvertedControls(true);
+        sizePolicy1.setHeightForWidth(MoveY->sizePolicy().hasHeightForWidth());
+        MoveY->setSizePolicy(sizePolicy1);
+        MoveY->setMinimum(-360);
+        MoveY->setMaximum(360);
+        MoveY->setOrientation(Qt::Horizontal);
+        MoveY->setInvertedControls(true);
 
-        gridLayout_2->addWidget(horizontalSlider, 2, 1, 1, 1);
+        gridLayout_2->addWidget(MoveY, 2, 1, 1, 1);
 
-        lineEdit = new QLineEdit(centralwidget);
-        lineEdit->setObjectName(QString::fromUtf8("lineEdit"));
-        sizePolicy.setHeightForWidth(lineEdit->sizePolicy().hasHeightForWidth());
-        lineEdit->setSizePolicy(sizePolicy);
-        lineEdit->setMaximumSize(QSize(16777215, 16777215));
-        lineEdit->setFont(font);
+        DisplayMoveX = new QLineEdit(centralwidget);
+        DisplayMoveX->setObjectName(QString::fromUtf8("DisplayMoveX"));
+        sizePolicy.setHeightForWidth(DisplayMoveX->sizePolicy().hasHeightForWidth());
+        DisplayMoveX->setSizePolicy(sizePolicy);
+        DisplayMoveX->setMaximumSize(QSize(16777215, 16777215));
+        DisplayMoveX->setFont(font);
 
-        gridLayout_2->addWidget(lineEdit, 1, 2, 1, 1);
+        gridLayout_2->addWidget(DisplayMoveX, 1, 2, 1, 1);
 
-        horizontalSlider_3 = new QSlider(centralwidget);
-        horizontalSlider_3->setObjectName(QString::fromUtf8("horizontalSlider_3"));
+        MoveX = new QSlider(centralwidget);
+        MoveX->setObjectName(QString::fromUtf8("MoveX"));
         QSizePolicy sizePolicy2(QSizePolicy::Expanding, QSizePolicy::Preferred);
         sizePolicy2.setHorizontalStretch(0);
         sizePolicy2.setVerticalStretch(0);
-        sizePolicy2.setHeightForWidth(horizontalSlider_3->sizePolicy().hasHeightForWidth());
-        horizontalSlider_3->setSizePolicy(sizePolicy2);
-        horizontalSlider_3->setMinimum(-360);
-        horizontalSlider_3->setMaximum(360);
-        horizontalSlider_3->setOrientation(Qt::Horizontal);
-        horizontalSlider_3->setInvertedControls(true);
+        sizePolicy2.setHeightForWidth(MoveX->sizePolicy().hasHeightForWidth());
+        MoveX->setSizePolicy(sizePolicy2);
+        MoveX->setMinimum(-360);
+        MoveX->setMaximum(360);
+        MoveX->setOrientation(Qt::Horizontal);
+        MoveX->setInvertedControls(true);
 
-        gridLayout_2->addWidget(horizontalSlider_3, 1, 1, 1, 1);
+        gridLayout_2->addWidget(MoveX, 1, 1, 1, 1);
 
         label_11 = new QLabel(centralwidget);
         label_11->setObjectName(QString::fromUtf8("label_11"));
@@ -174,25 +174,25 @@ public:
 
         gridLayout_2->addWidget(label, 1, 0, 1, 1);
 
-        lineEdit_3 = new QLineEdit(centralwidget);
-        lineEdit_3->setObjectName(QString::fromUtf8("lineEdit_3"));
-        sizePolicy.setHeightForWidth(lineEdit_3->sizePolicy().hasHeightForWidth());
-        lineEdit_3->setSizePolicy(sizePolicy);
-        lineEdit_3->setMaximumSize(QSize(16777215, 16777215));
-        lineEdit_3->setFont(font);
+        DisplayMoveZ = new QLineEdit(centralwidget);
+        DisplayMoveZ->setObjectName(QString::fromUtf8("DisplayMoveZ"));
+        sizePolicy.setHeightForWidth(DisplayMoveZ->sizePolicy().hasHeightForWidth());
+        DisplayMoveZ->setSizePolicy(sizePolicy);
+        DisplayMoveZ->setMaximumSize(QSize(16777215, 16777215));
+        DisplayMoveZ->setFont(font);
 
-        gridLayout_2->addWidget(lineEdit_3, 3, 2, 1, 1);
+        gridLayout_2->addWidget(DisplayMoveZ, 3, 2, 1, 1);
 
-        horizontalSlider_2 = new QSlider(centralwidget);
-        horizontalSlider_2->setObjectName(QString::fromUtf8("horizontalSlider_2"));
-        sizePolicy2.setHeightForWidth(horizontalSlider_2->sizePolicy().hasHeightForWidth());
-        horizontalSlider_2->setSizePolicy(sizePolicy2);
-        horizontalSlider_2->setMinimum(-360);
-        horizontalSlider_2->setMaximum(360);
-        horizontalSlider_2->setOrientation(Qt::Horizontal);
-        horizontalSlider_2->setInvertedControls(true);
+        MoveZ = new QSlider(centralwidget);
+        MoveZ->setObjectName(QString::fromUtf8("MoveZ"));
+        sizePolicy2.setHeightForWidth(MoveZ->sizePolicy().hasHeightForWidth());
+        MoveZ->setSizePolicy(sizePolicy2);
+        MoveZ->setMinimum(-360);
+        MoveZ->setMaximum(360);
+        MoveZ->setOrientation(Qt::Horizontal);
+        MoveZ->setInvertedControls(true);
 
-        gridLayout_2->addWidget(horizontalSlider_2, 3, 1, 1, 1);
+        gridLayout_2->addWidget(MoveZ, 3, 1, 1, 1);
 
         label_10 = new QLabel(centralwidget);
         label_10->setObjectName(QString::fromUtf8("label_10"));
@@ -228,23 +228,23 @@ public:
         gridLayout_7->setHorizontalSpacing(18);
         gridLayout_7->setVerticalSpacing(20);
         gridLayout_7->setContentsMargins(12, -1, -1, -1);
-        lineEdit_5 = new QLineEdit(centralwidget);
-        lineEdit_5->setObjectName(QString::fromUtf8("lineEdit_5"));
-        sizePolicy.setHeightForWidth(lineEdit_5->sizePolicy().hasHeightForWidth());
-        lineEdit_5->setSizePolicy(sizePolicy);
-        lineEdit_5->setMaximumSize(QSize(16777215, 16777215));
-        lineEdit_5->setFont(font);
+        DisplayRotateY = new QLineEdit(centralwidget);
+        DisplayRotateY->setObjectName(QString::fromUtf8("DisplayRotateY"));
+        sizePolicy.setHeightForWidth(DisplayRotateY->sizePolicy().hasHeightForWidth());
+        DisplayRotateY->setSizePolicy(sizePolicy);
+        DisplayRotateY->setMaximumSize(QSize(16777215, 16777215));
+        DisplayRotateY->setFont(font);
 
-        gridLayout_7->addWidget(lineEdit_5, 2, 2, 1, 1);
+        gridLayout_7->addWidget(DisplayRotateY, 2, 2, 1, 1);
 
-        lineEdit_4 = new QLineEdit(centralwidget);
-        lineEdit_4->setObjectName(QString::fromUtf8("lineEdit_4"));
-        sizePolicy.setHeightForWidth(lineEdit_4->sizePolicy().hasHeightForWidth());
-        lineEdit_4->setSizePolicy(sizePolicy);
-        lineEdit_4->setMaximumSize(QSize(16777215, 16777215));
-        lineEdit_4->setFont(font);
+        DisplayRotateX = new QLineEdit(centralwidget);
+        DisplayRotateX->setObjectName(QString::fromUtf8("DisplayRotateX"));
+        sizePolicy.setHeightForWidth(DisplayRotateX->sizePolicy().hasHeightForWidth());
+        DisplayRotateX->setSizePolicy(sizePolicy);
+        DisplayRotateX->setMaximumSize(QSize(16777215, 16777215));
+        DisplayRotateX->setFont(font);
 
-        gridLayout_7->addWidget(lineEdit_4, 1, 2, 1, 1);
+        gridLayout_7->addWidget(DisplayRotateX, 1, 2, 1, 1);
 
         label_15 = new QLabel(centralwidget);
         label_15->setObjectName(QString::fromUtf8("label_15"));
@@ -253,15 +253,15 @@ public:
 
         gridLayout_7->addWidget(label_15, 3, 0, 1, 1);
 
-        horizontalSlider_4 = new QSlider(centralwidget);
-        horizontalSlider_4->setObjectName(QString::fromUtf8("horizontalSlider_4"));
-        sizePolicy2.setHeightForWidth(horizontalSlider_4->sizePolicy().hasHeightForWidth());
-        horizontalSlider_4->setSizePolicy(sizePolicy2);
-        horizontalSlider_4->setMaximum(720);
-        horizontalSlider_4->setSliderPosition(360);
-        horizontalSlider_4->setOrientation(Qt::Horizontal);
+        RotateX = new QSlider(centralwidget);
+        RotateX->setObjectName(QString::fromUtf8("RotateX"));
+        sizePolicy2.setHeightForWidth(RotateX->sizePolicy().hasHeightForWidth());
+        RotateX->setSizePolicy(sizePolicy2);
+        RotateX->setMaximum(720);
+        RotateX->setSliderPosition(360);
+        RotateX->setOrientation(Qt::Horizontal);
 
-        gridLayout_7->addWidget(horizontalSlider_4, 1, 1, 1, 1);
+        gridLayout_7->addWidget(RotateX, 1, 1, 1, 1);
 
         label_13 = new QLabel(centralwidget);
         label_13->setObjectName(QString::fromUtf8("label_13"));
@@ -277,34 +277,34 @@ public:
 
         gridLayout_7->addWidget(label_14, 2, 0, 1, 1);
 
-        lineEdit_6 = new QLineEdit(centralwidget);
-        lineEdit_6->setObjectName(QString::fromUtf8("lineEdit_6"));
-        sizePolicy.setHeightForWidth(lineEdit_6->sizePolicy().hasHeightForWidth());
-        lineEdit_6->setSizePolicy(sizePolicy);
-        lineEdit_6->setMaximumSize(QSize(16777215, 16777215));
-        lineEdit_6->setFont(font);
+        DisplayRotateZ = new QLineEdit(centralwidget);
+        DisplayRotateZ->setObjectName(QString::fromUtf8("DisplayRotateZ"));
+        sizePolicy.setHeightForWidth(DisplayRotateZ->sizePolicy().hasHeightForWidth());
+        DisplayRotateZ->setSizePolicy(sizePolicy);
+        DisplayRotateZ->setMaximumSize(QSize(16777215, 16777215));
+        DisplayRotateZ->setFont(font);
 
-        gridLayout_7->addWidget(lineEdit_6, 3, 2, 1, 1);
+        gridLayout_7->addWidget(DisplayRotateZ, 3, 2, 1, 1);
 
-        horizontalSlider_5 = new QSlider(centralwidget);
-        horizontalSlider_5->setObjectName(QString::fromUtf8("horizontalSlider_5"));
-        sizePolicy2.setHeightForWidth(horizontalSlider_5->sizePolicy().hasHeightForWidth());
-        horizontalSlider_5->setSizePolicy(sizePolicy2);
-        horizontalSlider_5->setMaximum(720);
-        horizontalSlider_5->setSliderPosition(360);
-        horizontalSlider_5->setOrientation(Qt::Horizontal);
+        RotateY = new QSlider(centralwidget);
+        RotateY->setObjectName(QString::fromUtf8("RotateY"));
+        sizePolicy2.setHeightForWidth(RotateY->sizePolicy().hasHeightForWidth());
+        RotateY->setSizePolicy(sizePolicy2);
+        RotateY->setMaximum(720);
+        RotateY->setSliderPosition(360);
+        RotateY->setOrientation(Qt::Horizontal);
 
-        gridLayout_7->addWidget(horizontalSlider_5, 2, 1, 1, 1);
+        gridLayout_7->addWidget(RotateY, 2, 1, 1, 1);
 
-        horizontalSlider_6 = new QSlider(centralwidget);
-        horizontalSlider_6->setObjectName(QString::fromUtf8("horizontalSlider_6"));
-        sizePolicy2.setHeightForWidth(horizontalSlider_6->sizePolicy().hasHeightForWidth());
-        horizontalSlider_6->setSizePolicy(sizePolicy2);
-        horizontalSlider_6->setMaximum(720);
-        horizontalSlider_6->setSliderPosition(360);
-        horizontalSlider_6->setOrientation(Qt::Horizontal);
+        RotateZ = new QSlider(centralwidget);
+        RotateZ->setObjectName(QString::fromUtf8("RotateZ"));
+        sizePolicy2.setHeightForWidth(RotateZ->sizePolicy().hasHeightForWidth());
+        RotateZ->setSizePolicy(sizePolicy2);
+        RotateZ->setMaximum(720);
+        RotateZ->setSliderPosition(360);
+        RotateZ->setOrientation(Qt::Horizontal);
 
-        gridLayout_7->addWidget(horizontalSlider_6, 3, 1, 1, 1);
+        gridLayout_7->addWidget(RotateZ, 3, 1, 1, 1);
 
         label_8 = new QLabel(centralwidget);
         label_8->setObjectName(QString::fromUtf8("label_8"));
@@ -332,24 +332,24 @@ public:
         gridLayout_8->setHorizontalSpacing(18);
         gridLayout_8->setVerticalSpacing(20);
         gridLayout_8->setContentsMargins(12, -1, -1, -1);
-        horizontalSlider_7 = new QSlider(centralwidget);
-        horizontalSlider_7->setObjectName(QString::fromUtf8("horizontalSlider_7"));
-        sizePolicy2.setHeightForWidth(horizontalSlider_7->sizePolicy().hasHeightForWidth());
-        horizontalSlider_7->setSizePolicy(sizePolicy2);
-        horizontalSlider_7->setMinimum(-10);
-        horizontalSlider_7->setMaximum(10);
-        horizontalSlider_7->setOrientation(Qt::Horizontal);
+        Scale = new QSlider(centralwidget);
+        Scale->setObjectName(QString::fromUtf8("Scale"));
+        sizePolicy2.setHeightForWidth(Scale->sizePolicy().hasHeightForWidth());
+        Scale->setSizePolicy(sizePolicy2);
+        Scale->setMinimum(-10);
+        Scale->setMaximum(10);
+        Scale->setOrientation(Qt::Horizontal);
 
-        gridLayout_8->addWidget(horizontalSlider_7, 1, 0, 1, 1);
+        gridLayout_8->addWidget(Scale, 1, 0, 1, 1);
 
-        lineEdit_7 = new QLineEdit(centralwidget);
-        lineEdit_7->setObjectName(QString::fromUtf8("lineEdit_7"));
-        sizePolicy.setHeightForWidth(lineEdit_7->sizePolicy().hasHeightForWidth());
-        lineEdit_7->setSizePolicy(sizePolicy);
-        lineEdit_7->setMaximumSize(QSize(16777215, 16777215));
-        lineEdit_7->setFont(font);
+        DisplayScale = new QLineEdit(centralwidget);
+        DisplayScale->setObjectName(QString::fromUtf8("DisplayScale"));
+        sizePolicy.setHeightForWidth(DisplayScale->sizePolicy().hasHeightForWidth());
+        DisplayScale->setSizePolicy(sizePolicy);
+        DisplayScale->setMaximumSize(QSize(16777215, 16777215));
+        DisplayScale->setFont(font);
 
-        gridLayout_8->addWidget(lineEdit_7, 1, 1, 1, 1);
+        gridLayout_8->addWidget(DisplayScale, 1, 1, 1, 1);
 
         label_9 = new QLabel(centralwidget);
         label_9->setObjectName(QString::fromUtf8("label_9"));
@@ -380,17 +380,17 @@ public:
         gridLayout_3->setHorizontalSpacing(15);
         gridLayout_3->setVerticalSpacing(10);
         gridLayout_3->setContentsMargins(12, -1, -1, -1);
-        LineVert = new QLineEdit(centralwidget);
-        LineVert->setObjectName(QString::fromUtf8("LineVert"));
-        LineVert->setFont(font);
+        DisplayVertices = new QLineEdit(centralwidget);
+        DisplayVertices->setObjectName(QString::fromUtf8("DisplayVertices"));
+        DisplayVertices->setFont(font);
 
-        gridLayout_3->addWidget(LineVert, 0, 1, 1, 1);
+        gridLayout_3->addWidget(DisplayVertices, 0, 1, 1, 1);
 
-        LineEdges = new QLineEdit(centralwidget);
-        LineEdges->setObjectName(QString::fromUtf8("LineEdges"));
-        LineEdges->setFont(font);
+        DisplayEdges = new QLineEdit(centralwidget);
+        DisplayEdges->setObjectName(QString::fromUtf8("DisplayEdges"));
+        DisplayEdges->setFont(font);
 
-        gridLayout_3->addWidget(LineEdges, 1, 1, 1, 1);
+        gridLayout_3->addWidget(DisplayEdges, 1, 1, 1, 1);
 
         label_3 = new QLabel(centralwidget);
         label_3->setObjectName(QString::fromUtf8("label_3"));

@@ -18,6 +18,9 @@ public:
 
 private slots:
     void FilePressed();
+    void MovePressed();
+    void RotatePressed();
+    void ScalePressed();
 
 private:
     Ui::MainWindow *ui;

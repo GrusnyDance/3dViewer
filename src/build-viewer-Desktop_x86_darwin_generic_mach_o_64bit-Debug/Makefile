@@ -37,7 +37,7 @@ MOVE          = mv -f
 TAR           = tar -cf
 COMPRESS      = gzip -9f
 DISTNAME      = viewer1.0.0
-DISTDIR = /Users/sparelis/view/lexa/src/build-viewer-Desktop_x86_darwin_generic_mach_o_64bit-Debug/.tmp/viewer1.0.0
+DISTDIR = /Users/sparelis/viewer/src/build-viewer-Desktop_x86_darwin_generic_mach_o_64bit-Debug/.tmp/viewer1.0.0
 LINK          = /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++
 LFLAGS        = -stdlib=libc++ -headerpad_max_install_names $(EXPORT_ARCH_ARGS) -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk -mmacosx-version-min=11 -Wl,-rpath,@executable_path/../Frameworks -Wl,-rpath,/usr/local/lib
 LIBS          = $(SUBLIBS) -F/usr/local/lib -framework QtOpenGLWidgets -framework Qt3DExtras -framework Qt3DRender -framework QtOpenGL -framework QtWidgets -framework Qt3DInput -framework Qt3DLogic -framework Qt3DCore -framework QtGui -framework AppKit -framework ImageIO -framework Metal -framework QtConcurrent -framework QtNetwork -framework QtCore -framework DiskArbitration -framework IOKit -framework AGL -framework OpenGL   
@@ -291,7 +291,6 @@ DIST          = /usr/local/share/qt/mkspecs/features/spec_pre.prf \
 		/usr/local/share/qt/mkspecs/features/qt_config.prf \
 		/usr/local/share/qt/mkspecs/macx-clang/qmake.conf \
 		/usr/local/share/qt/mkspecs/features/spec_post.prf \
-		../viewer/.qmake.stash \
 		/usr/local/share/qt/mkspecs/features/exclusive_builds.prf \
 		/usr/local/share/qt/mkspecs/features/mac/sdk.prf \
 		/usr/local/share/qt/mkspecs/features/toolchain.prf \
@@ -334,12 +333,12 @@ TARGET        = viewer.app/Contents/MacOS/viewer
 EXPORT_QMAKE_MAC_SDK = macosx
 EXPORT_QMAKE_MAC_SDK_VERSION = 12.1
 EXPORT_QMAKE_XCODE_DEVELOPER_PATH = /Applications/Xcode.app/Contents/Developer
-EXPORT__QMAKE_STASH_ = /Users/sparelis/view/lexa/src/build-viewer-Desktop_x86_darwin_generic_mach_o_64bit-Debug/.qmake.stash
+EXPORT__QMAKE_STASH_ = 
 EXPORT_VALID_ARCHS = x86_64
 EXPORT_DEFAULT_ARCHS = x86_64
 EXPORT_ARCHS = $(filter $(EXPORT_VALID_ARCHS), $(if $(ARCHS), $(ARCHS), $(if $(EXPORT_DEFAULT_ARCHS), $(EXPORT_DEFAULT_ARCHS), $(EXPORT_VALID_ARCHS))))
 EXPORT_ARCH_ARGS = $(foreach arch, $(if $(EXPORT_ARCHS), $(EXPORT_ARCHS), $(EXPORT_VALID_ARCHS)), -arch $(arch))
-EXPORT__PRO_FILE_ = /Users/sparelis/view/lexa/src/viewer/viewer.pro
+EXPORT__PRO_FILE_ = /Users/sparelis/viewer/src/viewer/viewer.pro
 
 
 include /usr/local/share/qt/mkspecs/features/mac/sdk.mk
@@ -576,7 +575,6 @@ Makefile: ../viewer/viewer.pro /usr/local/share/qt/mkspecs/macx-clang/qmake.conf
 		/usr/local/share/qt/mkspecs/features/qt_config.prf \
 		/usr/local/share/qt/mkspecs/macx-clang/qmake.conf \
 		/usr/local/share/qt/mkspecs/features/spec_post.prf \
-		.qmake.stash \
 		/usr/local/share/qt/mkspecs/features/exclusive_builds.prf \
 		/usr/local/share/qt/mkspecs/features/mac/sdk.prf \
 		/usr/local/share/qt/mkspecs/features/toolchain.prf \
@@ -846,7 +844,6 @@ Makefile: ../viewer/viewer.pro /usr/local/share/qt/mkspecs/macx-clang/qmake.conf
 /usr/local/share/qt/mkspecs/features/qt_config.prf:
 /usr/local/share/qt/mkspecs/macx-clang/qmake.conf:
 /usr/local/share/qt/mkspecs/features/spec_post.prf:
-.qmake.stash:
 /usr/local/share/qt/mkspecs/features/exclusive_builds.prf:
 /usr/local/share/qt/mkspecs/features/mac/sdk.prf:
 /usr/local/share/qt/mkspecs/features/toolchain.prf:
@@ -932,7 +929,6 @@ clean: compiler_clean
 
 distclean: clean 
 	-$(DEL_FILE) -r viewer.app
-	-$(DEL_FILE) .qmake.stash
 	-$(DEL_FILE) Makefile
 
 
@@ -971,7 +967,7 @@ moc_mainwindow.cpp: ../viewer/mainwindow.h \
 		/usr/local/lib/QtWidgets.framework/Headers/qmainwindow.h \
 		moc_predefs.h \
 		/usr/local/share/qt/libexec/moc
-	/usr/local/share/qt/libexec/moc $(DEFINES) --include /Users/sparelis/view/lexa/src/build-viewer-Desktop_x86_darwin_generic_mach_o_64bit-Debug/moc_predefs.h -I/usr/local/share/qt/mkspecs/macx-clang -I/Users/sparelis/view/lexa/src/viewer -I/usr/local/lib/QtOpenGLWidgets.framework/Headers -I/usr/local/lib/Qt3DExtras.framework/Headers -I/usr/local/lib/Qt3DRender.framework/Headers -I/usr/local/lib/QtOpenGL.framework/Headers -I/usr/local/lib/QtWidgets.framework/Headers -I/usr/local/lib/Qt3DInput.framework/Headers -I/usr/local/lib/Qt3DLogic.framework/Headers -I/usr/local/lib/Qt3DCore.framework/Headers -I/usr/local/lib/QtGui.framework/Headers -I/usr/local/lib/QtConcurrent.framework/Headers -I/usr/local/lib/QtNetwork.framework/Headers -I/usr/local/lib/QtCore.framework/Headers -I. -I/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk/usr/include/c++/v1 -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/13.0.0/include -I/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -F/usr/local/lib ../viewer/mainwindow.h -o moc_mainwindow.cpp
+	/usr/local/share/qt/libexec/moc $(DEFINES) --include /Users/sparelis/viewer/src/build-viewer-Desktop_x86_darwin_generic_mach_o_64bit-Debug/moc_predefs.h -I/usr/local/share/qt/mkspecs/macx-clang -I/Users/sparelis/viewer/src/viewer -I/usr/local/lib/QtOpenGLWidgets.framework/Headers -I/usr/local/lib/Qt3DExtras.framework/Headers -I/usr/local/lib/Qt3DRender.framework/Headers -I/usr/local/lib/QtOpenGL.framework/Headers -I/usr/local/lib/QtWidgets.framework/Headers -I/usr/local/lib/Qt3DInput.framework/Headers -I/usr/local/lib/Qt3DLogic.framework/Headers -I/usr/local/lib/Qt3DCore.framework/Headers -I/usr/local/lib/QtGui.framework/Headers -I/usr/local/lib/QtConcurrent.framework/Headers -I/usr/local/lib/QtNetwork.framework/Headers -I/usr/local/lib/QtCore.framework/Headers -I. -I/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk/usr/include/c++/v1 -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/13.0.0/include -I/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -F/usr/local/lib ../viewer/mainwindow.h -o moc_mainwindow.cpp
 
 moc_ogl.cpp: ../viewer/ogl.h \
 		/usr/local/lib/QtOpenGL.framework/Headers/QtOpenGL \
@@ -1124,7 +1120,7 @@ moc_ogl.cpp: ../viewer/ogl.h \
 		../parser/3d.h \
 		moc_predefs.h \
 		/usr/local/share/qt/libexec/moc
-	/usr/local/share/qt/libexec/moc $(DEFINES) --include /Users/sparelis/view/lexa/src/build-viewer-Desktop_x86_darwin_generic_mach_o_64bit-Debug/moc_predefs.h -I/usr/local/share/qt/mkspecs/macx-clang -I/Users/sparelis/view/lexa/src/viewer -I/usr/local/lib/QtOpenGLWidgets.framework/Headers -I/usr/local/lib/Qt3DExtras.framework/Headers -I/usr/local/lib/Qt3DRender.framework/Headers -I/usr/local/lib/QtOpenGL.framework/Headers -I/usr/local/lib/QtWidgets.framework/Headers -I/usr/local/lib/Qt3DInput.framework/Headers -I/usr/local/lib/Qt3DLogic.framework/Headers -I/usr/local/lib/Qt3DCore.framework/Headers -I/usr/local/lib/QtGui.framework/Headers -I/usr/local/lib/QtConcurrent.framework/Headers -I/usr/local/lib/QtNetwork.framework/Headers -I/usr/local/lib/QtCore.framework/Headers -I. -I/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk/usr/include/c++/v1 -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/13.0.0/include -I/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -F/usr/local/lib ../viewer/ogl.h -o moc_ogl.cpp
+	/usr/local/share/qt/libexec/moc $(DEFINES) --include /Users/sparelis/viewer/src/build-viewer-Desktop_x86_darwin_generic_mach_o_64bit-Debug/moc_predefs.h -I/usr/local/share/qt/mkspecs/macx-clang -I/Users/sparelis/viewer/src/viewer -I/usr/local/lib/QtOpenGLWidgets.framework/Headers -I/usr/local/lib/Qt3DExtras.framework/Headers -I/usr/local/lib/Qt3DRender.framework/Headers -I/usr/local/lib/QtOpenGL.framework/Headers -I/usr/local/lib/QtWidgets.framework/Headers -I/usr/local/lib/Qt3DInput.framework/Headers -I/usr/local/lib/Qt3DLogic.framework/Headers -I/usr/local/lib/Qt3DCore.framework/Headers -I/usr/local/lib/QtGui.framework/Headers -I/usr/local/lib/QtConcurrent.framework/Headers -I/usr/local/lib/QtNetwork.framework/Headers -I/usr/local/lib/QtCore.framework/Headers -I. -I/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk/usr/include/c++/v1 -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/13.0.0/include -I/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -F/usr/local/lib ../viewer/ogl.h -o moc_ogl.cpp
 
 compiler_moc_objc_header_make_all:
 compiler_moc_objc_header_clean:
@@ -1385,7 +1381,9 @@ mainwindow.o: ../viewer/mainwindow.cpp ../viewer/mainwindow.h \
 		/usr/local/lib/Qt3DExtras.framework/Headers/qtorusgeometry.h \
 		/usr/local/lib/Qt3DExtras.framework/Headers/qtorusgeometryview.h \
 		/usr/local/lib/Qt3DExtras.framework/Headers/qtorusmesh.h \
-		/usr/local/lib/Qt3DExtras.framework/Headers/qt3dextrasversion.h
+		/usr/local/lib/Qt3DExtras.framework/Headers/qt3dextrasversion.h \
+		/usr/local/lib/QtCore.framework/Headers/QObject \
+		/usr/local/lib/QtCore.framework/Headers/qobject.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o mainwindow.o ../viewer/mainwindow.cpp
 
 ogl.o: ../viewer/ogl.cpp ../viewer/ogl.h \

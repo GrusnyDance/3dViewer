@@ -10,6 +10,7 @@
 #include <QOpenGLWidget>
 #include <Qt3DCore>
 #include <Qt3DExtras>
+#include <QObject>
 
 
 MainWindow::MainWindow(QWidget *parent)
@@ -19,8 +20,8 @@ MainWindow::MainWindow(QWidget *parent)
     ui->setupUi(this);
 
     ui->FileName->setStyleSheet("background-color: transparent; color: lavender;");
-    ui->LineVert->setStyleSheet("background-color: transparent;");
-    ui->LineEdges->setStyleSheet("background-color: transparent;");
+    ui->DisplayVertices->setStyleSheet("background-color: transparent;");
+    ui->DisplayEdges->setStyleSheet("background-color: transparent;");
 
     QScreen *screen = QGuiApplication::primaryScreen();
     QRect screenGeometry = screen->geometry();
@@ -32,6 +33,16 @@ MainWindow::MainWindow(QWidget *parent)
     ui->gridLayout_4->addWidget(OGLWidget, 1, 0);
 
     connect(ui->FileButton, SIGNAL(pressed()), this, SLOT(FilePressed()));
+
+    connect(ui->MoveX, SIGNAL(valueChanged(int)), this, SLOT(MovePressed()));
+    connect(ui->MoveY, SIGNAL(valueChanged(int)), this, SLOT(MovePressed()));
+    connect(ui->MoveZ, SIGNAL(valueChanged(int)), this, SLOT(MovePressed()));
+
+    connect(ui->RotateX, SIGNAL(valueChanged(int)), this, SLOT(RotatePressed()));
+    connect(ui->RotateY, SIGNAL(valueChanged(int)), this, SLOT(RotatePressed()));
+    connect(ui->RotateZ, SIGNAL(valueChanged(int)), this, SLOT(RotatePressed()));
+
+    connect(ui->Scale, SIGNAL(valueChanged(int)), this, SLOT(ScalePressed()));
 
 }
 
@@ -47,7 +58,37 @@ void MainWindow::FilePressed() {
     ui->FileName->setText(FindFile);
 }
 
-//void MainWindow::paintGL() {
-//    glViewport(0,0, 0, 0);
-//    glClearColor(0,1,0,0);
-//}
+void MainWindow::MovePressed() {
+    QSlider *mySlider = (QSlider *)sender();
+    QString sliderName = sender()->objectName();
+    QString findQEdit = "Display" + sliderName;
+
+    int sliderVal = mySlider->value();
+    QString displayVal = QString::number(sliderVal);
+    this->findChild<QLineEdit *>(findQEdit)->setText(displayVal);
+}
+
+void MainWindow::RotatePressed() {
+    QSlider *mySlider = (QSlider *)sender();
+    QString sliderName = sender()->objectName();
+    QString findQEdit = "Display" + sliderName;
+
+    int sliderVal = mySlider->value();
+    QString displayVal = QString::number(sliderVal);
+    this->findChild<QLineEdit *>(findQEdit)->setText(displayVal);
+}
+
+void MainWindow::ScalePressed() {
+    QSlider *mySlider = (QSlider *)sender();
+    QString sliderName = sender()->objectName();
+    QString findQEdit = "Display" + sliderName;
+
+    int sliderVal = mySlider->value();
+    QString displayVal = QString::number(sliderVal);
+    this->findChild<QLineEdit *>(findQEdit)->setText(displayVal);
+}
+
+
+
+
+

@@ -62,7 +62,7 @@
        <number>20</number>
       </property>
       <item row="2" column="2">
-       <widget class="QLineEdit" name="lineEdit_2">
+       <widget class="QLineEdit" name="DisplayMoveY">
         <property name="sizePolicy">
          <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
           <horstretch>0</horstretch>
@@ -102,7 +102,7 @@
        </widget>
       </item>
       <item row="2" column="1">
-       <widget class="QSlider" name="horizontalSlider">
+       <widget class="QSlider" name="MoveY">
         <property name="sizePolicy">
          <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
           <horstretch>0</horstretch>
@@ -124,7 +124,7 @@
        </widget>
       </item>
       <item row="1" column="2">
-       <widget class="QLineEdit" name="lineEdit">
+       <widget class="QLineEdit" name="DisplayMoveX">
         <property name="sizePolicy">
          <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
           <horstretch>0</horstretch>
@@ -146,7 +146,7 @@
        </widget>
       </item>
       <item row="1" column="1">
-       <widget class="QSlider" name="horizontalSlider_3">
+       <widget class="QSlider" name="MoveX">
         <property name="sizePolicy">
          <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
           <horstretch>0</horstretch>
@@ -219,7 +219,7 @@
        </widget>
       </item>
       <item row="3" column="2">
-       <widget class="QLineEdit" name="lineEdit_3">
+       <widget class="QLineEdit" name="DisplayMoveZ">
         <property name="sizePolicy">
          <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
           <horstretch>0</horstretch>
@@ -241,7 +241,7 @@
        </widget>
       </item>
       <item row="3" column="1">
-       <widget class="QSlider" name="horizontalSlider_2">
+       <widget class="QSlider" name="MoveZ">
         <property name="sizePolicy">
          <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
           <horstretch>0</horstretch>
@@ -325,7 +325,7 @@
        <number>20</number>
       </property>
       <item row="2" column="2">
-       <widget class="QLineEdit" name="lineEdit_5">
+       <widget class="QLineEdit" name="DisplayRotateY">
         <property name="sizePolicy">
          <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
           <horstretch>0</horstretch>
@@ -347,7 +347,7 @@
        </widget>
       </item>
       <item row="1" column="2">
-       <widget class="QLineEdit" name="lineEdit_4">
+       <widget class="QLineEdit" name="DisplayRotateX">
         <property name="sizePolicy">
          <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
           <horstretch>0</horstretch>
@@ -387,7 +387,7 @@
        </widget>
       </item>
       <item row="1" column="1">
-       <widget class="QSlider" name="horizontalSlider_4">
+       <widget class="QSlider" name="RotateX">
         <property name="sizePolicy">
          <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
           <horstretch>0</horstretch>
@@ -442,7 +442,7 @@
        </widget>
       </item>
       <item row="3" column="2">
-       <widget class="QLineEdit" name="lineEdit_6">
+       <widget class="QLineEdit" name="DisplayRotateZ">
         <property name="sizePolicy">
          <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
           <horstretch>0</horstretch>
@@ -464,7 +464,7 @@
        </widget>
       </item>
       <item row="2" column="1">
-       <widget class="QSlider" name="horizontalSlider_5">
+       <widget class="QSlider" name="RotateY">
         <property name="sizePolicy">
          <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
           <horstretch>0</horstretch>
@@ -483,7 +483,7 @@
        </widget>
       </item>
       <item row="3" column="1">
-       <widget class="QSlider" name="horizontalSlider_6">
+       <widget class="QSlider" name="RotateZ">
         <property name="sizePolicy">
          <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
           <horstretch>0</horstretch>
@@ -551,7 +551,7 @@
        <number>20</number>
       </property>
       <item row="1" column="0">
-       <widget class="QSlider" name="horizontalSlider_7">
+       <widget class="QSlider" name="Scale">
         <property name="sizePolicy">
          <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
           <horstretch>0</horstretch>
@@ -570,7 +570,7 @@
        </widget>
       </item>
       <item row="1" column="1">
-       <widget class="QLineEdit" name="lineEdit_7">
+       <widget class="QLineEdit" name="DisplayScale">
         <property name="sizePolicy">
          <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
           <horstretch>0</horstretch>
@@ -655,7 +655,7 @@
        <number>10</number>
       </property>
       <item row="0" column="1">
-       <widget class="QLineEdit" name="LineVert">
+       <widget class="QLineEdit" name="DisplayVertices">
         <property name="font">
          <font>
           <family>Arial</family>
@@ -665,7 +665,7 @@
        </widget>
       </item>
       <item row="1" column="1">
-       <widget class="QLineEdit" name="LineEdges">
+       <widget class="QLineEdit" name="DisplayEdges">
         <property name="font">
          <font>
           <family>Arial</family>
