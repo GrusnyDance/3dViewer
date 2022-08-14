@@ -6,10 +6,11 @@ static void pars_f(FILE *file, info *src, int *f, char *c);
 static void pars_v(FILE *file, info *src, int *v, char *c);
 static int isnum(char c);
 
-void parser(char *fileName, info *src) {
+void parserr(char *fileName, info *src) {
     // int error = 0;
     src->indexF = 0;
     src->indexV = 0;
+    // printf("%s\n", fileName);
     FILE *file = fopen(fileName, "r");
     if (file == NULL) {
         printf("FILE ERROR\n");
@@ -93,6 +94,7 @@ static void pars_f(FILE *file, info *src, int *f, char *c) {
     }
     src->polygon[*f] = (unsigned int*)calloc(k + 1, sizeof(unsigned int));
     for ( ; k > 0; k--) src->polygon[*f][k - 1] = f_buff[k - 1];
+    // src->polygon[*f][0] = 0;
     free(f_buff);
     *f += 1;
 }

@@ -3,7 +3,7 @@
 
 int main() {
     info a;
-    parser("cow.obj", &a);
+    parserr("objectives/cube.obj", &a);
     for (unsigned int k = 0; k < a.indexV; k++) {
         for (unsigned int g = 0; g < 3; g++) {
             printf("%f ", a.array[k][g]);
