@@ -77,6 +77,7 @@ void OGLW::drawCude(float a) {
 //    glBegin(GL_LINE_STRIP);
     for (uint k = 0; k < inff.indexF; k++) {
           glBegin(GL_LINE_LOOP);
+          glColor3d(174.0/255.0, 109.0/255.0, 217.0/255);
           int g = 0;
           while (inff.polygon[k][g] != 0) {
               glVertex3f(inff.array[inff.polygon[k][g] - 1][0], inff.array[inff.polygon[k][g] - 1][1], inff.array[inff.polygon[k][g] - 1][2]);

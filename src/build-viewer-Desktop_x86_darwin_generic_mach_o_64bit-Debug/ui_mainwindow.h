@@ -126,7 +126,10 @@ public:
         sizePolicy1.setVerticalStretch(0);
         sizePolicy1.setHeightForWidth(horizontalSlider->sizePolicy().hasHeightForWidth());
         horizontalSlider->setSizePolicy(sizePolicy1);
+        horizontalSlider->setMinimum(-360);
+        horizontalSlider->setMaximum(360);
         horizontalSlider->setOrientation(Qt::Horizontal);
+        horizontalSlider->setInvertedControls(true);
 
         gridLayout_2->addWidget(horizontalSlider, 2, 1, 1, 1);
 
@@ -146,7 +149,10 @@ public:
         sizePolicy2.setVerticalStretch(0);
         sizePolicy2.setHeightForWidth(horizontalSlider_3->sizePolicy().hasHeightForWidth());
         horizontalSlider_3->setSizePolicy(sizePolicy2);
+        horizontalSlider_3->setMinimum(-360);
+        horizontalSlider_3->setMaximum(360);
         horizontalSlider_3->setOrientation(Qt::Horizontal);
+        horizontalSlider_3->setInvertedControls(true);
 
         gridLayout_2->addWidget(horizontalSlider_3, 1, 1, 1, 1);
 
@@ -181,7 +187,10 @@ public:
         horizontalSlider_2->setObjectName(QString::fromUtf8("horizontalSlider_2"));
         sizePolicy2.setHeightForWidth(horizontalSlider_2->sizePolicy().hasHeightForWidth());
         horizontalSlider_2->setSizePolicy(sizePolicy2);
+        horizontalSlider_2->setMinimum(-360);
+        horizontalSlider_2->setMaximum(360);
         horizontalSlider_2->setOrientation(Qt::Horizontal);
+        horizontalSlider_2->setInvertedControls(true);
 
         gridLayout_2->addWidget(horizontalSlider_2, 3, 1, 1, 1);
 
@@ -248,6 +257,8 @@ public:
         horizontalSlider_4->setObjectName(QString::fromUtf8("horizontalSlider_4"));
         sizePolicy2.setHeightForWidth(horizontalSlider_4->sizePolicy().hasHeightForWidth());
         horizontalSlider_4->setSizePolicy(sizePolicy2);
+        horizontalSlider_4->setMaximum(720);
+        horizontalSlider_4->setSliderPosition(360);
         horizontalSlider_4->setOrientation(Qt::Horizontal);
 
         gridLayout_7->addWidget(horizontalSlider_4, 1, 1, 1, 1);
@@ -279,6 +290,8 @@ public:
         horizontalSlider_5->setObjectName(QString::fromUtf8("horizontalSlider_5"));
         sizePolicy2.setHeightForWidth(horizontalSlider_5->sizePolicy().hasHeightForWidth());
         horizontalSlider_5->setSizePolicy(sizePolicy2);
+        horizontalSlider_5->setMaximum(720);
+        horizontalSlider_5->setSliderPosition(360);
         horizontalSlider_5->setOrientation(Qt::Horizontal);
 
         gridLayout_7->addWidget(horizontalSlider_5, 2, 1, 1, 1);
@@ -287,6 +300,8 @@ public:
         horizontalSlider_6->setObjectName(QString::fromUtf8("horizontalSlider_6"));
         sizePolicy2.setHeightForWidth(horizontalSlider_6->sizePolicy().hasHeightForWidth());
         horizontalSlider_6->setSizePolicy(sizePolicy2);
+        horizontalSlider_6->setMaximum(720);
+        horizontalSlider_6->setSliderPosition(360);
         horizontalSlider_6->setOrientation(Qt::Horizontal);
 
         gridLayout_7->addWidget(horizontalSlider_6, 3, 1, 1, 1);
@@ -321,6 +336,8 @@ public:
         horizontalSlider_7->setObjectName(QString::fromUtf8("horizontalSlider_7"));
         sizePolicy2.setHeightForWidth(horizontalSlider_7->sizePolicy().hasHeightForWidth());
         horizontalSlider_7->setSizePolicy(sizePolicy2);
+        horizontalSlider_7->setMinimum(-10);
+        horizontalSlider_7->setMaximum(10);
         horizontalSlider_7->setOrientation(Qt::Horizontal);
 
         gridLayout_8->addWidget(horizontalSlider_7, 1, 0, 1, 1);

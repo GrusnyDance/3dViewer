@@ -7,7 +7,7 @@
         "-I",
         "/opt/goinfre/sparelis/Qt Creator.app/Contents/Resources/cplusplus/wrappedQtHeaders/QtCore",
         "-I",
-        "/private/var/folders/zz/zyxvpxvq6csfxvn_n00027p0000jxh/T/QtCreator-ghXesU/clang-uiheader-ymGVuI",
+        "/private/var/folders/zz/zyxvpxvq6csfxvn_n00027p0000jxh/T/QtCreator-FQZCyV/clang-uiheader-sgFXLt",
         "-nostdinc",
         "-nostdinc++",
         "-pipe",
@@ -38,7 +38,7 @@
         "-DQT_NETWORK_LIB",
         "-DQT_CORE_LIB",
         "-I",
-        "/Users/sparelis/view/lexa/src/viewer",
+        "/Users/sparelis/viewer/src/viewer",
         "-I",
         "/usr/local/lib/QtOpenGLWidgets.framework/Headers",
         "-I",
@@ -64,7 +64,7 @@
         "-I",
         "/usr/local/lib/QtCore.framework/Headers",
         "-I",
-        "/Users/sparelis/view/lexa/src/build-viewer-Desktop_x86_darwin_generic_mach_o_64bit-Debug",
+        "/Users/sparelis/viewer/src/build-viewer-Desktop_x86_darwin_generic_mach_o_64bit-Debug",
         "-I",
         "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk/System/Library/Frameworks/OpenGL.framework/Headers",
         "-I",
@@ -93,10 +93,10 @@
         "-Wno-unknown-pragmas",
         "-Wno-unknown-warning-option",
         "-Wno-documentation-unknown-command",
-        "/Users/sparelis/view/lexa/src/viewer/main.cpp"
+        "/Users/sparelis/viewer/src/viewer/main.cpp"
     ],
-    "directory": "/Users/sparelis/view/lexa/src/build-viewer-Desktop_x86_darwin_generic_mach_o_64bit-Debug/.qtc_clangd",
-    "file": "/Users/sparelis/view/lexa/src/viewer/main.cpp"
+    "directory": "/Users/sparelis/viewer/src/build-viewer-Desktop_x86_darwin_generic_mach_o_64bit-Debug/.qtc_clangd",
+    "file": "/Users/sparelis/viewer/src/viewer/main.cpp"
 },
 {
     "arguments": [
@@ -106,7 +106,7 @@
         "-I",
         "/opt/goinfre/sparelis/Qt Creator.app/Contents/Resources/cplusplus/wrappedQtHeaders/QtCore",
         "-I",
-        "/private/var/folders/zz/zyxvpxvq6csfxvn_n00027p0000jxh/T/QtCreator-ghXesU/clang-uiheader-ymGVuI",
+        "/private/var/folders/zz/zyxvpxvq6csfxvn_n00027p0000jxh/T/QtCreator-FQZCyV/clang-uiheader-sgFXLt",
         "-nostdinc",
         "-nostdinc++",
         "-pipe",
@@ -137,7 +137,7 @@
         "-DQT_NETWORK_LIB",
         "-DQT_CORE_LIB",
         "-I",
-        "/Users/sparelis/view/lexa/src/viewer",
+        "/Users/sparelis/viewer/src/viewer",
         "-I",
         "/usr/local/lib/QtOpenGLWidgets.framework/Headers",
         "-I",
@@ -163,7 +163,7 @@
         "-I",
         "/usr/local/lib/QtCore.framework/Headers",
         "-I",
-        "/Users/sparelis/view/lexa/src/build-viewer-Desktop_x86_darwin_generic_mach_o_64bit-Debug",
+        "/Users/sparelis/viewer/src/build-viewer-Desktop_x86_darwin_generic_mach_o_64bit-Debug",
         "-I",
         "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk/System/Library/Frameworks/OpenGL.framework/Headers",
         "-I",
@@ -192,10 +192,10 @@
         "-Wno-unknown-pragmas",
         "-Wno-unknown-warning-option",
         "-Wno-documentation-unknown-command",
-        "/Users/sparelis/view/lexa/src/viewer/mainwindow.cpp"
+        "/Users/sparelis/viewer/src/viewer/mainwindow.cpp"
     ],
-    "directory": "/Users/sparelis/view/lexa/src/build-viewer-Desktop_x86_darwin_generic_mach_o_64bit-Debug/.qtc_clangd",
-    "file": "/Users/sparelis/view/lexa/src/viewer/mainwindow.cpp"
+    "directory": "/Users/sparelis/viewer/src/build-viewer-Desktop_x86_darwin_generic_mach_o_64bit-Debug/.qtc_clangd",
+    "file": "/Users/sparelis/viewer/src/viewer/mainwindow.cpp"
 },
 {
     "arguments": [
@@ -205,7 +205,7 @@
         "-I",
         "/opt/goinfre/sparelis/Qt Creator.app/Contents/Resources/cplusplus/wrappedQtHeaders/QtCore",
         "-I",
-        "/private/var/folders/zz/zyxvpxvq6csfxvn_n00027p0000jxh/T/QtCreator-ghXesU/clang-uiheader-ymGVuI",
+        "/private/var/folders/zz/zyxvpxvq6csfxvn_n00027p0000jxh/T/QtCreator-FQZCyV/clang-uiheader-sgFXLt",
         "-nostdinc",
         "-nostdinc++",
         "-pipe",
@@ -236,7 +236,7 @@
         "-DQT_NETWORK_LIB",
         "-DQT_CORE_LIB",
         "-I",
-        "/Users/sparelis/view/lexa/src/viewer",
+        "/Users/sparelis/viewer/src/viewer",
         "-I",
         "/usr/local/lib/QtOpenGLWidgets.framework/Headers",
         "-I",
@@ -262,7 +262,7 @@
         "-I",
         "/usr/local/lib/QtCore.framework/Headers",
         "-I",
-        "/Users/sparelis/view/lexa/src/build-viewer-Desktop_x86_darwin_generic_mach_o_64bit-Debug",
+        "/Users/sparelis/viewer/src/build-viewer-Desktop_x86_darwin_generic_mach_o_64bit-Debug",
         "-I",
         "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk/System/Library/Frameworks/OpenGL.framework/Headers",
         "-I",
@@ -291,10 +291,10 @@
         "-Wno-unknown-pragmas",
         "-Wno-unknown-warning-option",
         "-Wno-documentation-unknown-command",
-        "/Users/sparelis/view/lexa/src/viewer/ogl.cpp"
+        "/Users/sparelis/viewer/src/viewer/ogl.cpp"
     ],
-    "directory": "/Users/sparelis/view/lexa/src/build-viewer-Desktop_x86_darwin_generic_mach_o_64bit-Debug/.qtc_clangd",
-    "file": "/Users/sparelis/view/lexa/src/viewer/ogl.cpp"
+    "directory": "/Users/sparelis/viewer/src/build-viewer-Desktop_x86_darwin_generic_mach_o_64bit-Debug/.qtc_clangd",
+    "file": "/Users/sparelis/viewer/src/viewer/ogl.cpp"
 },
 {
     "arguments": [
@@ -304,7 +304,7 @@
         "-I",
         "/opt/goinfre/sparelis/Qt Creator.app/Contents/Resources/cplusplus/wrappedQtHeaders/QtCore",
         "-I",
-        "/private/var/folders/zz/zyxvpxvq6csfxvn_n00027p0000jxh/T/QtCreator-ghXesU/clang-uiheader-ymGVuI",
+        "/private/var/folders/zz/zyxvpxvq6csfxvn_n00027p0000jxh/T/QtCreator-FQZCyV/clang-uiheader-sgFXLt",
         "-nostdinc",
         "-nostdinc++",
         "-pipe",
@@ -335,7 +335,7 @@
         "-DQT_NETWORK_LIB",
         "-DQT_CORE_LIB",
         "-I",
-        "/Users/sparelis/view/lexa/src/viewer",
+        "/Users/sparelis/viewer/src/viewer",
         "-I",
         "/usr/local/lib/QtOpenGLWidgets.framework/Headers",
         "-I",
@@ -361,7 +361,7 @@
         "-I",
         "/usr/local/lib/QtCore.framework/Headers",
         "-I",
-        "/Users/sparelis/view/lexa/src/build-viewer-Desktop_x86_darwin_generic_mach_o_64bit-Debug",
+        "/Users/sparelis/viewer/src/build-viewer-Desktop_x86_darwin_generic_mach_o_64bit-Debug",
         "-I",
         "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk/System/Library/Frameworks/OpenGL.framework/Headers",
         "-I",
@@ -390,10 +390,10 @@
         "-Wno-unknown-pragmas",
         "-Wno-unknown-warning-option",
         "-Wno-documentation-unknown-command",
-        "/Users/sparelis/view/lexa/src/viewer/mainwindow.h"
+        "/Users/sparelis/viewer/src/viewer/mainwindow.h"
     ],
-    "directory": "/Users/sparelis/view/lexa/src/build-viewer-Desktop_x86_darwin_generic_mach_o_64bit-Debug/.qtc_clangd",
-    "file": "/Users/sparelis/view/lexa/src/viewer/mainwindow.h"
+    "directory": "/Users/sparelis/viewer/src/build-viewer-Desktop_x86_darwin_generic_mach_o_64bit-Debug/.qtc_clangd",
+    "file": "/Users/sparelis/viewer/src/viewer/mainwindow.h"
 },
 {
     "arguments": [
@@ -403,7 +403,7 @@
         "-I",
         "/opt/goinfre/sparelis/Qt Creator.app/Contents/Resources/cplusplus/wrappedQtHeaders/QtCore",
         "-I",
-        "/private/var/folders/zz/zyxvpxvq6csfxvn_n00027p0000jxh/T/QtCreator-ghXesU/clang-uiheader-ymGVuI",
+        "/private/var/folders/zz/zyxvpxvq6csfxvn_n00027p0000jxh/T/QtCreator-FQZCyV/clang-uiheader-sgFXLt",
         "-nostdinc",
         "-nostdinc++",
         "-pipe",
@@ -434,7 +434,7 @@
         "-DQT_NETWORK_LIB",
         "-DQT_CORE_LIB",
         "-I",
-        "/Users/sparelis/view/lexa/src/viewer",
+        "/Users/sparelis/viewer/src/viewer",
         "-I",
         "/usr/local/lib/QtOpenGLWidgets.framework/Headers",
         "-I",
@@ -460,7 +460,7 @@
         "-I",
         "/usr/local/lib/QtCore.framework/Headers",
         "-I",
-        "/Users/sparelis/view/lexa/src/build-viewer-Desktop_x86_darwin_generic_mach_o_64bit-Debug",
+        "/Users/sparelis/viewer/src/build-viewer-Desktop_x86_darwin_generic_mach_o_64bit-Debug",
         "-I",
         "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk/System/Library/Frameworks/OpenGL.framework/Headers",
         "-I",
@@ -489,10 +489,10 @@
         "-Wno-unknown-pragmas",
         "-Wno-unknown-warning-option",
         "-Wno-documentation-unknown-command",
-        "/Users/sparelis/view/lexa/src/viewer/ogl.h"
+        "/Users/sparelis/viewer/src/viewer/ogl.h"
     ],
-    "directory": "/Users/sparelis/view/lexa/src/build-viewer-Desktop_x86_darwin_generic_mach_o_64bit-Debug/.qtc_clangd",
-    "file": "/Users/sparelis/view/lexa/src/viewer/ogl.h"
+    "directory": "/Users/sparelis/viewer/src/build-viewer-Desktop_x86_darwin_generic_mach_o_64bit-Debug/.qtc_clangd",
+    "file": "/Users/sparelis/viewer/src/viewer/ogl.h"
 },
 {
     "arguments": [
@@ -502,7 +502,7 @@
         "-I",
         "/opt/goinfre/sparelis/Qt Creator.app/Contents/Resources/cplusplus/wrappedQtHeaders/QtCore",
         "-I",
-        "/private/var/folders/zz/zyxvpxvq6csfxvn_n00027p0000jxh/T/QtCreator-ghXesU/clang-uiheader-ymGVuI",
+        "/private/var/folders/zz/zyxvpxvq6csfxvn_n00027p0000jxh/T/QtCreator-FQZCyV/clang-uiheader-sgFXLt",
         "-nostdinc",
         "-nostdinc++",
         "-pipe",
@@ -533,7 +533,7 @@
         "-DQT_NETWORK_LIB",
         "-DQT_CORE_LIB",
         "-I",
-        "/Users/sparelis/view/lexa/src/viewer",
+        "/Users/sparelis/viewer/src/viewer",
         "-I",
         "/usr/local/lib/QtOpenGLWidgets.framework/Headers",
         "-I",
@@ -559,7 +559,7 @@
         "-I",
         "/usr/local/lib/QtCore.framework/Headers",
         "-I",
-        "/Users/sparelis/view/lexa/src/build-viewer-Desktop_x86_darwin_generic_mach_o_64bit-Debug",
+        "/Users/sparelis/viewer/src/build-viewer-Desktop_x86_darwin_generic_mach_o_64bit-Debug",
         "-I",
         "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk/System/Library/Frameworks/OpenGL.framework/Headers",
         "-I",
@@ -588,10 +588,10 @@
         "-Wno-unknown-pragmas",
         "-Wno-unknown-warning-option",
         "-Wno-documentation-unknown-command",
-        "/Users/sparelis/view/lexa/src/parser/3d.h"
+        "/Users/sparelis/viewer/src/parser/3d.h"
     ],
-    "directory": "/Users/sparelis/view/lexa/src/build-viewer-Desktop_x86_darwin_generic_mach_o_64bit-Debug/.qtc_clangd",
-    "file": "/Users/sparelis/view/lexa/src/parser/3d.h"
+    "directory": "/Users/sparelis/viewer/src/build-viewer-Desktop_x86_darwin_generic_mach_o_64bit-Debug/.qtc_clangd",
+    "file": "/Users/sparelis/viewer/src/parser/3d.h"
 },
 {
     "arguments": [
@@ -601,7 +601,7 @@
         "-I",
         "/opt/goinfre/sparelis/Qt Creator.app/Contents/Resources/cplusplus/wrappedQtHeaders/QtCore",
         "-I",
-        "/private/var/folders/zz/zyxvpxvq6csfxvn_n00027p0000jxh/T/QtCreator-ghXesU/clang-uiheader-ymGVuI",
+        "/private/var/folders/zz/zyxvpxvq6csfxvn_n00027p0000jxh/T/QtCreator-FQZCyV/clang-uiheader-sgFXLt",
         "-nostdinc",
         "-nostdinc++",
         "-pipe",
@@ -632,7 +632,7 @@
         "-DQT_NETWORK_LIB",
         "-DQT_CORE_LIB",
         "-I",
-        "/Users/sparelis/view/lexa/src/viewer",
+        "/Users/sparelis/viewer/src/viewer",
         "-I",
         "/usr/local/lib/QtOpenGLWidgets.framework/Headers",
         "-I",
@@ -658,7 +658,7 @@
         "-I",
         "/usr/local/lib/QtCore.framework/Headers",
         "-I",
-        "/Users/sparelis/view/lexa/src/build-viewer-Desktop_x86_darwin_generic_mach_o_64bit-Debug",
+        "/Users/sparelis/viewer/src/build-viewer-Desktop_x86_darwin_generic_mach_o_64bit-Debug",
         "-I",
         "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk/System/Library/Frameworks/OpenGL.framework/Headers",
         "-I",
@@ -687,10 +687,10 @@
         "-Wno-unknown-pragmas",
         "-Wno-unknown-warning-option",
         "-Wno-documentation-unknown-command",
-        "/Users/sparelis/view/lexa/src/build-viewer-Desktop_x86_darwin_generic_mach_o_64bit-Debug/ui_mainwindow.h"
+        "/Users/sparelis/viewer/src/build-viewer-Desktop_x86_darwin_generic_mach_o_64bit-Debug/ui_mainwindow.h"
     ],
-    "directory": "/Users/sparelis/view/lexa/src/build-viewer-Desktop_x86_darwin_generic_mach_o_64bit-Debug/.qtc_clangd",
-    "file": "/Users/sparelis/view/lexa/src/build-viewer-Desktop_x86_darwin_generic_mach_o_64bit-Debug/ui_mainwindow.h"
+    "directory": "/Users/sparelis/viewer/src/build-viewer-Desktop_x86_darwin_generic_mach_o_64bit-Debug/.qtc_clangd",
+    "file": "/Users/sparelis/viewer/src/build-viewer-Desktop_x86_darwin_generic_mach_o_64bit-Debug/ui_mainwindow.h"
 },
 {
     "arguments": [
@@ -700,7 +700,7 @@
         "-I",
         "/opt/goinfre/sparelis/Qt Creator.app/Contents/Resources/cplusplus/wrappedQtHeaders/QtCore",
         "-I",
-        "/private/var/folders/zz/zyxvpxvq6csfxvn_n00027p0000jxh/T/QtCreator-ghXesU/clang-uiheader-ymGVuI",
+        "/private/var/folders/zz/zyxvpxvq6csfxvn_n00027p0000jxh/T/QtCreator-FQZCyV/clang-uiheader-sgFXLt",
         "-nostdinc",
         "-nostdinc++",
         "-pipe",
@@ -729,7 +729,7 @@
         "-DQT_NETWORK_LIB",
         "-DQT_CORE_LIB",
         "-I",
-        "/Users/sparelis/view/lexa/src/viewer",
+        "/Users/sparelis/viewer/src/viewer",
         "-I",
         "/usr/local/lib/QtOpenGLWidgets.framework/Headers",
         "-I",
@@ -755,7 +755,7 @@
         "-I",
         "/usr/local/lib/QtCore.framework/Headers",
         "-I",
-        "/Users/sparelis/view/lexa/src/build-viewer-Desktop_x86_darwin_generic_mach_o_64bit-Debug",
+        "/Users/sparelis/viewer/src/build-viewer-Desktop_x86_darwin_generic_mach_o_64bit-Debug",
         "-I",
         "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk/System/Library/Frameworks/OpenGL.framework/Headers",
         "-I",
@@ -782,10 +782,10 @@
         "-Wno-unknown-pragmas",
         "-Wno-unknown-warning-option",
         "-Wno-documentation-unknown-command",
-        "/Users/sparelis/view/lexa/src/parser/parser.c"
+        "/Users/sparelis/viewer/src/parser/parser.c"
     ],
-    "directory": "/Users/sparelis/view/lexa/src/build-viewer-Desktop_x86_darwin_generic_mach_o_64bit-Debug/.qtc_clangd",
-    "file": "/Users/sparelis/view/lexa/src/parser/parser.c"
+    "directory": "/Users/sparelis/viewer/src/build-viewer-Desktop_x86_darwin_generic_mach_o_64bit-Debug/.qtc_clangd",
+    "file": "/Users/sparelis/viewer/src/parser/parser.c"
 },
 {
     "arguments": [
@@ -795,7 +795,7 @@
         "-I",
         "/opt/goinfre/sparelis/Qt Creator.app/Contents/Resources/cplusplus/wrappedQtHeaders/QtCore",
         "-I",
-        "/private/var/folders/zz/zyxvpxvq6csfxvn_n00027p0000jxh/T/QtCreator-ghXesU/clang-uiheader-ymGVuI",
+        "/private/var/folders/zz/zyxvpxvq6csfxvn_n00027p0000jxh/T/QtCreator-FQZCyV/clang-uiheader-sgFXLt",
         "-nostdinc",
         "-nostdinc++",
         "-pipe",
@@ -824,7 +824,7 @@
         "-DQT_NETWORK_LIB",
         "-DQT_CORE_LIB",
         "-I",
-        "/Users/sparelis/view/lexa/src/viewer",
+        "/Users/sparelis/viewer/src/viewer",
         "-I",
         "/usr/local/lib/QtOpenGLWidgets.framework/Headers",
         "-I",
@@ -850,7 +850,7 @@
         "-I",
         "/usr/local/lib/QtCore.framework/Headers",
         "-I",
-        "/Users/sparelis/view/lexa/src/build-viewer-Desktop_x86_darwin_generic_mach_o_64bit-Debug",
+        "/Users/sparelis/viewer/src/build-viewer-Desktop_x86_darwin_generic_mach_o_64bit-Debug",
         "-I",
         "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk/System/Library/Frameworks/OpenGL.framework/Headers",
         "-I",
@@ -877,10 +877,10 @@
         "-Wno-unknown-pragmas",
         "-Wno-unknown-warning-option",
         "-Wno-documentation-unknown-command",
-        "/Users/sparelis/view/lexa/src/viewer/mainwindow.h"
+        "/Users/sparelis/viewer/src/viewer/mainwindow.h"
     ],
-    "directory": "/Users/sparelis/view/lexa/src/build-viewer-Desktop_x86_darwin_generic_mach_o_64bit-Debug/.qtc_clangd",
-    "file": "/Users/sparelis/view/lexa/src/viewer/mainwindow.h"
+    "directory": "/Users/sparelis/viewer/src/build-viewer-Desktop_x86_darwin_generic_mach_o_64bit-Debug/.qtc_clangd",
+    "file": "/Users/sparelis/viewer/src/viewer/mainwindow.h"
 },
 {
     "arguments": [
@@ -890,7 +890,7 @@
         "-I",
         "/opt/goinfre/sparelis/Qt Creator.app/Contents/Resources/cplusplus/wrappedQtHeaders/QtCore",
         "-I",
-        "/private/var/folders/zz/zyxvpxvq6csfxvn_n00027p0000jxh/T/QtCreator-ghXesU/clang-uiheader-ymGVuI",
+        "/private/var/folders/zz/zyxvpxvq6csfxvn_n00027p0000jxh/T/QtCreator-FQZCyV/clang-uiheader-sgFXLt",
         "-nostdinc",
         "-nostdinc++",
         "-pipe",
@@ -919,7 +919,7 @@
         "-DQT_NETWORK_LIB",
         "-DQT_CORE_LIB",
         "-I",
-        "/Users/sparelis/view/lexa/src/viewer",
+        "/Users/sparelis/viewer/src/viewer",
         "-I",
         "/usr/local/lib/QtOpenGLWidgets.framework/Headers",
         "-I",
@@ -945,7 +945,7 @@
         "-I",
         "/usr/local/lib/QtCore.framework/Headers",
         "-I",
-        "/Users/sparelis/view/lexa/src/build-viewer-Desktop_x86_darwin_generic_mach_o_64bit-Debug",
+        "/Users/sparelis/viewer/src/build-viewer-Desktop_x86_darwin_generic_mach_o_64bit-Debug",
         "-I",
         "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk/System/Library/Frameworks/OpenGL.framework/Headers",
         "-I",
@@ -972,10 +972,10 @@
         "-Wno-unknown-pragmas",
         "-Wno-unknown-warning-option",
         "-Wno-documentation-unknown-command",
-        "/Users/sparelis/view/lexa/src/viewer/ogl.h"
+        "/Users/sparelis/viewer/src/viewer/ogl.h"
     ],
-    "directory": "/Users/sparelis/view/lexa/src/build-viewer-Desktop_x86_darwin_generic_mach_o_64bit-Debug/.qtc_clangd",
-    "file": "/Users/sparelis/view/lexa/src/viewer/ogl.h"
+    "directory": "/Users/sparelis/viewer/src/build-viewer-Desktop_x86_darwin_generic_mach_o_64bit-Debug/.qtc_clangd",
+    "file": "/Users/sparelis/viewer/src/viewer/ogl.h"
 },
 {
     "arguments": [
@@ -985,7 +985,7 @@
         "-I",
         "/opt/goinfre/sparelis/Qt Creator.app/Contents/Resources/cplusplus/wrappedQtHeaders/QtCore",
         "-I",
-        "/private/var/folders/zz/zyxvpxvq6csfxvn_n00027p0000jxh/T/QtCreator-ghXesU/clang-uiheader-ymGVuI",
+        "/private/var/folders/zz/zyxvpxvq6csfxvn_n00027p0000jxh/T/QtCreator-FQZCyV/clang-uiheader-sgFXLt",
         "-nostdinc",
         "-nostdinc++",
         "-pipe",
@@ -1014,7 +1014,7 @@
         "-DQT_NETWORK_LIB",
         "-DQT_CORE_LIB",
         "-I",
-        "/Users/sparelis/view/lexa/src/viewer",
+        "/Users/sparelis/viewer/src/viewer",
         "-I",
         "/usr/local/lib/QtOpenGLWidgets.framework/Headers",
         "-I",
@@ -1040,7 +1040,7 @@
         "-I",
         "/usr/local/lib/QtCore.framework/Headers",
         "-I",
-        "/Users/sparelis/view/lexa/src/build-viewer-Desktop_x86_darwin_generic_mach_o_64bit-Debug",
+        "/Users/sparelis/viewer/src/build-viewer-Desktop_x86_darwin_generic_mach_o_64bit-Debug",
         "-I",
         "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk/System/Library/Frameworks/OpenGL.framework/Headers",
         "-I",
@@ -1067,10 +1067,10 @@
         "-Wno-unknown-pragmas",
         "-Wno-unknown-warning-option",
         "-Wno-documentation-unknown-command",
-        "/Users/sparelis/view/lexa/src/parser/3d.h"
+        "/Users/sparelis/viewer/src/parser/3d.h"
     ],
-    "directory": "/Users/sparelis/view/lexa/src/build-viewer-Desktop_x86_darwin_generic_mach_o_64bit-Debug/.qtc_clangd",
-    "file": "/Users/sparelis/view/lexa/src/parser/3d.h"
+    "directory": "/Users/sparelis/viewer/src/build-viewer-Desktop_x86_darwin_generic_mach_o_64bit-Debug/.qtc_clangd",
+    "file": "/Users/sparelis/viewer/src/parser/3d.h"
 },
 {
     "arguments": [
@@ -1080,7 +1080,7 @@
         "-I",
         "/opt/goinfre/sparelis/Qt Creator.app/Contents/Resources/cplusplus/wrappedQtHeaders/QtCore",
         "-I",
-        "/private/var/folders/zz/zyxvpxvq6csfxvn_n00027p0000jxh/T/QtCreator-ghXesU/clang-uiheader-ymGVuI",
+        "/private/var/folders/zz/zyxvpxvq6csfxvn_n00027p0000jxh/T/QtCreator-FQZCyV/clang-uiheader-sgFXLt",
         "-nostdinc",
         "-nostdinc++",
         "-pipe",
@@ -1109,7 +1109,7 @@
         "-DQT_NETWORK_LIB",
         "-DQT_CORE_LIB",
         "-I",
-        "/Users/sparelis/view/lexa/src/viewer",
+        "/Users/sparelis/viewer/src/viewer",
         "-I",
         "/usr/local/lib/QtOpenGLWidgets.framework/Headers",
         "-I",
@@ -1135,7 +1135,7 @@
         "-I",
         "/usr/local/lib/QtCore.framework/Headers",
         "-I",
-        "/Users/sparelis/view/lexa/src/build-viewer-Desktop_x86_darwin_generic_mach_o_64bit-Debug",
+        "/Users/sparelis/viewer/src/build-viewer-Desktop_x86_darwin_generic_mach_o_64bit-Debug",
         "-I",
         "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk/System/Library/Frameworks/OpenGL.framework/Headers",
         "-I",
@@ -1162,9 +1162,9 @@
         "-Wno-unknown-pragmas",
         "-Wno-unknown-warning-option",
         "-Wno-documentation-unknown-command",
-        "/Users/sparelis/view/lexa/src/build-viewer-Desktop_x86_darwin_generic_mach_o_64bit-Debug/ui_mainwindow.h"
+        "/Users/sparelis/viewer/src/build-viewer-Desktop_x86_darwin_generic_mach_o_64bit-Debug/ui_mainwindow.h"
     ],
-    "directory": "/Users/sparelis/view/lexa/src/build-viewer-Desktop_x86_darwin_generic_mach_o_64bit-Debug/.qtc_clangd",
-    "file": "/Users/sparelis/view/lexa/src/build-viewer-Desktop_x86_darwin_generic_mach_o_64bit-Debug/ui_mainwindow.h"
+    "directory": "/Users/sparelis/viewer/src/build-viewer-Desktop_x86_darwin_generic_mach_o_64bit-Debug/.qtc_clangd",
+    "file": "/Users/sparelis/viewer/src/build-viewer-Desktop_x86_darwin_generic_mach_o_64bit-Debug/ui_mainwindow.h"
 }
 ]
