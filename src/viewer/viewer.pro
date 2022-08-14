@@ -9,11 +9,13 @@ greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 SOURCES += \
     main.cpp \
     mainwindow.cpp \
-    ogl.cpp
+    ogl.cpp \
+    ../parser/parser.c
 
 HEADERS += \
     mainwindow.h \
-    ogl.h
+    ogl.h \
+    ../parser/3d.h
 
 FORMS += \
     mainwindow.ui

@@ -41,7 +41,7 @@ void OGLW::resizeGL(int w, int h) {
     glMatrixMode(GL_PROJECTION);
     glLoadIdentity();
 
-    glFrustum(-1, 1, -1, 1, 1, 5); // область видимости объема должна быть адаптивной
+    glFrustum(-1, 1, -1, 1, 1, 20); // область видимости объема должна быть адаптивной
 }
 
 void OGLW::mousePressEvent(QMouseEvent *mo) {
@@ -56,21 +56,35 @@ void OGLW::mouseMoveEvent(QMouseEvent *mo) {
 }
 
 void OGLW::drawCude(float a) {
-    float ver_cub[] = {
-        -a, -a, a,     a, -a, a,     a, a, a,     -a, a, a,
-        a, -a, -a,     -a, -a, -a,   -a, a, -a,   a, a, -a,
-        -a, -a, -a,    -a, -a, a,    -a, a, a,    -a, a, -a,
-        a, -a, a,      a, -a, -a,    a, a, -a,    a, a, a,
-        -a, -a, a,     a, -a, a,     a, -a, -a,   -a, -a, -a,
-        -a, a, a,      a, a, a,      a, a, -a,    -a, a, -a
-    };
+//    float ver_cub[] = {
+//        -a, -a, a,     a, -a, a,     a, a, a,     -a, a, a,
+//        a, -a, -a,     -a, -a, -a,   -a, a, -a,   a, a, -a,
+//        -a, -a, -a,    -a, -a, a,    -a, a, a,    -a, a, -a,
+//        a, -a, a,      a, -a, -a,    a, a, -a,    a, a, a,
+//        -a, -a, a,     a, -a, a,     a, -a, -a,   -a, -a, -a,
+//        -a, a, a,      a, a, a,      a, a, -a,    -a, a, -a
+//    };
 
-    glVertexPointer(3, GL_FLOAT, 0, &ver_cub);
+//    glVertexPointer(3, GL_FLOAT, 0, &ver_cub);
 
-    glEnableClientState(GL_VERTEX_ARRAY);
-        glColor3d(174.0/255.0, 109.0/255.0, 217.0/255);
-        glDrawArrays(GL_QUADS, 0, 24);
-    glDisableClientState(GL_VERTEX_ARRAY);
+//    glEnableClientState(GL_VERTEX_ARRAY);
+//        glColor3d(174.0/255.0, 109.0/255.0, 217.0/255);
+//        glDrawArrays(GL_QUADS, 0, 24);
+//    glDisableClientState(GL_VERTEX_ARRAY);
+    info inff;
+    char filename[] = "/Users/sparelis/Desktop/objectives/monkey2.obj";
+    parserr(filename, &inff);
+//    glBegin(GL_LINE_STRIP);
+    for (uint k = 0; k < inff.indexF; k++) {
+          glBegin(GL_LINE_LOOP);
+          int g = 0;
+          while (inff.polygon[k][g] != 0) {
+              glVertex3f(inff.array[inff.polygon[k][g] - 1][0], inff.array[inff.polygon[k][g] - 1][1], inff.array[inff.polygon[k][g] - 1][2]);
+              g++;
+          }
+          glEnd();
+    }
+//    glEnd();
 }
 
 // не работает - мб и не должна?

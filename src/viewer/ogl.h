@@ -6,6 +6,10 @@
 #include <QtOpenGLWidgets>
 #include <QOpenGLFunctions>
 
+extern "C" {
+    #include "../parser/3d.h"
+}
+
 
 class OGLW : public QOpenGLWidget, protected QOpenGLFunctions {
   Q_OBJECT
