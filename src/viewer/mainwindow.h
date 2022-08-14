@@ -3,6 +3,7 @@
 
 #include <QMainWindow>
 #include <Qt3DCore/QEntity>
+#include "ogl.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -16,6 +17,8 @@ public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
+    OGLW *OGLWidget;
+
 private slots:
     void FilePressed();
     void MovePressed();
@@ -25,6 +28,9 @@ private slots:
     void MoveUserInput();
     void RotateUserInput();
     void ScaleUserInput();
+
+    void CallMove(QString str, int val);
+    void CallRotate(QString str, int val);
 
 private:
     Ui::MainWindow *ui;

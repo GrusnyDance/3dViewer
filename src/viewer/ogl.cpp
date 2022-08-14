@@ -71,13 +71,12 @@ void OGLW::drawCude(float a) {
 //        glColor3d(174.0/255.0, 109.0/255.0, 217.0/255);
 //        glDrawArrays(GL_QUADS, 0, 24);
 //    glDisableClientState(GL_VERTEX_ARRAY);
-    info inff;
-    char filename[] = "/Users/sparelis/Desktop/objectives/monkey2.obj";
+    char filename[] = "/home/darika/view/src/parser/objectives/monkey2.obj";
     parserr(filename, &inff);
 //    glBegin(GL_LINE_STRIP);
     for (uint k = 0; k < inff.indexF; k++) {
           glBegin(GL_LINE_LOOP);
-          glColor3d(174.0/255.0, 109.0/255.0, 217.0/255);
+          glColor3d(125.0/255.0, 110.0/255.0, 175.0/255);
           int g = 0;
           while (inff.polygon[k][g] != 0) {
               glVertex3f(inff.array[inff.polygon[k][g] - 1][0], inff.array[inff.polygon[k][g] - 1][1], inff.array[inff.polygon[k][g] - 1][2]);
@@ -86,17 +85,4 @@ void OGLW::drawCude(float a) {
           glEnd();
     }
 //    glEnd();
-}
-
-// не работает - мб и не должна?
-void OGLW::paintFigure() {
-//    glClearColor(0.5,1,0,1);
-    glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-    glBegin(GL_TRIANGLES);
-    glColor3d(1, 0, 0);
-    glVertex2d(0,0);
-    glVertex2d(1,0);
-    glVertex2d(0,1);
-    glEnd();
-    qDebug() << "hello";
 }

@@ -20,6 +20,8 @@ class OGLW : public QOpenGLWidget, protected QOpenGLFunctions {
   void paintFigure();
   void drawCude(float a);
 
+  info inff;
+
 protected:
   void initializeGL() override;
   void paintGL() override;
