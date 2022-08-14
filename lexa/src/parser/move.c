@@ -1,14 +1,20 @@
 
 #include "3d.h"
 
-void shift_x(info *src, int shift) {
-
+void move_x(info *src, int shift) {
+    for (unsigned int k = 0; k < src->indexV; k++) {
+        src->array[k][0] += shift;
+    }
 }
 
-void shift_y(info *src, int shift) {
-
+void move_y(info *src, int shift) {
+    for (unsigned int k = 0; k < src->indexV; k++) {
+        src->array[k][1] += shift;
+    }
 }
 
-void shift_z(info *src, int shift) {
-
+void move_z(info *src, int shift) {
+    for (unsigned int k = 0; k < src->indexV; k++) {
+        src->array[k][2] += shift;
+    }
 }
