@@ -19,6 +19,8 @@ public:
 
     OGLW *OGLWidget;
 
+//    QString FindFile;
+
     int scaleBuff = 0;
     int moveBuffX = 0;
     int moveBuffY = 0;

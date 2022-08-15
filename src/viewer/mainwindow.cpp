@@ -63,9 +63,10 @@ MainWindow::~MainWindow()
 
 
 void MainWindow::FilePressed() {
-    QString FindFile = QFileDialog::getOpenFileName(this,
+    OGLWidget->FindFile = QFileDialog::getOpenFileName(this,
                        tr("Select a file to open"), QDir::homePath(), tr("Text Files (*.obj)"));
-    ui->FileName->setText(FindFile);
+    ui->FileName->setText(OGLWidget->FindFile);
+    parserr((char*)OGLWidget->FindFile.toStdString().c_str(), &(OGLWidget->inff));
 }
 
 void MainWindow::MovePressed() {

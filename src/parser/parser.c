@@ -14,7 +14,7 @@ void parserr(char *fileName, info *src) {
     FILE *file = fopen(fileName, "r");
     if (file == NULL) {
         printf("FILE ERROR\n");
-        exit(1);
+        // exit(1);
     }
     char c = 'c', buff = 'b';
     while (c != EOF) {

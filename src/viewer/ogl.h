@@ -10,7 +10,6 @@ extern "C" {
     #include "../parser/3d.h"
 }
 
-
 class OGLW : public QOpenGLWidget, protected QOpenGLFunctions {
   Q_OBJECT
 
@@ -19,6 +18,8 @@ class OGLW : public QOpenGLWidget, protected QOpenGLFunctions {
     ~OGLW();
   void paintFigure();
   void drawFigure();
+
+  QString FindFile = "/Users/maykitbo/Desktop/objectives/monkey2.obj";
 
   info inff; // переписать на указатель когда будет готов остальной код
 

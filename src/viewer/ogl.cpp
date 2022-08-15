@@ -21,8 +21,9 @@ void OGLW::initializeGL() {
     initializeOpenGLFunctions();
     glEnable(GL_DEPTH_TEST);
 
-    char filename[] = "/Users/maykitbo/Desktop/objectives/monkey2.obj";
-    parserr(filename, &inff);
+//    char filename[] = "/Users/maykitbo/Desktop/objectives/monkey2.obj";
+//    char *filename = FindFile.toStdString();
+    parserr((char*)FindFile.toStdString().c_str(), &inff);
 }
 
 void OGLW::paintGL() {
