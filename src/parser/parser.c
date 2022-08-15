@@ -3,14 +3,13 @@
 #include "3d.h"
 
 static void pars_f(FILE *file, info *src, int *f, char *c);
-static void pars_v(FILE *file, info *src, int *v, char *c);
+static void pars_v(FILE *file, info *src, int *v, char *c, float *max);
 static int isnum(char c);
 
 void parserr(char *fileName, info *src) {
-    // int error = 0;
+    float max = 0.0;
     src->indexF = 0;
     src->indexV = 0;
-    // printf("%s\n", fileName);
     FILE *file = fopen(fileName, "r");
     if (file == NULL) {
         printf("FILE ERROR\n");
@@ -27,24 +26,22 @@ void parserr(char *fileName, info *src) {
     buff = 'b';
     fseek(file, 0, SEEK_SET);
     src->array = (float*)calloc(src->indexV * 3, sizeof(float));
-    // for (unsigned int k = 0; k < src->indexV; k++) {
-    //     src->array[k] = (float*)calloc(3, sizeof(float));
-    // }
     src->polygon = (unsigned int**)malloc(src->indexF * sizeof(unsigned int*));
     int v = 0, f = 0;
     while (c != EOF) {
         c = fgetc(file);
         if (buff == 'v' && c == ' ') {
-            pars_v(file, src, &v, &c);
+            pars_v(file, src, &v, &c, &max);
         } else if (buff == 'f' && c == ' ') {
             pars_f(file, src, &f, &c);
         }
         buff = c;
     }
     fclose(file);
+    scale(src, log(1 / max) * SCALE_STEP);  // scale normalization
 }
 
-static void pars_v(FILE *file, info *src, int *v, char *c) {
+static void pars_v(FILE *file, info *src, int *v, char *c, float *max) {
     int k = 0;
     while (*c != '\n' && *c != EOF) {
         *c = fgetc(file);
@@ -68,11 +65,11 @@ static void pars_v(FILE *file, info *src, int *v, char *c) {
                     *c = fgetc(file);
                 }
             }
+            if (src->array[*v] > *max) *max = src->array[*v];
             src->array[*v] *= minus;
             *v += 1;
         }
     }
-    // *v += 1;
 }
 
 static void pars_f(FILE *file, info *src, int *f, char *c) {

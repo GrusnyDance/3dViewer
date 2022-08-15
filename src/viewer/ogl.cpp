@@ -23,7 +23,7 @@ void OGLW::initializeGL() {
 
 //    char filename[] = "/Users/maykitbo/Desktop/objectives/monkey2.obj";
 //    char *filename = FindFile.toStdString();
-    parserr((char*)FindFile.toStdString().c_str(), &inff);
+//    parserr((char*)FindFile.toStdString().c_str(), &inff);
 }
 
 void OGLW::paintGL() {
