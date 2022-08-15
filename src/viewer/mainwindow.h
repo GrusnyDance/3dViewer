@@ -18,10 +18,14 @@ public:
     ~MainWindow();
 
     OGLW *OGLWidget;
+
     int scaleBuff = 0;
     int moveBuffX = 0;
     int moveBuffY = 0;
     int moveBuffZ = 0;
+    int rotateBuffX = 0;
+    int rotateBuffY = 0;
+    int rotateBuffZ = 0;
 
 private slots:
     void FilePressed();

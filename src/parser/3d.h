@@ -20,7 +20,7 @@ void move_x(info *src, int shift);
 void move_y(info *src, int shift);
 void move_z(info *src, int shift);
 
-void scale(info *src, int scale, int buff);
+void scale(info *src, int scale);
 
 void rotate_x(info *src, double turn);
 void rotate_y(info *src, double turn);
