@@ -83,11 +83,14 @@ void MainWindow::MovePressed() {
 
 void MainWindow::CallMove(QString str, int val) {
     if (str[0] == 'X') {
-        move_x(&(OGLWidget->inff), val);
+        move_x(&(OGLWidget->inff), val - moveBuffX);
+        moveBuffX = val;
     } else if (str[0] == 'Y') {
-        move_y(&(OGLWidget->inff), val);
+        move_y(&(OGLWidget->inff), val - moveBuffY);
+        moveBuffY = val;
     } else {
-        move_z(&(OGLWidget->inff), val);
+        move_z(&(OGLWidget->inff), val - moveBuffZ);
+        moveBuffZ = val;
     }
 }
 
@@ -120,7 +123,8 @@ void MainWindow::ScalePressed() {
     QString displayVal = QString::number(sliderVal);
     this->findChild<QLineEdit *>("DisplayScale")->setText(displayVal);
 
-    scale(&(OGLWidget->inff), sliderVal);
+    scale(&(OGLWidget->inff), sliderVal, scaleBuff);
+    scaleBuff = sliderVal;
 }
 
 void MainWindow::MoveUserInput() {
@@ -177,7 +181,8 @@ void MainWindow::ScaleUserInput() {
         if (sliderVal < -10) this->findChild<QSlider *>("Scale")->setValue(-10);
         else if (sliderVal > 10) this->findChild<QSlider *>("Scale")->setValue(10);
         else this->findChild<QSlider *>("Scale")->setValue(sliderVal);
-        scale(&(OGLWidget->inff), sliderVal);
+        scale(&(OGLWidget->inff), sliderVal, scaleBuff);
+        scaleBuff = sliderVal;
 
     } else {
         this->findChild<QLineEdit *>("DisplayScale")->setText("");

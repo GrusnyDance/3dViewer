@@ -4,6 +4,9 @@
 #include <stdlib.h>
 #include <math.h>
 
+#define MOVE_STEP 10.0
+#define SCALE_STEP 5.0
+
 typedef struct ddd {
     unsigned int indexV; // вершины
     unsigned int indexF; // ломаные
@@ -17,7 +20,7 @@ void move_x(info *src, int shift);
 void move_y(info *src, int shift);
 void move_z(info *src, int shift);
 
-void scale(info *src, int scale);
+void scale(info *src, int scale, int buff);
 
 void rotate_x(info *src, double turn);
 void rotate_y(info *src, double turn);

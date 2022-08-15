@@ -21,7 +21,7 @@ void OGLW::initializeGL() {
     initializeOpenGLFunctions();
     glEnable(GL_DEPTH_TEST);
 
-    char filename[] = "/home/darika/view/src/parser/objectives/monkey2.obj";
+    char filename[] = "/Users/maykitbo/Desktop/objectives/monkey2.obj";
     parserr(filename, &inff);
 }
 
@@ -81,7 +81,7 @@ void OGLW::drawFigure() {
           glColor3d(125.0/255.0, 110.0/255.0, 175.0/255);
           int g = 0;
           while (inff.polygon[k][g] != 0) {
-              glVertex3f(inff.array[inff.polygon[k][g] - 1][0], inff.array[inff.polygon[k][g] - 1][1], inff.array[inff.polygon[k][g] - 1][2]);
+              glVertex3f(inff.array[(inff.polygon[k][g] - 1) * 3], inff.array[1 + (inff.polygon[k][g] - 1) * 3], inff.array[2 + (inff.polygon[k][g] - 1) * 3]);
               g++;
           }
           glEnd();
