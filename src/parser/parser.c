@@ -26,10 +26,10 @@ void parserr(char *fileName, info *src) {
     c = 'c';
     buff = 'b';
     fseek(file, 0, SEEK_SET);
-    src->array = (float**)malloc(src->indexV * sizeof(float*));
-    for (unsigned int k = 0; k < src->indexV; k++) {
-        src->array[k] = (float*)calloc(3, sizeof(float));
-    }
+    src->array = (float*)calloc(src->indexV * 3, sizeof(float));
+    // for (unsigned int k = 0; k < src->indexV; k++) {
+    //     src->array[k] = (float*)calloc(3, sizeof(float));
+    // }
     src->polygon = (unsigned int**)malloc(src->indexF * sizeof(unsigned int*));
     int v = 0, f = 0;
     while (c != EOF) {
@@ -55,24 +55,24 @@ static void pars_v(FILE *file, info *src, int *v, char *c) {
         }
         if (isnum(*c)) {
             while (isnum(*c)) {
-                src->array[*v][k] *= 10;
-                src->array[*v][k] += *c - 48;
+                src->array[*v] *= 10;
+                src->array[*v] += *c - 48;
                 *c = fgetc(file);
             }
             if (*c == '.' || *c == ',') {
                 *c = fgetc(file);
                 long int ten = 10;
                 while (isnum(*c)) {
-                    src->array[*v][k] += (float)(*c - 48) / ten;
+                    src->array[*v] += (float)(*c - 48) / ten;
                     ten *= 10;
                     *c = fgetc(file);
                 }
             }
-            src->array[*v][k] *= minus;
-            k++;
+            src->array[*v] *= minus;
+            *v += 1;
         }
     }
-    *v += 1;
+    // *v += 1;
 }
 
 static void pars_f(FILE *file, info *src, int *f, char *c) {

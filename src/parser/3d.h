@@ -7,7 +7,7 @@
 typedef struct ddd {
     unsigned int indexV; // вершины
     unsigned int indexF; // ломаные
-    float **array;
+    float *array;
     unsigned int **polygon; // последний символ каждой строки 0
 } info;
 
