@@ -11,7 +11,7 @@ typedef struct ddd {
     unsigned int indexV; // вершины
     unsigned int indexF; // ломаные
     float *array;
-    unsigned int **polygon; // последний символ каждой строки 0
+    unsigned int *polygon; // последний символ каждой строки 0
 } info;
 
 void parserr(char *fileName, info *src);
