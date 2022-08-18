@@ -35,23 +35,23 @@ static void pars_v(FILE *file, info *src, char *c, float *max) {
         }
         if (isnum(*c)) {
             src->array = realloc(src->array, (src->indexV + 1) * sizeof(float));
-            src->array[src->indexV] = 0;
-            while (isnum(*c)) {
-                src->array[src->indexV] *= 10;
-                src->array[src->indexV] += *c - 48;
-                *c = fgetc(file);
-            }
-            if (*c == '.' || *c == ',') {
-                *c = fgetc(file);
-                long int ten = 10;
-                while (isnum(*c)) {
-                    src->array[src->indexV] += (float)(*c - 48) / ten;
-                    ten *= 10;
-                    *c = fgetc(file);
-                }
-            }
-            // fseek(file, -1, SEEK_CUR);
-            // fscanf(file, "%f", &src->array[src->indexV]);
+//            src->array[src->indexV] = 0;
+//            while (isnum(*c)) {
+//                src->array[src->indexV] *= 10;
+//                src->array[src->indexV] += *c - 48;
+//                *c = fgetc(file);
+//            }
+//            if (*c == '.' || *c == ',') {
+//                *c = fgetc(file);
+//                long int ten = 10;
+//                while (isnum(*c)) {
+//                    src->array[src->indexV] += (float)(*c - 48) / ten;
+//                    ten *= 10;
+//                    *c = fgetc(file);
+//                }
+//            }
+             fseek(file, -1, 1);
+             fscanf(file, "%f", src->array + src->indexV);
             if (fabs(src->array[src->indexV]) > *max) *max = fabs(src->array[src->indexV]);
             src->array[src->indexV] *= minus;
             src->indexV += 1;
@@ -76,11 +76,12 @@ static void pars_f(FILE *file, info *src, char *c) {
             src->polygon[src->indexF] = 0;
             // fseek(file, -1, SEEK_CUR);
             // fscanf(file, "%d", src->polygon[src->indexF]);
-            while (isnum(*c)) {
-                src->polygon[src->indexF] *= 10;
-                src->polygon[src->indexF] += *c - 48;
-                *c = fgetc(file);
-            }
+//            while (isnum(*c)) {
+//                src->polygon[src->indexF] *= 10;
+//                src->polygon[src->indexF] += *c - 48;
+//                *c = fgetc(file);
+//            }
+            if (isnum(*c)) { fseek(file, -1, 1); fscanf(file, "%u", src->polygon + src->indexF); }
             if (k == 1) {
                 first = src->polygon[src->indexF];
             }

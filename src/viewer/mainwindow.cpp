@@ -33,6 +33,7 @@ MainWindow::MainWindow(QWidget *parent)
     ui->gridLayout_4->addWidget(OGLWidget, 1, 0);
 
     connect(ui->FileButton, SIGNAL(pressed()), this, SLOT(FilePressed()));
+//    connect(ui->FileButton, SIGNAL(pressed()), OGLWidget, SLOT(Allocate()));
 
     connect(ui->MoveX, SIGNAL(valueChanged(int)), this, SLOT(MovePressed()));
     connect(ui->MoveY, SIGNAL(valueChanged(int)), this, SLOT(MovePressed()));
@@ -67,6 +68,7 @@ void MainWindow::FilePressed() {
                        tr("Select a file to open"), QDir::homePath(), tr("Text Files (*.obj)"));
     ui->FileName->setText(OGLWidget->FindFile);
     parserr((char*)OGLWidget->FindFile.toStdString().c_str(), &(OGLWidget->inff));
+    OGLWidget->Allocate();
 }
 
 void MainWindow::MovePressed() {

@@ -19,6 +19,7 @@ class OGLW : public QOpenGLWidget, protected QOpenGLFunctions {
   void paintFigure();
   void drawFigure();
 
+
   QString FindFile = "/Users/maykitbo/Desktop/objectives/monkey2.obj";
 
   info inff; // переписать на указатель когда будет готов остальной код
@@ -35,9 +36,15 @@ private:
   QPoint mPos;
   void mousePressEvent(QMouseEvent*) override;
   void mouseMoveEvent(QMouseEvent*) override;
+  QOpenGLShaderProgram *prog = nullptr;
+  QOpenGLVertexArrayObject vao;
+    QOpenGLBuffer vbo;
+    QOpenGLBuffer *ibo = new QOpenGLBuffer(QOpenGLBuffer::IndexBuffer);
+//    info *data;
 
 public slots:
   void changeZ();
+  void Allocate();
 
 };
 
