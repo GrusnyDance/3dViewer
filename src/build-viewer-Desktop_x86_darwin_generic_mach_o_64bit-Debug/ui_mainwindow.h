@@ -104,6 +104,7 @@ public:
         font.setFamilies({QString::fromUtf8("Arial")});
         font.setPointSize(14);
         DisplayMoveY->setFont(font);
+        DisplayMoveY->setFocusPolicy(Qt::StrongFocus);
 
         gridLayout_2->addWidget(DisplayMoveY, 2, 2, 1, 1);
 
@@ -139,6 +140,7 @@ public:
         DisplayMoveX->setSizePolicy(sizePolicy);
         DisplayMoveX->setMaximumSize(QSize(16777215, 16777215));
         DisplayMoveX->setFont(font);
+        DisplayMoveX->setFocusPolicy(Qt::StrongFocus);
 
         gridLayout_2->addWidget(DisplayMoveX, 1, 2, 1, 1);
 
@@ -180,6 +182,7 @@ public:
         DisplayMoveZ->setSizePolicy(sizePolicy);
         DisplayMoveZ->setMaximumSize(QSize(16777215, 16777215));
         DisplayMoveZ->setFont(font);
+        DisplayMoveZ->setFocusPolicy(Qt::StrongFocus);
 
         gridLayout_2->addWidget(DisplayMoveZ, 3, 2, 1, 1);
 
@@ -234,6 +237,7 @@ public:
         DisplayRotateY->setSizePolicy(sizePolicy);
         DisplayRotateY->setMaximumSize(QSize(16777215, 16777215));
         DisplayRotateY->setFont(font);
+        DisplayRotateY->setFocusPolicy(Qt::StrongFocus);
 
         gridLayout_7->addWidget(DisplayRotateY, 2, 2, 1, 1);
 
@@ -243,6 +247,7 @@ public:
         DisplayRotateX->setSizePolicy(sizePolicy);
         DisplayRotateX->setMaximumSize(QSize(16777215, 16777215));
         DisplayRotateX->setFont(font);
+        DisplayRotateX->setFocusPolicy(Qt::StrongFocus);
 
         gridLayout_7->addWidget(DisplayRotateX, 1, 2, 1, 1);
 
@@ -283,6 +288,7 @@ public:
         DisplayRotateZ->setSizePolicy(sizePolicy);
         DisplayRotateZ->setMaximumSize(QSize(16777215, 16777215));
         DisplayRotateZ->setFont(font);
+        DisplayRotateZ->setFocusPolicy(Qt::StrongFocus);
 
         gridLayout_7->addWidget(DisplayRotateZ, 3, 2, 1, 1);
 
@@ -336,8 +342,10 @@ public:
         Scale->setObjectName(QString::fromUtf8("Scale"));
         sizePolicy2.setHeightForWidth(Scale->sizePolicy().hasHeightForWidth());
         Scale->setSizePolicy(sizePolicy2);
-        Scale->setMinimum(-10);
-        Scale->setMaximum(10);
+        Scale->setMinimum(0);
+        Scale->setMaximum(300);
+        Scale->setSingleStep(1);
+        Scale->setValue(100);
         Scale->setOrientation(Qt::Horizontal);
 
         gridLayout_8->addWidget(Scale, 1, 0, 1, 1);
@@ -348,6 +356,7 @@ public:
         DisplayScale->setSizePolicy(sizePolicy);
         DisplayScale->setMaximumSize(QSize(16777215, 16777215));
         DisplayScale->setFont(font);
+        DisplayScale->setFocusPolicy(Qt::StrongFocus);
 
         gridLayout_8->addWidget(DisplayScale, 1, 1, 1, 1);
 
@@ -383,12 +392,22 @@ public:
         DisplayVertices = new QLineEdit(centralwidget);
         DisplayVertices->setObjectName(QString::fromUtf8("DisplayVertices"));
         DisplayVertices->setFont(font);
+        DisplayVertices->setFocusPolicy(Qt::NoFocus);
+        DisplayVertices->setStyleSheet(QString::fromUtf8("QLineEdit {\n"
+"	color: white;\n"
+"	background-color: transparent;\n"
+"}"));
 
         gridLayout_3->addWidget(DisplayVertices, 0, 1, 1, 1);
 
         DisplayEdges = new QLineEdit(centralwidget);
         DisplayEdges->setObjectName(QString::fromUtf8("DisplayEdges"));
         DisplayEdges->setFont(font);
+        DisplayEdges->setFocusPolicy(Qt::NoFocus);
+        DisplayEdges->setStyleSheet(QString::fromUtf8("QLineEdit {\n"
+"	color: white;\n"
+"	background-color: transparent;\n"
+"}"));
 
         gridLayout_3->addWidget(DisplayEdges, 1, 1, 1, 1);
 
@@ -483,14 +502,21 @@ public:
     void retranslateUi(QMainWindow *MainWindow)
     {
         MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "3dViewer", nullptr));
+        DisplayMoveY->setText(QCoreApplication::translate("MainWindow", "0", nullptr));
         label_12->setText(QCoreApplication::translate("MainWindow", "Y", nullptr));
+        DisplayMoveX->setText(QCoreApplication::translate("MainWindow", "0", nullptr));
         label_11->setText(QCoreApplication::translate("MainWindow", "Z", nullptr));
         label->setText(QCoreApplication::translate("MainWindow", "X", nullptr));
+        DisplayMoveZ->setText(QCoreApplication::translate("MainWindow", "0", nullptr));
         label_10->setText(QCoreApplication::translate("MainWindow", "Move", nullptr));
+        DisplayRotateY->setText(QCoreApplication::translate("MainWindow", "360", nullptr));
+        DisplayRotateX->setText(QCoreApplication::translate("MainWindow", "360", nullptr));
         label_15->setText(QCoreApplication::translate("MainWindow", "Z", nullptr));
         label_13->setText(QCoreApplication::translate("MainWindow", "X", nullptr));
         label_14->setText(QCoreApplication::translate("MainWindow", "Y", nullptr));
+        DisplayRotateZ->setText(QCoreApplication::translate("MainWindow", "360", nullptr));
         label_8->setText(QCoreApplication::translate("MainWindow", "Rotate", nullptr));
+        DisplayScale->setText(QCoreApplication::translate("MainWindow", "1.00", nullptr));
         label_9->setText(QCoreApplication::translate("MainWindow", "Scale", nullptr));
         FileButton->setText(QCoreApplication::translate("MainWindow", "Choose file", nullptr));
         label_3->setText(QCoreApplication::translate("MainWindow", "Edges", nullptr));

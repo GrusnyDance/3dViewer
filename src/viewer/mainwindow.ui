@@ -81,6 +81,12 @@
           <pointsize>14</pointsize>
          </font>
         </property>
+        <property name="focusPolicy">
+         <enum>Qt::StrongFocus</enum>
+        </property>
+        <property name="text">
+         <string>0</string>
+        </property>
        </widget>
       </item>
       <item row="2" column="0">
@@ -142,6 +148,12 @@
           <family>Arial</family>
           <pointsize>14</pointsize>
          </font>
+        </property>
+        <property name="focusPolicy">
+         <enum>Qt::StrongFocus</enum>
+        </property>
+        <property name="text">
+         <string>0</string>
         </property>
        </widget>
       </item>
@@ -237,6 +249,12 @@
           <family>Arial</family>
           <pointsize>14</pointsize>
          </font>
+        </property>
+        <property name="focusPolicy">
+         <enum>Qt::StrongFocus</enum>
+        </property>
+        <property name="text">
+         <string>0</string>
         </property>
        </widget>
       </item>
@@ -344,6 +362,12 @@
           <pointsize>14</pointsize>
          </font>
         </property>
+        <property name="focusPolicy">
+         <enum>Qt::StrongFocus</enum>
+        </property>
+        <property name="text">
+         <string>360</string>
+        </property>
        </widget>
       </item>
       <item row="1" column="2">
@@ -365,6 +389,12 @@
           <family>Arial</family>
           <pointsize>14</pointsize>
          </font>
+        </property>
+        <property name="focusPolicy">
+         <enum>Qt::StrongFocus</enum>
+        </property>
+        <property name="text">
+         <string>360</string>
         </property>
        </widget>
       </item>
@@ -460,6 +490,12 @@
           <family>Arial</family>
           <pointsize>14</pointsize>
          </font>
+        </property>
+        <property name="focusPolicy">
+         <enum>Qt::StrongFocus</enum>
+        </property>
+        <property name="text">
+         <string>360</string>
         </property>
        </widget>
       </item>
@@ -559,10 +595,16 @@
          </sizepolicy>
         </property>
         <property name="minimum">
-         <number>-10</number>
+         <number>0</number>
         </property>
         <property name="maximum">
-         <number>10</number>
+         <number>300</number>
+        </property>
+        <property name="singleStep">
+         <number>1</number>
+        </property>
+        <property name="value">
+         <number>100</number>
         </property>
         <property name="orientation">
          <enum>Qt::Horizontal</enum>
@@ -588,6 +630,12 @@
           <family>Arial</family>
           <pointsize>14</pointsize>
          </font>
+        </property>
+        <property name="focusPolicy">
+         <enum>Qt::StrongFocus</enum>
+        </property>
+        <property name="text">
+         <string>1.00</string>
         </property>
        </widget>
       </item>
@@ -662,6 +710,15 @@
           <pointsize>14</pointsize>
          </font>
         </property>
+        <property name="focusPolicy">
+         <enum>Qt::NoFocus</enum>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QLineEdit {
+	color: white;
+	background-color: transparent;
+}</string>
+        </property>
        </widget>
       </item>
       <item row="1" column="1">
@@ -671,6 +728,15 @@
           <family>Arial</family>
           <pointsize>14</pointsize>
          </font>
+        </property>
+        <property name="focusPolicy">
+         <enum>Qt::NoFocus</enum>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QLineEdit {
+	color: white;
+	background-color: transparent;
+}</string>
         </property>
        </widget>
       </item>

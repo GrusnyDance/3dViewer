@@ -3,47 +3,50 @@
 
 #include <QMainWindow>
 #include <Qt3DCore/QEntity>
+
 #include "ogl.h"
 
 QT_BEGIN_NAMESPACE
-namespace Ui { class MainWindow; }
+namespace Ui {
+class MainWindow;
+}
 QT_END_NAMESPACE
 
-class MainWindow : public QMainWindow
-{
-    Q_OBJECT
+class MainWindow : public QMainWindow {
+  Q_OBJECT
 
-public:
-    MainWindow(QWidget *parent = nullptr);
-    ~MainWindow();
+ public:
+  MainWindow(QWidget *parent = nullptr);
+  ~MainWindow();
 
-    OGLW *OGLWidget;
+  OGLW *OGLWidget;
 
-//    QString FindFile;
+  //    QString FindFile;
 
-    int scaleBuff = 0;
-    int moveBuffX = 0;
-    int moveBuffY = 0;
-    int moveBuffZ = 0;
-    int rotateBuffX = 0;
-    int rotateBuffY = 0;
-    int rotateBuffZ = 0;
+  //    int scaleBuff = 0;
+  //    int moveBuffX = 0;
+  //    int moveBuffY = 0;
+  //    int moveBuffZ = 0;
+  //    int rotateBuffX = 0;
+  //    int rotateBuffY = 0;
+  //    int rotateBuffZ = 0;
 
-private slots:
-    void FilePressed();
-    void MovePressed();
-    void RotatePressed();
-    void ScalePressed();
+ private slots:
+  void FilePressed();
+  void MovePressed();
+  void RotatePressed();
+  void ScalePressed();
 
-    void MoveUserInput();
-    void RotateUserInput();
-    void ScaleUserInput();
+  void MoveUserInput();
+  void RotateUserInput();
+  void ScaleUserInput();
 
-    void CallMove(QString str, int val);
-    void CallRotate(QString str, int val);
+  void CallMove(QString str, int val);
+  void CallRotate(QString str, int val);
 
-private:
-    Ui::MainWindow *ui;
+  void updateSliders();
 
+ private:
+  Ui::MainWindow *ui;
 };
-#endif // MAINWINDOW_H
+#endif  // MAINWINDOW_H

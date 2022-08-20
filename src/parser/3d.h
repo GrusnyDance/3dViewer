@@ -1,17 +1,18 @@
-
-#include <stdio.h>
-#include <string.h>
-#include <stdlib.h>
+#ifndef SRC_3D_H_
+#define SRC_3D_H_
 #include <math.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 
 #define MOVE_STEP 5.0
 #define SCALE_STEP 5.0
 
 typedef struct ddd {
-    unsigned int indexV; // вершины
-    unsigned int indexF; // ломаные
-    float *array;
-    unsigned int *polygon; // последний символ каждой строки 0
+  unsigned int indexV;  // вершины
+  unsigned int indexF;  // ломаные
+  float *array;
+  unsigned int *polygon;  // последний символ каждой строки 0
 } info;
 
 void parserr(char *fileName, info *src);
@@ -25,3 +26,5 @@ void scale(info *src, float scale);
 void rotate_x(info *src, double turn);
 void rotate_y(info *src, double turn);
 void rotate_z(info *src, double turn);
+
+#endif  // SRC_3D_H_

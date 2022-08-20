@@ -22,7 +22,7 @@ void parserr(char *fileName, info *src) {
         buff = c;
     }
     fclose(file);
-    scale(src, log(1 / max) * SCALE_STEP);  // scale normalization
+    if (fabs(max) > 1) scale(src, (1 / max));  // scale normalization
 }
 
 static void pars_v(FILE *file, info *src, char *c, float *max) {
