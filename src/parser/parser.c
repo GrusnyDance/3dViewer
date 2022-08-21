@@ -5,10 +5,10 @@ static void pars_v(FILE *file, info *src, char *c, float *max);
 static int isnum(char c);
 
 void parserr(char *fileName, info *src) {
+    FILE *file = fopen(fileName, "r");
     float max = 0.0;
     src->indexF = 0;
     src->indexV = 0;
-    FILE *file = fopen(fileName, "r");
     char c = 'c', buff = 'b';
     src->array = calloc(1, sizeof(float));
     src->polygon = calloc(1, sizeof(unsigned));

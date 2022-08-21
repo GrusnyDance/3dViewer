@@ -84,6 +84,7 @@ void MainWindow::FilePressed() {
       QFileDialog::getOpenFileName(this, tr("Select a file to open"),
                                    QDir::homePath(), tr("Text Files (*.obj)"));
   ui->FileName->setText(OGLWidget->FindFile);
+  if (OGLWidget->FindFile.isEmpty()) return;
   parserr((char *)OGLWidget->FindFile.toStdString().c_str(),
           &(OGLWidget->inff));
   OGLWidget->Allocate();

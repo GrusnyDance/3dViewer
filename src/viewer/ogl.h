@@ -23,7 +23,7 @@ class OGLW : public QOpenGLWidget, protected QOpenGLFunctions {
 
   QString FindFile;
 
-  info inff;  // переписать на указатель когда будет готов остальной код
+  info inff = {0, 0, 0, 0};  // переписать на указатель когда будет готов остальной код
   int rotateBuffX = 0;
   int rotateBuffY = 0;
   int rotateBuffZ = 0;
@@ -61,7 +61,7 @@ class OGLW : public QOpenGLWidget, protected QOpenGLFunctions {
   QOpenGLShaderProgram *prog = nullptr;
   QOpenGLVertexArrayObject vao;
   QOpenGLBuffer vbo;
-  QOpenGLBuffer *ibo = new QOpenGLBuffer(QOpenGLBuffer::IndexBuffer);
+  QOpenGLBuffer ibo;
   //    info *data;
 
  public slots:
