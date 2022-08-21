@@ -38,6 +38,80 @@ QLabel
 
 }
 
+/*-----QRadioButton-----*/
+QRadioButton{
+        background-color: transparent;
+        color: lavender;
+        font-size: 16px;
+
+}
+
+
+QRadioButton::indicator::unchecked
+{
+        border: 2px inset #222222;
+        border-radius: 6px;
+        background-color:  #323232;
+        width: 9px;
+        height: 9px;
+
+}
+
+
+QRadioButton::indicator::checked
+{
+        border: 2px inset #222222;
+        border-radius: 5px;
+        background-color: #00ff00;
+        width: 9px;
+        height: 9px;
+
+}
+
+
+
+/*-----QGroupBox-----*/
+QGroupBox
+{
+    border: none;
+        border-radius: 2px;
+    margin-top: 20px;
+
+}
+
+
+QGroupBox
+{
+        background-color: transparent;
+        font-size: 16px;
+
+}
+
+
+QGroupBox::title
+{
+    background-color: transparent;
+    color: #ffffff;
+    border: none;
+    subcontrol-origin: margin;
+    subcontrol-position: top center;
+    padding: 2px;
+
+}
+
+
+QGroupBox::title::disabled
+{
+        background-color: #404040;
+        color: #656565;
+    subcontrol-origin: margin;
+    subcontrol-position: center;
+    padding: 5px;
+        border-top-left-radius: 3px;
+        border-top-right-radius: 3px;
+
+}
+
 
 /*-----QSlider-----*/
 

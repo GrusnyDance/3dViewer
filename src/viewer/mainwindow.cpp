@@ -20,6 +20,7 @@ MainWindow::MainWindow(QWidget *parent)
 
   ui->FileName->setStyleSheet(
       "background-color: transparent; color: lavender;");
+
   //    ui->DisplayVertices->setStyleSheet("background-color: transparent;");
   //    ui->DisplayEdges->setStyleSheet("background-color: transparent;");
 
