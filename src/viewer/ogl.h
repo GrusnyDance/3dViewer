@@ -19,7 +19,7 @@ class OGLW : public QOpenGLWidget, protected QOpenGLFunctions {
   ~OGLW();
   //  void paintFigure();
   //  void drawFigure();
-  int lineType = 1;  // 1 for stipple
+  int lineType = 0;  // 1 for stipple
   int perspective = 0;  // 1 for on perspective mode
   float lineWidth = 1;  // 1 is default and min, max 5
   float pointSize = 2;  // 1 is default, max 10, min 2
@@ -30,7 +30,7 @@ class OGLW : public QOpenGLWidget, protected QOpenGLFunctions {
 
   QString FindFile;
 
-  info inff = {0, 0, 0, 0};  // переписать на указатель когда будет готов остальной код
+  info inff = {0, 0, 0, 0, 0};  // переписать на указатель когда будет готов остальной код
   int rotateBuffX = 0;
   int rotateBuffY = 0;
   int rotateBuffZ = 0;

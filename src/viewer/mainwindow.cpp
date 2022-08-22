@@ -10,6 +10,7 @@
 #include <Qt3DCore>
 #include <Qt3DExtras>
 #include <QtWidgets>
+#include <ctime>
 
 #include "ogl.h"
 #include "ui_mainwindow.h"
@@ -69,6 +70,24 @@ MainWindow::MainWindow(QWidget *parent)
 MainWindow::~MainWindow() {
   delete OGLWidget;
   delete ui;
+}
+
+void MainWindow::screenJPG() {
+    time_t now = time(0);
+    tm *time = localtime(&now);
+    QString name = "/Users/maykitbo/3dViewer/" + QString::number(time->tm_hour) + "-" + QString::number(time->tm_min) + "-" + QString::number(time->tm_sec) + ".jpg";
+    QPixmap pixmap(OGLWidget->size());
+    OGLWidget->render(&pixmap);
+    pixmap.save(name, "JPG", 100);
+}
+
+void MainWindow::screenBMP() {
+    time_t now = time(0);
+    tm *time = localtime(&now);
+    QString name = "/Users/maykitbo/3dViewer/" + QString::number(time->tm_hour) + "-" + QString::number(time->tm_min) + "-" + QString::number(time->tm_sec) + ".bmp";
+    QPixmap pixmap(OGLWidget->size());
+    OGLWidget->render(&pixmap);
+    pixmap.save(name, "BMP", 100);
 }
 
 void MainWindow::updateSliders() {

@@ -41,6 +41,9 @@ class MainWindow : public QMainWindow {
   void RotateUserInput();
   void ScaleUserInput();
 
+  void screenJPG();
+  void screenBMP();
+
   void CallMove(QString str, int val);
   void CallRotate(QString str, int val);
 
