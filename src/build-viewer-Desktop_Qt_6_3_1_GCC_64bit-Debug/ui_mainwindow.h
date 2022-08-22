@@ -167,6 +167,7 @@ public:
         sizePolicy1.setHeightForWidth(RotateY->sizePolicy().hasHeightForWidth());
         RotateY->setSizePolicy(sizePolicy1);
         RotateY->setMinimumSize(QSize(0, 19));
+        RotateY->setMaximumSize(QSize(16777215, 19));
         RotateY->setBaseSize(QSize(0, 19));
         RotateY->setMaximum(720);
         RotateY->setSliderPosition(360);
@@ -179,6 +180,7 @@ public:
         sizePolicy1.setHeightForWidth(RotateX->sizePolicy().hasHeightForWidth());
         RotateX->setSizePolicy(sizePolicy1);
         RotateX->setMinimumSize(QSize(0, 19));
+        RotateX->setMaximumSize(QSize(16777215, 19));
         RotateX->setBaseSize(QSize(0, 19));
         RotateX->setMaximum(720);
         RotateX->setSliderPosition(360);
@@ -211,6 +213,7 @@ public:
         sizePolicy1.setHeightForWidth(RotateZ->sizePolicy().hasHeightForWidth());
         RotateZ->setSizePolicy(sizePolicy1);
         RotateZ->setMinimumSize(QSize(0, 19));
+        RotateZ->setMaximumSize(QSize(16777215, 19));
         RotateZ->setBaseSize(QSize(0, 19));
         RotateZ->setMaximum(720);
         RotateZ->setSliderPosition(360);
@@ -241,7 +244,8 @@ public:
         Scale->setObjectName(QString::fromUtf8("Scale"));
         sizePolicy1.setHeightForWidth(Scale->sizePolicy().hasHeightForWidth());
         Scale->setSizePolicy(sizePolicy1);
-        Scale->setMinimumSize(QSize(0, 0));
+        Scale->setMinimumSize(QSize(0, 19));
+        Scale->setMaximumSize(QSize(16777215, 19));
         Scale->setBaseSize(QSize(0, 19));
         Scale->setStyleSheet(QString::fromUtf8("QSlider{\n"
 "	height: 19px;\n"
@@ -292,11 +296,11 @@ public:
 
         Scale_5 = new QSlider(groupBox_3);
         Scale_5->setObjectName(QString::fromUtf8("Scale_5"));
-        QSizePolicy sizePolicy2(QSizePolicy::Expanding, QSizePolicy::Preferred);
-        sizePolicy2.setHorizontalStretch(0);
-        sizePolicy2.setVerticalStretch(0);
-        sizePolicy2.setHeightForWidth(Scale_5->sizePolicy().hasHeightForWidth());
-        Scale_5->setSizePolicy(sizePolicy2);
+        sizePolicy1.setHeightForWidth(Scale_5->sizePolicy().hasHeightForWidth());
+        Scale_5->setSizePolicy(sizePolicy1);
+        Scale_5->setMinimumSize(QSize(0, 19));
+        Scale_5->setMaximumSize(QSize(16777215, 19));
+        Scale_5->setBaseSize(QSize(0, 19));
         Scale_5->setMinimum(0);
         Scale_5->setMaximum(300);
         Scale_5->setSingleStep(1);
@@ -326,8 +330,11 @@ public:
 
         Scale_6 = new QSlider(groupBox_3);
         Scale_6->setObjectName(QString::fromUtf8("Scale_6"));
-        sizePolicy2.setHeightForWidth(Scale_6->sizePolicy().hasHeightForWidth());
-        Scale_6->setSizePolicy(sizePolicy2);
+        sizePolicy1.setHeightForWidth(Scale_6->sizePolicy().hasHeightForWidth());
+        Scale_6->setSizePolicy(sizePolicy1);
+        Scale_6->setMinimumSize(QSize(0, 19));
+        Scale_6->setMaximumSize(QSize(16777215, 19));
+        Scale_6->setBaseSize(QSize(0, 19));
         Scale_6->setMinimum(0);
         Scale_6->setMaximum(300);
         Scale_6->setSingleStep(1);
@@ -455,8 +462,11 @@ public:
         gridLayout_14->setObjectName(QString::fromUtf8("gridLayout_14"));
         Scale_4 = new QSlider(groupBox_8);
         Scale_4->setObjectName(QString::fromUtf8("Scale_4"));
-        sizePolicy2.setHeightForWidth(Scale_4->sizePolicy().hasHeightForWidth());
-        Scale_4->setSizePolicy(sizePolicy2);
+        sizePolicy1.setHeightForWidth(Scale_4->sizePolicy().hasHeightForWidth());
+        Scale_4->setSizePolicy(sizePolicy1);
+        Scale_4->setMinimumSize(QSize(0, 19));
+        Scale_4->setMaximumSize(QSize(16777215, 19));
+        Scale_4->setBaseSize(QSize(0, 19));
         Scale_4->setMinimum(0);
         Scale_4->setMaximum(300);
         Scale_4->setSingleStep(1);
@@ -493,11 +503,11 @@ public:
 
         FileButton = new QPushButton(centralwidget);
         FileButton->setObjectName(QString::fromUtf8("FileButton"));
-        QSizePolicy sizePolicy3(QSizePolicy::Preferred, QSizePolicy::Preferred);
-        sizePolicy3.setHorizontalStretch(0);
-        sizePolicy3.setVerticalStretch(0);
-        sizePolicy3.setHeightForWidth(FileButton->sizePolicy().hasHeightForWidth());
-        FileButton->setSizePolicy(sizePolicy3);
+        QSizePolicy sizePolicy2(QSizePolicy::Preferred, QSizePolicy::Preferred);
+        sizePolicy2.setHorizontalStretch(0);
+        sizePolicy2.setVerticalStretch(0);
+        sizePolicy2.setHeightForWidth(FileButton->sizePolicy().hasHeightForWidth());
+        FileButton->setSizePolicy(sizePolicy2);
         FileButton->setMaximumSize(QSize(16777215, 50));
         FileButton->setFont(font1);
 
@@ -513,8 +523,8 @@ public:
         gridLayout_12->setObjectName(QString::fromUtf8("gridLayout_12"));
         label = new QLabel(groupBox_6);
         label->setObjectName(QString::fromUtf8("label"));
-        sizePolicy3.setHeightForWidth(label->sizePolicy().hasHeightForWidth());
-        label->setSizePolicy(sizePolicy3);
+        sizePolicy2.setHeightForWidth(label->sizePolicy().hasHeightForWidth());
+        label->setSizePolicy(sizePolicy2);
         label->setBaseSize(QSize(0, 0));
         label->setFont(font1);
         label->setAlignment(Qt::AlignCenter);
@@ -526,6 +536,7 @@ public:
         sizePolicy1.setHeightForWidth(MoveX->sizePolicy().hasHeightForWidth());
         MoveX->setSizePolicy(sizePolicy1);
         MoveX->setMinimumSize(QSize(0, 19));
+        MoveX->setMaximumSize(QSize(16777215, 19));
         MoveX->setBaseSize(QSize(0, 19));
         MoveX->setMinimum(-360);
         MoveX->setMaximum(360);
@@ -553,12 +564,13 @@ public:
 
         MoveY = new QSlider(groupBox_6);
         MoveY->setObjectName(QString::fromUtf8("MoveY"));
-        QSizePolicy sizePolicy4(QSizePolicy::Preferred, QSizePolicy::Fixed);
-        sizePolicy4.setHorizontalStretch(0);
-        sizePolicy4.setVerticalStretch(19);
-        sizePolicy4.setHeightForWidth(MoveY->sizePolicy().hasHeightForWidth());
-        MoveY->setSizePolicy(sizePolicy4);
+        QSizePolicy sizePolicy3(QSizePolicy::Preferred, QSizePolicy::Fixed);
+        sizePolicy3.setHorizontalStretch(0);
+        sizePolicy3.setVerticalStretch(19);
+        sizePolicy3.setHeightForWidth(MoveY->sizePolicy().hasHeightForWidth());
+        MoveY->setSizePolicy(sizePolicy3);
         MoveY->setMinimumSize(QSize(0, 19));
+        MoveY->setMaximumSize(QSize(16777215, 19));
         MoveY->setBaseSize(QSize(0, 19));
         MoveY->setMinimum(-360);
         MoveY->setMaximum(360);
@@ -587,9 +599,10 @@ public:
 
         MoveZ = new QSlider(groupBox_6);
         MoveZ->setObjectName(QString::fromUtf8("MoveZ"));
-        sizePolicy4.setHeightForWidth(MoveZ->sizePolicy().hasHeightForWidth());
-        MoveZ->setSizePolicy(sizePolicy4);
+        sizePolicy3.setHeightForWidth(MoveZ->sizePolicy().hasHeightForWidth());
+        MoveZ->setSizePolicy(sizePolicy3);
         MoveZ->setMinimumSize(QSize(0, 19));
+        MoveZ->setMaximumSize(QSize(16777215, 19));
         MoveZ->setBaseSize(QSize(0, 19));
         MoveZ->setMinimum(-360);
         MoveZ->setMaximum(360);
@@ -630,8 +643,11 @@ public:
 
         Scale_2 = new QSlider(groupBox_2);
         Scale_2->setObjectName(QString::fromUtf8("Scale_2"));
-        sizePolicy2.setHeightForWidth(Scale_2->sizePolicy().hasHeightForWidth());
-        Scale_2->setSizePolicy(sizePolicy2);
+        sizePolicy1.setHeightForWidth(Scale_2->sizePolicy().hasHeightForWidth());
+        Scale_2->setSizePolicy(sizePolicy1);
+        Scale_2->setMinimumSize(QSize(0, 19));
+        Scale_2->setMaximumSize(QSize(16777215, 19));
+        Scale_2->setBaseSize(QSize(0, 19));
         Scale_2->setMinimum(0);
         Scale_2->setMaximum(300);
         Scale_2->setSingleStep(1);
@@ -656,8 +672,11 @@ public:
 
         Scale_3 = new QSlider(groupBox_2);
         Scale_3->setObjectName(QString::fromUtf8("Scale_3"));
-        sizePolicy2.setHeightForWidth(Scale_3->sizePolicy().hasHeightForWidth());
-        Scale_3->setSizePolicy(sizePolicy2);
+        sizePolicy1.setHeightForWidth(Scale_3->sizePolicy().hasHeightForWidth());
+        Scale_3->setSizePolicy(sizePolicy1);
+        Scale_3->setMinimumSize(QSize(0, 19));
+        Scale_3->setMaximumSize(QSize(16777215, 19));
+        Scale_3->setBaseSize(QSize(0, 19));
         Scale_3->setMinimum(0);
         Scale_3->setMaximum(300);
         Scale_3->setSingleStep(1);
