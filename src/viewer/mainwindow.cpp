@@ -89,7 +89,7 @@ void MainWindow::FilePressed() {
   parserr((char *)OGLWidget->FindFile.toStdString().c_str(),
           &(OGLWidget->inff));
   OGLWidget->Allocate();
-  ui->DisplayEdges->setText(QString::number(OGLWidget->inff.indexF / 3));
+  ui->DisplayEdges->setText(QString::number(OGLWidget->inff.indexF / 6));
   ui->DisplayVertices->setText(QString::number(OGLWidget->inff.indexV / 3));
 }
 

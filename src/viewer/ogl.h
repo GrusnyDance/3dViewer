@@ -20,7 +20,7 @@ class OGLW : public QOpenGLWidget, protected QOpenGLFunctions {
   //  void paintFigure();
   //  void drawFigure();
   int lineType = 1;  // 1 for stipple
-  int perspective = 1;  // 1 for on perspective mode
+  int perspective = 0;  // 1 for on perspective mode
   float lineWidth = 1;  // 1 is default and min, max 5
   float pointSize = 2;  // 1 is default, max 10, min 2
   int pointType = 2;  // 0 - disable, 1 - circle, 2 - square

@@ -3,21 +3,16 @@
 
 int main() {
     info a;
-    parserr("objectives/cube.obj", &a);
-    for (unsigned int k = 0; k < a.indexV; k++) {
-        for (unsigned int g = 0; g < 3; g++) {
-            printf("%f ", a.array[k][g]);
-        }
-        printf("\n");
-    }
-    printf("\n");
-    for (unsigned int k = 0; k < a.indexF; k++) {
-        int g = 0;
-        while (a.polygon[k][g] != 0) {
-            printf("%d ", a.polygon[k][g]);
-            g++;
-        }
-        printf("\n");
-    }
+    parserr("objectives/Controller.obj", &a);
+    // for (unsigned int k = 0; k < a.indexV; k++) {
+    //     printf("%f ", a.array[k]);
+    //     if (!((k + 1) % 3)) printf("\n");
+    // }
+    // printf("\n");
+    // for (unsigned int k = 0; k < a.indexF; k++) {
+    //     printf("%d ", a.polygon[k]);
+    //     if (!((k + 1) % 6)) printf("\n");
+    // }
+    printf("\n\n%d\n", a.indexV / 3);
     return 0;
 }

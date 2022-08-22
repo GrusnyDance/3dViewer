@@ -156,7 +156,7 @@ void OGLW::Allocate() {
   ibo.create();
   ibo.bind();
   ibo.setUsagePattern(QOpenGLBuffer::DynamicDraw);
-  ibo.allocate(inff.polygon, sizeof(unsigned) * inff.indexF);
+  ibo.allocate(inff.polygon, sizeof(unsigned int) * inff.indexF);
 
   //  vbo.release();
 
