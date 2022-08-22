@@ -707,7 +707,7 @@ public:
         gridLayout->addItem(verticalSpacer_9, 14, 0, 1, 1);
 
         gridLayout->setRowStretch(0, 2);
-        gridLayout->setRowStretch(1, 5);
+        gridLayout->setRowStretch(1, 6);
         gridLayout->setRowStretch(2, 2);
         gridLayout->setRowStretch(3, 5);
         gridLayout->setRowStretch(4, 1);
@@ -726,7 +726,7 @@ public:
         gridLayout->setColumnStretch(0, 2);
         gridLayout->setColumnStretch(1, 10);
         gridLayout->setRowMinimumHeight(0, 2);
-        gridLayout->setRowMinimumHeight(1, 5);
+        gridLayout->setRowMinimumHeight(1, 6);
         gridLayout->setRowMinimumHeight(2, 2);
         gridLayout->setRowMinimumHeight(3, 5);
         gridLayout->setRowMinimumHeight(4, 1);
@@ -782,7 +782,7 @@ public:
         DisplayMoveY->setText(QCoreApplication::translate("MainWindow", "0", nullptr));
         label_11->setText(QCoreApplication::translate("MainWindow", "Z", nullptr));
         DisplayMoveZ->setText(QCoreApplication::translate("MainWindow", "0", nullptr));
-        groupBox_2->setTitle(QCoreApplication::translate("MainWindow", "Lines", nullptr));
+        groupBox_2->setTitle(QCoreApplication::translate("MainWindow", "Edges", nullptr));
         radioButton_4->setText(QCoreApplication::translate("MainWindow", "Dashed", nullptr));
         label_16->setText(QCoreApplication::translate("MainWindow", "Clr", nullptr));
         label_17->setText(QCoreApplication::translate("MainWindow", "Size", nullptr));

@@ -14,7 +14,7 @@
    <string>3dViewer</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <layout class="QGridLayout" name="gridLayout" rowstretch="2,5,2,5,1,5,1,3,1,4,5,4,1,7,1,7,2" columnstretch="2,10,0" rowminimumheight="2,5,2,5,1,5,1,3,1,4,5,4,1,7,1,7,2">
+   <layout class="QGridLayout" name="gridLayout" rowstretch="2,6,2,5,1,5,1,3,1,4,5,4,1,7,1,7,2" columnstretch="2,10,0" rowminimumheight="2,6,2,5,1,5,1,3,1,4,5,4,1,7,1,7,2">
     <item row="5" column="0">
      <widget class="QGroupBox" name="groupBox_5">
       <property name="font">
@@ -1253,7 +1253,7 @@
        <string notr="true"/>
       </property>
       <property name="title">
-       <string>Lines</string>
+       <string>Edges</string>
       </property>
       <property name="alignment">
        <set>Qt::AlignCenter</set>
