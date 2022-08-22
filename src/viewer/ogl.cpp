@@ -82,16 +82,17 @@ void OGLW::Allocate() {
   //  8,
   //                        5, 7, 8, 5, 8, 6, 1, 5, 6, 1, 6, 2, 2, 6, 8, 2, 8,
   //                        4};
-  GLuint indexes[inff.indexF * 2];
-  for (unsigned i = 0, k = 0; i < inff.indexF; i += 3, k += 6) {
-    indexes[k] = inff.polygon[i] - 1;
-    indexes[k + 1] = inff.polygon[i + 1] - 1;
-    indexes[k + 2] = inff.polygon[i + 1] - 1;
-    indexes[k + 3] = inff.polygon[i + 2] - 1;
-    indexes[k + 4] = inff.polygon[i + 2] - 1;
-    indexes[k + 5] = inff.polygon[i] - 1;
-  }
 
+//  const int sizeF = inff.indexF * 2;
+//  GLuint indexes[sizeF];
+//  for (unsigned i = 0, k = 0; i < inff.indexF; i += 3, k += 6) {
+//    indexes[k] = inff.polygon[i] - 1;
+//    indexes[k + 1] = inff.polygon[i + 1] - 1;
+//    indexes[k + 2] = inff.polygon[i + 1] - 1;
+//    indexes[k + 3] = inff.polygon[i + 2] - 1;
+//    indexes[k + 4] = inff.polygon[i + 2] - 1;
+//    indexes[k + 5] = inff.polygon[i] - 1;
+//  }
   if (vbo.isCreated()) vbo.destroy();
   if (ibo.isCreated()) ibo.destroy();
   if (vao.isCreated()) vao.destroy();
@@ -125,12 +126,14 @@ void OGLW::Allocate() {
   ibo.create();
   ibo.bind();
   ibo.setUsagePattern(QOpenGLBuffer::DynamicDraw);
-  ibo.allocate(indexes, sizeof(indexes));
+  ibo.allocate(inff.polygon, sizeof(unsigned) * inff.indexF);
 
   //  vbo.release();
 
   vao.release();
   prog->release();
+
+  paintStart = 1;
 }
 
 void OGLW::paintGL() {
@@ -174,7 +177,7 @@ void OGLW::paintGL() {
 
     vao.bind();
 
-    glDrawElements(GL_LINES, inff.indexF * 2, GL_UNSIGNED_INT, 0);
+    glDrawElements(GL_LINES, inff.indexF, GL_UNSIGNED_INT, 0);
 
     if (lineType) glDisable(GL_LINE_STIPPLE);
     prog->setUniformValue(prog->uniformLocation("color"), pointColor);

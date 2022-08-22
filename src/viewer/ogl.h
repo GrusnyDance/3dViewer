@@ -71,6 +71,8 @@ class OGLW : public QOpenGLWidget, protected QOpenGLFunctions {
   QOpenGLVertexArrayObject vao;
   QOpenGLBuffer vbo;
   QOpenGLBuffer ibo;
+
+  int paintStart = 0;
 //  void BuildPerspProjMat(float *m, float fov, float aspect,
 //                         float znear, float zfar);
   //    info *data;
