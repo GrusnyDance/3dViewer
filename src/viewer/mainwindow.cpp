@@ -246,7 +246,9 @@ void MainWindow::ScaleUserInput() {
   }
 }
 
-void MainWindow::on_Scale_4_valueChanged(int value)
+
+// sparelis: refactoring needed
+void MainWindow::on_BackColorSlider_valueChanged(int value)
 {
     if (value / 204 == 0) {
         OGLWidget->backColor.setX(225);
@@ -276,4 +278,86 @@ void MainWindow::on_Scale_4_valueChanged(int value)
 
     OGLWidget->update();
 }
+
+
+void MainWindow::on_EdgeColorSlider_valueChanged(int value)
+{
+    if (value / 204 == 0) {
+        OGLWidget->lineColor.setX(225);
+        OGLWidget->lineColor.setY(51 + value);
+        OGLWidget->lineColor.setZ(51);
+    } else if (value / 204 == 1) {
+        OGLWidget->lineColor.setX(255 - (value % 204));
+        OGLWidget->lineColor.setY(255);
+        OGLWidget->lineColor.setZ(51);
+    } else if (value / 204 == 2) {
+        OGLWidget->lineColor.setX(51);
+        OGLWidget->lineColor.setY(255);
+        OGLWidget->lineColor.setZ(51 + (value % 204));
+    } else if (value / 204 == 3) {
+        OGLWidget->lineColor.setX(51);
+        OGLWidget->lineColor.setY(255 - (value % 204));
+        OGLWidget->lineColor.setZ(255);
+    } else if (value / 204 == 4) {
+        OGLWidget->lineColor.setX(51 + (value % 204));
+        OGLWidget->lineColor.setY(51);
+        OGLWidget->lineColor.setZ(255);
+    } else if (value / 204 == 5) {
+        OGLWidget->lineColor.setX(225);
+        OGLWidget->lineColor.setY(51);
+        OGLWidget->lineColor.setZ(255 - (value % 204));
+    }
+
+    OGLWidget->update();
+}
+
+
+void MainWindow::on_VertColorSlider_valueChanged(int value)
+{
+    if (value / 204 == 0) {
+        OGLWidget->pointColor.setX(225);
+        OGLWidget->pointColor.setY(51 + value);
+        OGLWidget->pointColor.setZ(51);
+    } else if (value / 204 == 1) {
+        OGLWidget->pointColor.setX(255 - (value % 204));
+        OGLWidget->pointColor.setY(255);
+        OGLWidget->pointColor.setZ(51);
+    } else if (value / 204 == 2) {
+        OGLWidget->pointColor.setX(51);
+        OGLWidget->pointColor.setY(255);
+        OGLWidget->pointColor.setZ(51 + (value % 204));
+    } else if (value / 204 == 3) {
+        OGLWidget->pointColor.setX(51);
+        OGLWidget->pointColor.setY(255 - (value % 204));
+        OGLWidget->pointColor.setZ(255);
+    } else if (value / 204 == 4) {
+        OGLWidget->pointColor.setX(51 + (value % 204));
+        OGLWidget->pointColor.setY(51);
+        OGLWidget->pointColor.setZ(255);
+    } else if (value / 204 == 5) {
+        OGLWidget->pointColor.setX(225);
+        OGLWidget->pointColor.setY(51);
+        OGLWidget->pointColor.setZ(255 - (value % 204));
+    }
+
+    OGLWidget->update();
+}
+
+
+
+void MainWindow::on_PerspectivePrButton_pressed(){OGLWidget->perspective = 1;}
+
+void MainWindow::on_OrthoPrButton_pressed(){OGLWidget->perspective = 0;}
+
+void MainWindow::on_SolidEdgeButton_pressed(){OGLWidget->lineType = 0;};
+
+void MainWindow::on_DashedEdgeButton_pressed(){OGLWidget->lineType = 1;};
+
+void MainWindow::on_EdgeSizeSlider_valueChanged(int value){OGLWidget->lineWidth = value / 10.0;}
+
+void MainWindow::on_CircleButton_pressed(){OGLWidget->pointType = 1;}
+
+void MainWindow::on_SquareButton_pressed(){OGLWidget->pointType = 2;}
+
+void MainWindow::on_NoButton_pressed(){OGLWidget->pointType = 0;}
 

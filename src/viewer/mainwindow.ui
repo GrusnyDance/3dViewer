@@ -706,7 +706,7 @@
         <number>13</number>
        </property>
        <item row="0" column="1">
-        <widget class="QSlider" name="Scale_4">
+        <widget class="QSlider" name="BackColorSlider">
          <property name="sizePolicy">
           <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
            <horstretch>0</horstretch>
@@ -908,7 +908,7 @@
         </spacer>
        </item>
        <item row="3" column="2" colspan="4">
-        <widget class="QSlider" name="Scale_8">
+        <widget class="QSlider" name="VertColorSlider">
          <property name="sizePolicy">
           <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
            <horstretch>0</horstretch>
@@ -934,16 +934,16 @@
           </size>
          </property>
          <property name="minimum">
-          <number>0</number>
+          <number>1</number>
          </property>
          <property name="maximum">
-          <number>300</number>
+          <number>1224</number>
          </property>
          <property name="singleStep">
           <number>1</number>
          </property>
          <property name="value">
-          <number>100</number>
+          <number>1</number>
          </property>
          <property name="orientation">
           <enum>Qt::Horizontal</enum>
@@ -987,7 +987,7 @@
         </widget>
        </item>
        <item row="1" column="3">
-        <widget class="QRadioButton" name="radioButton_7">
+        <widget class="QRadioButton" name="SquareButton">
          <property name="font">
           <font>
            <family>Arial</family>
@@ -1003,7 +1003,7 @@
         </widget>
        </item>
        <item row="1" column="4">
-        <widget class="QRadioButton" name="radioButton_5">
+        <widget class="QRadioButton" name="NoButton">
          <property name="font">
           <font>
            <family>Arial</family>
@@ -1019,7 +1019,7 @@
         </widget>
        </item>
        <item row="1" column="1" colspan="2">
-        <widget class="QRadioButton" name="radioButton_6">
+        <widget class="QRadioButton" name="CircleButton">
          <property name="font">
           <font>
            <family>Arial</family>
@@ -1226,7 +1226,7 @@
         </spacer>
        </item>
        <item row="5" column="2" colspan="4">
-        <widget class="QSlider" name="Scale_3">
+        <widget class="QSlider" name="EdgeSizeSlider">
          <property name="sizePolicy">
           <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
            <horstretch>0</horstretch>
@@ -1252,16 +1252,16 @@
           </size>
          </property>
          <property name="minimum">
-          <number>0</number>
+          <number>10</number>
          </property>
          <property name="maximum">
-          <number>300</number>
+          <number>50</number>
          </property>
          <property name="singleStep">
           <number>1</number>
          </property>
          <property name="value">
-          <number>100</number>
+          <number>10</number>
          </property>
          <property name="orientation">
           <enum>Qt::Horizontal</enum>
@@ -1269,7 +1269,7 @@
         </widget>
        </item>
        <item row="1" column="4">
-        <widget class="QRadioButton" name="radioButton_4">
+        <widget class="QRadioButton" name="DashedEdgeButton">
          <property name="font">
           <font>
            <family>Arial</family>
@@ -1308,7 +1308,7 @@
         </spacer>
        </item>
        <item row="1" column="1" colspan="2">
-        <widget class="QRadioButton" name="radioButton_3">
+        <widget class="QRadioButton" name="SolidEdgeButton">
          <property name="font">
           <font>
            <family>Arial</family>
@@ -1357,7 +1357,7 @@
         </widget>
        </item>
        <item row="3" column="2" colspan="4">
-        <widget class="QSlider" name="Scale_2">
+        <widget class="QSlider" name="EdgeColorSlider">
          <property name="sizePolicy">
           <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
            <horstretch>0</horstretch>
@@ -1383,16 +1383,19 @@
           </size>
          </property>
          <property name="minimum">
-          <number>0</number>
+          <number>1</number>
          </property>
          <property name="maximum">
-          <number>300</number>
+          <number>1224</number>
          </property>
          <property name="singleStep">
           <number>1</number>
          </property>
          <property name="value">
-          <number>100</number>
+          <number>1</number>
+         </property>
+         <property name="sliderPosition">
+          <number>1</number>
          </property>
          <property name="orientation">
           <enum>Qt::Horizontal</enum>
@@ -1424,7 +1427,7 @@
       </property>
       <layout class="QGridLayout" name="gridLayout_3">
        <item row="0" column="0">
-        <widget class="QRadioButton" name="radioButton">
+        <widget class="QRadioButton" name="PerspectivePrButton">
          <property name="font">
           <font>
            <family>Arial</family>
@@ -1437,7 +1440,7 @@
         </widget>
        </item>
        <item row="0" column="1">
-        <widget class="QRadioButton" name="radioButton_2">
+        <widget class="QRadioButton" name="OrthoPrButton">
          <property name="font">
           <font>
            <family>Arial</family>
@@ -1523,6 +1526,9 @@
     </item>
     <item row="1" column="1" colspan="2">
      <layout class="QGridLayout" name="gridLayout_6" columnstretch="25,3,4,3,5" columnminimumwidth="25,3,4,3,5">
+      <property name="leftMargin">
+       <number>20</number>
+      </property>
       <item row="0" column="0">
        <widget class="QLineEdit" name="FileName">
         <property name="font">
@@ -1530,6 +1536,9 @@
           <family>Arial</family>
           <pointsize>14</pointsize>
          </font>
+        </property>
+        <property name="readOnly">
+         <bool>true</bool>
         </property>
        </widget>
       </item>
@@ -1576,6 +1585,9 @@
 	background-color: transparent;
 }</string>
         </property>
+        <property name="readOnly">
+         <bool>true</bool>
+        </property>
        </widget>
       </item>
       <item row="0" column="1">
@@ -1611,6 +1623,9 @@
 	color: white;
 	background-color: transparent;
 }</string>
+        </property>
+        <property name="readOnly">
+         <bool>true</bool>
         </property>
        </widget>
       </item>

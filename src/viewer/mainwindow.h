@@ -46,7 +46,26 @@ class MainWindow : public QMainWindow {
 
   void updateSliders();
 
-  void on_Scale_4_valueChanged(int value);
+  void on_BackColorSlider_valueChanged(int value);
+  void on_EdgeColorSlider_valueChanged(int value);
+  void on_VertColorSlider_valueChanged(int value);
+
+
+  void on_PerspectivePrButton_pressed();
+
+  void on_OrthoPrButton_pressed();
+
+  void on_SolidEdgeButton_pressed();
+
+  void on_DashedEdgeButton_pressed();
+
+  void on_EdgeSizeSlider_valueChanged(int value);
+
+  void on_CircleButton_pressed();
+
+  void on_SquareButton_pressed();
+
+  void on_NoButton_pressed();
 
 private:
   Ui::MainWindow *ui;
