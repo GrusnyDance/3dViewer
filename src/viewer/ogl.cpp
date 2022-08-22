@@ -14,6 +14,7 @@ OGLW::~OGLW() {
 
   if (ibo.isCreated()) ibo.destroy();
   if (vbo.isCreated()) vbo.destroy();
+  if (vao.isCreated()) vao.destroy();
   delete prog;
 }
 
@@ -28,20 +29,18 @@ void OGLW::initializeGL() {
 
   const char *vertexShaderSource =
       "attribute vec3 position;\n"
-      "attribute vec3 color;\n"
-      "varying vec3 vColor;\n"
       "uniform mat4 projection;\n"
+      "uniform mat4 persp;\n"
       "void main()\n"
       "{\n"
-      "gl_Position = projection * vec4(position.x, position.y, position.z, "
+      "gl_Position = persp * projection * vec4(position.x, position.y, position.z, "
       "1.0);\n"
-      "vColor = color;\n"
       "}\0";
   const char *fragmentShaderSource =
-      "varying vec3 vColor;\n"
+      "uniform vec3 color;\n"
       "void main()\n"
       "{\n"
-      "gl_FragColor = vec4(1, 1, 1, 1);\n"
+      "gl_FragColor = vec4(color.x, color.y, color.z, 1);\n"
       "}\n\0";
   prog = new QOpenGLShaderProgram;
   prog->addShaderFromSourceCode(QOpenGLShader::Vertex, vertexShaderSource);
@@ -153,17 +152,37 @@ void OGLW::paintGL() {
   if (vao.isCreated()) {
     prog->bind();
 
-    projM = moveM * rotateM * scaleM;
-    prog->setUniformValue(prog->uniformLocation("projection"), projM);
+    perspectiveM.setToIdentity();
 
-    //          glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
-    //          if (lineType) {
-    //              glLineStipple(1, 0x3f07)
-    //          }
+    projM = moveM * rotateM * scaleM;
+    if (perspective) {
+    perspectiveM.frustum(-1, 1, -1, 1, 0.8, 3);
+    perspectiveM.translate(0,0, -1.4);
+    }
+    prog->setUniformValue(prog->uniformLocation("projection"), projM);
+    prog->setUniformValue(prog->uniformLocation("persp"), perspectiveM);
+    prog->setUniformValue(prog->uniformLocation("color"), lineColor);
+
+
+
+
+              if (lineType) {
+                  glEnable(GL_LINE_STIPPLE);
+                  glLineStipple(3, 0x00FF);
+              }
+              glLineWidth(lineWidth);
 
     vao.bind();
 
     glDrawElements(GL_LINES, inff.indexF * 2, GL_UNSIGNED_INT, 0);
+
+    if (lineType) glDisable(GL_LINE_STIPPLE);
+    prog->setUniformValue(prog->uniformLocation("color"), pointColor);
+
+    glPointSize(pointSize);
+    if (pointType == 1) glEnable(GL_POINT_SMOOTH);
+    if (pointType) glDrawArrays(GL_POINTS, 0, inff.indexV);
+    if (pointType == 1) glDisable(GL_POINT_SMOOTH);
 
     vao.release();
     prog->release();
@@ -172,12 +191,12 @@ void OGLW::paintGL() {
 
 void OGLW::resizeGL(int w, int h) {
   projM.setToIdentity();
-  projM.perspective(45.0f, GLfloat(w) / h, 0.01f, 100.0f);
+//  projM.perspective(45.0f, GLfloat(w) / h, 0.01f, 100.0f);
   //      glViewport(0,0, w, h);
   //        glMatrixMode(GL_PROJECTION);
   //        glLoadIdentity();
 
-  //        glFrustum(-1, 1, -1, 1, 1, 20);
+//          glFrustum(-1, 1, -1, 1, 1, 20);
 
   // область видимости объема должна быть адаптивной
 }
