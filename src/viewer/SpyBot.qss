@@ -50,10 +50,10 @@ QRadioButton{
 QRadioButton::indicator::unchecked
 {
         border: none;
-        border-radius: 10px;
+        border-radius: 7px;
         background-color: lavender;
-        width: 20px;
-        height: 20px;
+        width: 15px;
+        height: 15px;
 
 }
 
@@ -61,10 +61,10 @@ QRadioButton::indicator::unchecked
 QRadioButton::indicator::checked
 {
         border: none;
-        border-radius: 10px;
-        background-color: qlineargradient(spread:pad, x1:0, y1:0.511, x2:1, y2:0.511, stop:0 rgba(0, 172, 149, 255),stop:0.995192 rgba(54, 197, 177, 255));
-        width: 20px;
-        height: 20px;
+        border-radius: 7px;
+        background-color: #525366;
+        width: 15px;
+        height: 15px;
 
 }
 
