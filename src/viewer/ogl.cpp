@@ -1,11 +1,10 @@
 #include "ogl.h"
 
-#include <iostream>
+#include <fstream>
+#include <cstdio>
 
 OGLW::OGLW(QWidget *parent) : QOpenGLWidget(parent) {
-  //    z = 0;
-  //    connect(&tmr, SIGNAL(timeout()), this, SLOT(changeZ()));
-  //    tmr.start(1);
+  this->fromFile();
 }
 
 OGLW::~OGLW() {
@@ -16,6 +15,38 @@ OGLW::~OGLW() {
   if (vbo.isCreated()) vbo.destroy();
   if (vao.isCreated()) vao.destroy();
   delete prog;
+  this->toFile();
+}
+
+void OGLW::toFile() {
+    FILE* file = fopen("config.cfg", "w");
+    if (file) {
+    fprintf(file, "%d %d %f %f %d %f %f %f %f %f %f",lineType, perspective, lineWidth, pointSize, pointType, lineColor[0], lineColor[1], lineColor[2], pointColor[0], pointColor[1], pointColor[2]);
+            fclose(file);
+    }
+}
+
+void OGLW::fromFile() {
+    FILE* file = fopen("config.cfg", "r");
+    if (file) {
+    int a = fscanf(file, "%d %d %f %f %d %f %f %f %f %f %f", &lineType, &perspective, &lineWidth, &pointSize, &pointType, &lineColor[0], &lineColor[1], &lineColor[2], &pointColor[0], &pointColor[1], &pointColor[2]);
+    if (a != 11 || lineType > 1 || lineType < 0 || perspective > 1 || perspective < 0 || lineWidth > 5 || lineWidth < 1 || pointSize > 10 || pointSize < 1 || pointType > 2 || pointType < 0 || lineColor.x() > 1 || lineColor.x() < 0 || lineColor.y() > 1 || lineColor.y() < 0 || lineColor.z() > 1 || lineColor.z() < 0 || pointColor.x() > 1 || pointColor.x() < 0 || pointColor.y() > 1 || pointColor.y() < 0 || pointColor.z() > 1 || pointColor.z() < 0)
+        this->toDefault();
+    std::fclose(file);
+    } else {
+        this->toDefault();
+    }
+
+}
+
+void OGLW::toDefault() {
+     lineType = 0;
+     perspective = 0;
+     lineWidth = 1;
+     pointSize = 2;
+     pointType = 0;
+     lineColor = {1, 1, 1};
+     pointColor = {1, 1, 1};
 }
 
 // void OGLW::changeZ() {
