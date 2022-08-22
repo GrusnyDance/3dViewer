@@ -130,8 +130,8 @@
         <widget class="QRadioButton" name="radioButton_5">
          <property name="font">
           <font>
-           <family>Sans Serif</family>
-           <pointsize>12</pointsize>
+           <family>Arial</family>
+           <pointsize>13</pointsize>
           </font>
          </property>
          <property name="text">
@@ -229,8 +229,8 @@
         <widget class="QRadioButton" name="radioButton_6">
          <property name="font">
           <font>
-           <family>Sans Serif</family>
-           <pointsize>12</pointsize>
+           <family>Arial</family>
+           <pointsize>13</pointsize>
           </font>
          </property>
          <property name="text">
@@ -242,8 +242,8 @@
         <widget class="QRadioButton" name="radioButton_7">
          <property name="font">
           <font>
-           <family>Sans Serif</family>
-           <pointsize>12</pointsize>
+           <family>Arial</family>
+           <pointsize>13</pointsize>
           </font>
          </property>
          <property name="text">
@@ -781,8 +781,8 @@
         <widget class="QRadioButton" name="radioButton_4">
          <property name="font">
           <font>
-           <family>Sans Serif</family>
-           <pointsize>12</pointsize>
+           <family>Arial</family>
+           <pointsize>13</pointsize>
           </font>
          </property>
          <property name="text">
@@ -880,8 +880,8 @@
         <widget class="QRadioButton" name="radioButton_3">
          <property name="font">
           <font>
-           <family>Sans Serif</family>
-           <pointsize>12</pointsize>
+           <family>Arial</family>
+           <pointsize>13</pointsize>
           </font>
          </property>
          <property name="text">
@@ -917,8 +917,8 @@
         <widget class="QRadioButton" name="radioButton">
          <property name="font">
           <font>
-           <family>Sans Serif</family>
-           <pointsize>12</pointsize>
+           <family>Arial</family>
+           <pointsize>13</pointsize>
           </font>
          </property>
          <property name="text">
@@ -930,8 +930,8 @@
         <widget class="QRadioButton" name="radioButton_2">
          <property name="font">
           <font>
-           <family>Sans Serif</family>
-           <pointsize>12</pointsize>
+           <family>Arial</family>
+           <pointsize>13</pointsize>
           </font>
          </property>
          <property name="text">
