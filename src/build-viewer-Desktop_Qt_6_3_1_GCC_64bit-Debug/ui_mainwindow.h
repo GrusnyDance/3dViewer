@@ -49,21 +49,23 @@ public:
     QLabel *label_17;
     QGroupBox *groupBox_6;
     QGridLayout *gridLayout_12;
-    QLabel *label;
-    QSlider *MoveX;
-    QLineEdit *DisplayMoveX;
-    QLabel *label_12;
     QSlider *MoveY;
-    QLineEdit *DisplayMoveY;
+    QLabel *label_12;
     QLabel *label_11;
+    QLineEdit *DisplayMoveX;
+    QSlider *MoveX;
+    QLabel *label;
     QSlider *MoveZ;
+    QLineEdit *DisplayMoveY;
     QLineEdit *DisplayMoveZ;
+    QSpacerItem *horizontalSpacer_3;
     QSpacerItem *verticalSpacer_5;
     QSpacerItem *verticalSpacer_7;
     QGroupBox *groupBox_7;
     QGridLayout *gridLayout_13;
-    QSlider *Scale;
     QLineEdit *DisplayScale;
+    QSlider *Scale;
+    QSpacerItem *horizontalSpacer_5;
     QSpacerItem *verticalSpacer_9;
     QGroupBox *groupBox_8;
     QGridLayout *gridLayout_14;
@@ -76,13 +78,14 @@ public:
     QGridLayout *gridLayout_11;
     QLabel *label_13;
     QLabel *label_14;
-    QLineEdit *DisplayRotateZ;
-    QLabel *label_15;
-    QSlider *RotateY;
-    QSlider *RotateX;
     QLineEdit *DisplayRotateX;
-    QLineEdit *DisplayRotateY;
+    QLineEdit *DisplayRotateZ;
+    QSlider *RotateY;
     QSlider *RotateZ;
+    QLabel *label_15;
+    QSlider *RotateX;
+    QLineEdit *DisplayRotateY;
+    QSpacerItem *horizontalSpacer_4;
     QPushButton *FileButton;
     QGridLayout *gridLayout_4;
     QLabel *label_2;
@@ -277,23 +280,55 @@ public:
         gridLayout_12 = new QGridLayout(groupBox_6);
         gridLayout_12->setObjectName(QString::fromUtf8("gridLayout_12"));
         gridLayout_12->setContentsMargins(9, -1, 9, -1);
-        label = new QLabel(groupBox_6);
-        label->setObjectName(QString::fromUtf8("label"));
-        QSizePolicy sizePolicy1(QSizePolicy::Preferred, QSizePolicy::Preferred);
+        MoveY = new QSlider(groupBox_6);
+        MoveY->setObjectName(QString::fromUtf8("MoveY"));
+        QSizePolicy sizePolicy1(QSizePolicy::Preferred, QSizePolicy::Fixed);
         sizePolicy1.setHorizontalStretch(0);
-        sizePolicy1.setVerticalStretch(0);
-        sizePolicy1.setHeightForWidth(label->sizePolicy().hasHeightForWidth());
-        label->setSizePolicy(sizePolicy1);
-        label->setBaseSize(QSize(0, 0));
+        sizePolicy1.setVerticalStretch(19);
+        sizePolicy1.setHeightForWidth(MoveY->sizePolicy().hasHeightForWidth());
+        MoveY->setSizePolicy(sizePolicy1);
+        MoveY->setMinimumSize(QSize(0, 19));
+        MoveY->setMaximumSize(QSize(16777215, 19));
+        MoveY->setBaseSize(QSize(0, 19));
+        MoveY->setMinimum(-360);
+        MoveY->setMaximum(360);
+        MoveY->setOrientation(Qt::Horizontal);
+        MoveY->setInvertedControls(true);
+
+        gridLayout_12->addWidget(MoveY, 1, 1, 1, 1);
+
+        label_12 = new QLabel(groupBox_6);
+        label_12->setObjectName(QString::fromUtf8("label_12"));
         QFont font3;
         font3.setFamilies({QString::fromUtf8("Arial")});
         font3.setPointSize(14);
         font3.setBold(true);
         font3.setStyleStrategy(QFont::PreferAntialias);
-        label->setFont(font3);
-        label->setAlignment(Qt::AlignCenter);
+        label_12->setFont(font3);
+        label_12->setAlignment(Qt::AlignCenter);
 
-        gridLayout_12->addWidget(label, 0, 0, 1, 1);
+        gridLayout_12->addWidget(label_12, 1, 0, 1, 1);
+
+        label_11 = new QLabel(groupBox_6);
+        label_11->setObjectName(QString::fromUtf8("label_11"));
+        label_11->setFont(font3);
+        label_11->setScaledContents(true);
+        label_11->setAlignment(Qt::AlignCenter);
+
+        gridLayout_12->addWidget(label_11, 5, 0, 1, 1);
+
+        DisplayMoveX = new QLineEdit(groupBox_6);
+        DisplayMoveX->setObjectName(QString::fromUtf8("DisplayMoveX"));
+        QSizePolicy sizePolicy2(QSizePolicy::Preferred, QSizePolicy::Fixed);
+        sizePolicy2.setHorizontalStretch(0);
+        sizePolicy2.setVerticalStretch(0);
+        sizePolicy2.setHeightForWidth(DisplayMoveX->sizePolicy().hasHeightForWidth());
+        DisplayMoveX->setSizePolicy(sizePolicy2);
+        DisplayMoveX->setMaximumSize(QSize(16777215, 16777215));
+        DisplayMoveX->setFont(font);
+        DisplayMoveX->setFocusPolicy(Qt::StrongFocus);
+
+        gridLayout_12->addWidget(DisplayMoveX, 0, 3, 1, 1);
 
         MoveX = new QSlider(groupBox_6);
         MoveX->setObjectName(QString::fromUtf8("MoveX"));
@@ -309,65 +344,23 @@ public:
 
         gridLayout_12->addWidget(MoveX, 0, 1, 1, 1);
 
-        DisplayMoveX = new QLineEdit(groupBox_6);
-        DisplayMoveX->setObjectName(QString::fromUtf8("DisplayMoveX"));
-        QSizePolicy sizePolicy2(QSizePolicy::Preferred, QSizePolicy::Fixed);
-        sizePolicy2.setHorizontalStretch(0);
-        sizePolicy2.setVerticalStretch(0);
-        sizePolicy2.setHeightForWidth(DisplayMoveX->sizePolicy().hasHeightForWidth());
-        DisplayMoveX->setSizePolicy(sizePolicy2);
-        DisplayMoveX->setMaximumSize(QSize(16777215, 16777215));
-        DisplayMoveX->setFont(font);
-        DisplayMoveX->setFocusPolicy(Qt::StrongFocus);
-
-        gridLayout_12->addWidget(DisplayMoveX, 0, 2, 1, 1);
-
-        label_12 = new QLabel(groupBox_6);
-        label_12->setObjectName(QString::fromUtf8("label_12"));
-        label_12->setFont(font3);
-        label_12->setAlignment(Qt::AlignCenter);
-
-        gridLayout_12->addWidget(label_12, 1, 0, 1, 1);
-
-        MoveY = new QSlider(groupBox_6);
-        MoveY->setObjectName(QString::fromUtf8("MoveY"));
-        QSizePolicy sizePolicy3(QSizePolicy::Preferred, QSizePolicy::Fixed);
+        label = new QLabel(groupBox_6);
+        label->setObjectName(QString::fromUtf8("label"));
+        QSizePolicy sizePolicy3(QSizePolicy::Preferred, QSizePolicy::Preferred);
         sizePolicy3.setHorizontalStretch(0);
-        sizePolicy3.setVerticalStretch(19);
-        sizePolicy3.setHeightForWidth(MoveY->sizePolicy().hasHeightForWidth());
-        MoveY->setSizePolicy(sizePolicy3);
-        MoveY->setMinimumSize(QSize(0, 19));
-        MoveY->setMaximumSize(QSize(16777215, 19));
-        MoveY->setBaseSize(QSize(0, 19));
-        MoveY->setMinimum(-360);
-        MoveY->setMaximum(360);
-        MoveY->setOrientation(Qt::Horizontal);
-        MoveY->setInvertedControls(true);
+        sizePolicy3.setVerticalStretch(0);
+        sizePolicy3.setHeightForWidth(label->sizePolicy().hasHeightForWidth());
+        label->setSizePolicy(sizePolicy3);
+        label->setBaseSize(QSize(0, 0));
+        label->setFont(font3);
+        label->setAlignment(Qt::AlignCenter);
 
-        gridLayout_12->addWidget(MoveY, 1, 1, 1, 1);
-
-        DisplayMoveY = new QLineEdit(groupBox_6);
-        DisplayMoveY->setObjectName(QString::fromUtf8("DisplayMoveY"));
-        sizePolicy2.setHeightForWidth(DisplayMoveY->sizePolicy().hasHeightForWidth());
-        DisplayMoveY->setSizePolicy(sizePolicy2);
-        DisplayMoveY->setMaximumSize(QSize(16777215, 16777215));
-        DisplayMoveY->setFont(font);
-        DisplayMoveY->setFocusPolicy(Qt::StrongFocus);
-
-        gridLayout_12->addWidget(DisplayMoveY, 1, 2, 1, 1);
-
-        label_11 = new QLabel(groupBox_6);
-        label_11->setObjectName(QString::fromUtf8("label_11"));
-        label_11->setFont(font3);
-        label_11->setScaledContents(true);
-        label_11->setAlignment(Qt::AlignCenter);
-
-        gridLayout_12->addWidget(label_11, 5, 0, 1, 1);
+        gridLayout_12->addWidget(label, 0, 0, 1, 1);
 
         MoveZ = new QSlider(groupBox_6);
         MoveZ->setObjectName(QString::fromUtf8("MoveZ"));
-        sizePolicy3.setHeightForWidth(MoveZ->sizePolicy().hasHeightForWidth());
-        MoveZ->setSizePolicy(sizePolicy3);
+        sizePolicy1.setHeightForWidth(MoveZ->sizePolicy().hasHeightForWidth());
+        MoveZ->setSizePolicy(sizePolicy1);
         MoveZ->setMinimumSize(QSize(0, 19));
         MoveZ->setMaximumSize(QSize(16777215, 19));
         MoveZ->setBaseSize(QSize(0, 19));
@@ -378,6 +371,16 @@ public:
 
         gridLayout_12->addWidget(MoveZ, 5, 1, 1, 1);
 
+        DisplayMoveY = new QLineEdit(groupBox_6);
+        DisplayMoveY->setObjectName(QString::fromUtf8("DisplayMoveY"));
+        sizePolicy2.setHeightForWidth(DisplayMoveY->sizePolicy().hasHeightForWidth());
+        DisplayMoveY->setSizePolicy(sizePolicy2);
+        DisplayMoveY->setMaximumSize(QSize(16777215, 16777215));
+        DisplayMoveY->setFont(font);
+        DisplayMoveY->setFocusPolicy(Qt::StrongFocus);
+
+        gridLayout_12->addWidget(DisplayMoveY, 1, 3, 1, 1);
+
         DisplayMoveZ = new QLineEdit(groupBox_6);
         DisplayMoveZ->setObjectName(QString::fromUtf8("DisplayMoveZ"));
         sizePolicy2.setHeightForWidth(DisplayMoveZ->sizePolicy().hasHeightForWidth());
@@ -386,14 +389,20 @@ public:
         DisplayMoveZ->setFont(font);
         DisplayMoveZ->setFocusPolicy(Qt::StrongFocus);
 
-        gridLayout_12->addWidget(DisplayMoveZ, 5, 2, 1, 1);
+        gridLayout_12->addWidget(DisplayMoveZ, 5, 3, 1, 1);
+
+        horizontalSpacer_3 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        gridLayout_12->addItem(horizontalSpacer_3, 1, 2, 1, 1);
 
         gridLayout_12->setColumnStretch(0, 2);
         gridLayout_12->setColumnStretch(1, 10);
-        gridLayout_12->setColumnStretch(2, 4);
+        gridLayout_12->setColumnStretch(2, 1);
+        gridLayout_12->setColumnStretch(3, 4);
         gridLayout_12->setColumnMinimumWidth(0, 2);
         gridLayout_12->setColumnMinimumWidth(1, 10);
-        gridLayout_12->setColumnMinimumWidth(2, 4);
+        gridLayout_12->setColumnMinimumWidth(2, 1);
+        gridLayout_12->setColumnMinimumWidth(3, 4);
 
         gridLayout->addWidget(groupBox_6, 3, 0, 1, 1);
 
@@ -414,6 +423,16 @@ public:
         gridLayout_13 = new QGridLayout(groupBox_7);
         gridLayout_13->setObjectName(QString::fromUtf8("gridLayout_13"));
         gridLayout_13->setContentsMargins(-1, 9, -1, 9);
+        DisplayScale = new QLineEdit(groupBox_7);
+        DisplayScale->setObjectName(QString::fromUtf8("DisplayScale"));
+        sizePolicy2.setHeightForWidth(DisplayScale->sizePolicy().hasHeightForWidth());
+        DisplayScale->setSizePolicy(sizePolicy2);
+        DisplayScale->setMaximumSize(QSize(16777215, 16777215));
+        DisplayScale->setFont(font);
+        DisplayScale->setFocusPolicy(Qt::StrongFocus);
+
+        gridLayout_13->addWidget(DisplayScale, 0, 2, 1, 1);
+
         Scale = new QSlider(groupBox_7);
         Scale->setObjectName(QString::fromUtf8("Scale"));
         sizePolicy.setHeightForWidth(Scale->sizePolicy().hasHeightForWidth());
@@ -432,18 +451,16 @@ public:
 
         gridLayout_13->addWidget(Scale, 0, 0, 1, 1);
 
-        DisplayScale = new QLineEdit(groupBox_7);
-        DisplayScale->setObjectName(QString::fromUtf8("DisplayScale"));
-        sizePolicy2.setHeightForWidth(DisplayScale->sizePolicy().hasHeightForWidth());
-        DisplayScale->setSizePolicy(sizePolicy2);
-        DisplayScale->setMaximumSize(QSize(16777215, 16777215));
-        DisplayScale->setFont(font);
-        DisplayScale->setFocusPolicy(Qt::StrongFocus);
+        horizontalSpacer_5 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
 
-        gridLayout_13->addWidget(DisplayScale, 0, 1, 1, 1);
+        gridLayout_13->addItem(horizontalSpacer_5, 0, 1, 1, 1);
 
-        gridLayout_13->setColumnStretch(0, 12);
-        gridLayout_13->setColumnStretch(1, 4);
+        gridLayout_13->setColumnStretch(0, 13);
+        gridLayout_13->setColumnStretch(1, 1);
+        gridLayout_13->setColumnStretch(2, 4);
+        gridLayout_13->setColumnMinimumWidth(0, 13);
+        gridLayout_13->setColumnMinimumWidth(1, 1);
+        gridLayout_13->setColumnMinimumWidth(2, 4);
 
         gridLayout->addWidget(groupBox_7, 7, 0, 1, 1);
 
@@ -524,6 +541,16 @@ public:
 
         gridLayout_11->addWidget(label_14, 1, 0, 1, 1);
 
+        DisplayRotateX = new QLineEdit(groupBox_5);
+        DisplayRotateX->setObjectName(QString::fromUtf8("DisplayRotateX"));
+        sizePolicy2.setHeightForWidth(DisplayRotateX->sizePolicy().hasHeightForWidth());
+        DisplayRotateX->setSizePolicy(sizePolicy2);
+        DisplayRotateX->setMaximumSize(QSize(16777215, 16777215));
+        DisplayRotateX->setFont(font);
+        DisplayRotateX->setFocusPolicy(Qt::StrongFocus);
+
+        gridLayout_11->addWidget(DisplayRotateX, 0, 3, 1, 1);
+
         DisplayRotateZ = new QLineEdit(groupBox_5);
         DisplayRotateZ->setObjectName(QString::fromUtf8("DisplayRotateZ"));
         sizePolicy2.setHeightForWidth(DisplayRotateZ->sizePolicy().hasHeightForWidth());
@@ -532,14 +559,7 @@ public:
         DisplayRotateZ->setFont(font);
         DisplayRotateZ->setFocusPolicy(Qt::StrongFocus);
 
-        gridLayout_11->addWidget(DisplayRotateZ, 5, 2, 1, 1);
-
-        label_15 = new QLabel(groupBox_5);
-        label_15->setObjectName(QString::fromUtf8("label_15"));
-        label_15->setFont(font3);
-        label_15->setAlignment(Qt::AlignCenter);
-
-        gridLayout_11->addWidget(label_15, 5, 0, 1, 1);
+        gridLayout_11->addWidget(DisplayRotateZ, 5, 3, 1, 1);
 
         RotateY = new QSlider(groupBox_5);
         RotateY->setObjectName(QString::fromUtf8("RotateY"));
@@ -554,39 +574,6 @@ public:
 
         gridLayout_11->addWidget(RotateY, 1, 1, 1, 1);
 
-        RotateX = new QSlider(groupBox_5);
-        RotateX->setObjectName(QString::fromUtf8("RotateX"));
-        sizePolicy.setHeightForWidth(RotateX->sizePolicy().hasHeightForWidth());
-        RotateX->setSizePolicy(sizePolicy);
-        RotateX->setMinimumSize(QSize(0, 19));
-        RotateX->setMaximumSize(QSize(16777215, 19));
-        RotateX->setBaseSize(QSize(0, 19));
-        RotateX->setMaximum(720);
-        RotateX->setSliderPosition(360);
-        RotateX->setOrientation(Qt::Horizontal);
-
-        gridLayout_11->addWidget(RotateX, 0, 1, 1, 1);
-
-        DisplayRotateX = new QLineEdit(groupBox_5);
-        DisplayRotateX->setObjectName(QString::fromUtf8("DisplayRotateX"));
-        sizePolicy2.setHeightForWidth(DisplayRotateX->sizePolicy().hasHeightForWidth());
-        DisplayRotateX->setSizePolicy(sizePolicy2);
-        DisplayRotateX->setMaximumSize(QSize(16777215, 16777215));
-        DisplayRotateX->setFont(font);
-        DisplayRotateX->setFocusPolicy(Qt::StrongFocus);
-
-        gridLayout_11->addWidget(DisplayRotateX, 0, 2, 1, 1);
-
-        DisplayRotateY = new QLineEdit(groupBox_5);
-        DisplayRotateY->setObjectName(QString::fromUtf8("DisplayRotateY"));
-        sizePolicy2.setHeightForWidth(DisplayRotateY->sizePolicy().hasHeightForWidth());
-        DisplayRotateY->setSizePolicy(sizePolicy2);
-        DisplayRotateY->setMaximumSize(QSize(16777215, 16777215));
-        DisplayRotateY->setFont(font);
-        DisplayRotateY->setFocusPolicy(Qt::StrongFocus);
-
-        gridLayout_11->addWidget(DisplayRotateY, 1, 2, 1, 1);
-
         RotateZ = new QSlider(groupBox_5);
         RotateZ->setObjectName(QString::fromUtf8("RotateZ"));
         sizePolicy.setHeightForWidth(RotateZ->sizePolicy().hasHeightForWidth());
@@ -600,19 +587,55 @@ public:
 
         gridLayout_11->addWidget(RotateZ, 5, 1, 1, 1);
 
+        label_15 = new QLabel(groupBox_5);
+        label_15->setObjectName(QString::fromUtf8("label_15"));
+        label_15->setFont(font3);
+        label_15->setAlignment(Qt::AlignCenter);
+
+        gridLayout_11->addWidget(label_15, 5, 0, 1, 1);
+
+        RotateX = new QSlider(groupBox_5);
+        RotateX->setObjectName(QString::fromUtf8("RotateX"));
+        sizePolicy.setHeightForWidth(RotateX->sizePolicy().hasHeightForWidth());
+        RotateX->setSizePolicy(sizePolicy);
+        RotateX->setMinimumSize(QSize(0, 19));
+        RotateX->setMaximumSize(QSize(16777215, 19));
+        RotateX->setBaseSize(QSize(0, 19));
+        RotateX->setMaximum(720);
+        RotateX->setSliderPosition(360);
+        RotateX->setOrientation(Qt::Horizontal);
+
+        gridLayout_11->addWidget(RotateX, 0, 1, 1, 1);
+
+        DisplayRotateY = new QLineEdit(groupBox_5);
+        DisplayRotateY->setObjectName(QString::fromUtf8("DisplayRotateY"));
+        sizePolicy2.setHeightForWidth(DisplayRotateY->sizePolicy().hasHeightForWidth());
+        DisplayRotateY->setSizePolicy(sizePolicy2);
+        DisplayRotateY->setMaximumSize(QSize(16777215, 16777215));
+        DisplayRotateY->setFont(font);
+        DisplayRotateY->setFocusPolicy(Qt::StrongFocus);
+
+        gridLayout_11->addWidget(DisplayRotateY, 1, 3, 1, 1);
+
+        horizontalSpacer_4 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        gridLayout_11->addItem(horizontalSpacer_4, 1, 2, 1, 1);
+
         gridLayout_11->setColumnStretch(0, 2);
         gridLayout_11->setColumnStretch(1, 10);
-        gridLayout_11->setColumnStretch(2, 4);
+        gridLayout_11->setColumnStretch(2, 1);
+        gridLayout_11->setColumnStretch(3, 4);
         gridLayout_11->setColumnMinimumWidth(0, 2);
         gridLayout_11->setColumnMinimumWidth(1, 10);
-        gridLayout_11->setColumnMinimumWidth(2, 4);
+        gridLayout_11->setColumnMinimumWidth(2, 1);
+        gridLayout_11->setColumnMinimumWidth(3, 4);
 
         gridLayout->addWidget(groupBox_5, 5, 0, 1, 1);
 
         FileButton = new QPushButton(centralwidget);
         FileButton->setObjectName(QString::fromUtf8("FileButton"));
-        sizePolicy1.setHeightForWidth(FileButton->sizePolicy().hasHeightForWidth());
-        FileButton->setSizePolicy(sizePolicy1);
+        sizePolicy3.setHeightForWidth(FileButton->sizePolicy().hasHeightForWidth());
+        FileButton->setSizePolicy(sizePolicy3);
         FileButton->setMaximumSize(QSize(16777215, 50));
         FileButton->setFont(font3);
 
@@ -857,11 +880,11 @@ public:
         label_16->setText(QCoreApplication::translate("MainWindow", "Clr", nullptr));
         label_17->setText(QCoreApplication::translate("MainWindow", "Size", nullptr));
         groupBox_6->setTitle(QCoreApplication::translate("MainWindow", "Move", nullptr));
-        label->setText(QCoreApplication::translate("MainWindow", "X", nullptr));
-        DisplayMoveX->setText(QCoreApplication::translate("MainWindow", "0", nullptr));
         label_12->setText(QCoreApplication::translate("MainWindow", "Y", nullptr));
-        DisplayMoveY->setText(QCoreApplication::translate("MainWindow", "0", nullptr));
         label_11->setText(QCoreApplication::translate("MainWindow", "Z", nullptr));
+        DisplayMoveX->setText(QCoreApplication::translate("MainWindow", "0", nullptr));
+        label->setText(QCoreApplication::translate("MainWindow", "X", nullptr));
+        DisplayMoveY->setText(QCoreApplication::translate("MainWindow", "0", nullptr));
         DisplayMoveZ->setText(QCoreApplication::translate("MainWindow", "0", nullptr));
         groupBox_7->setTitle(QCoreApplication::translate("MainWindow", "Scale", nullptr));
         DisplayScale->setText(QCoreApplication::translate("MainWindow", "1.00", nullptr));
@@ -870,9 +893,9 @@ public:
         groupBox_5->setTitle(QCoreApplication::translate("MainWindow", "Rotate", nullptr));
         label_13->setText(QCoreApplication::translate("MainWindow", "X", nullptr));
         label_14->setText(QCoreApplication::translate("MainWindow", "Y", nullptr));
+        DisplayRotateX->setText(QCoreApplication::translate("MainWindow", "360", nullptr));
         DisplayRotateZ->setText(QCoreApplication::translate("MainWindow", "360", nullptr));
         label_15->setText(QCoreApplication::translate("MainWindow", "Z", nullptr));
-        DisplayRotateX->setText(QCoreApplication::translate("MainWindow", "360", nullptr));
         DisplayRotateY->setText(QCoreApplication::translate("MainWindow", "360", nullptr));
         FileButton->setText(QCoreApplication::translate("MainWindow", "Choose file", nullptr));
         label_2->setText(QCoreApplication::translate("MainWindow", "Vertices", nullptr));
