@@ -46,7 +46,9 @@ class MainWindow : public QMainWindow {
 
   void updateSliders();
 
- private:
+  void on_Scale_4_valueChanged(int value);
+
+private:
   Ui::MainWindow *ui;
 };
 #endif  // MAINWINDOW_H

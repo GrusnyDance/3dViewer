@@ -31,7 +31,7 @@ MainWindow::MainWindow(QWidget *parent)
   resize(width * 0.8, height * 0.9);
 
   OGLWidget = new OGLW;
-  ui->gridLayout_4->addWidget(OGLWidget, 1, 0);
+  ui->gridLayout_4->addWidget(OGLWidget, 0, 0);
 
   connect(ui->FileButton, SIGNAL(pressed()), this, SLOT(FilePressed()));
   //    connect(ui->FileButton, SIGNAL(pressed()), OGLWidget, SLOT(Allocate()));
@@ -245,3 +245,35 @@ void MainWindow::ScaleUserInput() {
     return;
   }
 }
+
+void MainWindow::on_Scale_4_valueChanged(int value)
+{
+    if (value / 204 == 0) {
+        OGLWidget->backColor.setX(225);
+        OGLWidget->backColor.setY(51 + value);
+        OGLWidget->backColor.setZ(51);
+    } else if (value / 204 == 1) {
+        OGLWidget->backColor.setX(255 - (value % 204));
+        OGLWidget->backColor.setY(255);
+        OGLWidget->backColor.setZ(51);
+    } else if (value / 204 == 2) {
+        OGLWidget->backColor.setX(51);
+        OGLWidget->backColor.setY(255);
+        OGLWidget->backColor.setZ(51 + (value % 204));
+    } else if (value / 204 == 3) {
+        OGLWidget->backColor.setX(51);
+        OGLWidget->backColor.setY(255 - (value % 204));
+        OGLWidget->backColor.setZ(255);
+    } else if (value / 204 == 4) {
+        OGLWidget->backColor.setX(51 + (value % 204));
+        OGLWidget->backColor.setY(51);
+        OGLWidget->backColor.setZ(255);
+    } else if (value / 204 == 5) {
+        OGLWidget->backColor.setX(225);
+        OGLWidget->backColor.setY(51);
+        OGLWidget->backColor.setZ(255 - (value % 204));
+    }
+
+    OGLWidget->update();
+}
+

@@ -168,7 +168,8 @@ void OGLW::Allocate() {
 }
 
 void OGLW::paintGL() {
-  glClearColor(27.0 / 255.0, 39.0 / 255.0, 50.0 / 255.0, 1);
+  glClearColor(backColor.x() / 255.0, backColor.y() / 255.0, backColor.z() / 255.0, 1);
+  qDebug() << "x is" << backColor.x();
   glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
   //      glMatrixMode(GL_MODELVIEW);
