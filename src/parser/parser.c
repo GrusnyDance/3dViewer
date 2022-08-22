@@ -1,7 +1,7 @@
 #include "3d.h"
 
 static void pars_f(FILE *file, info *src, char *c);
-static void pars_v(FILE *file, info *src, float *max);
+static void pars_v(FILE *file, info *src);
 static int isnum(char c);
 
 void parserr(char *fileName, info *src) {
@@ -15,7 +15,7 @@ void parserr(char *fileName, info *src) {
     while (c != EOF) {
         c = fgetc(file);
         if (buff == 'v' && c == ' ') {
-            pars_v(file, src, &max);
+            pars_v(file, src);
         } else if (buff == 'f' && c == ' ') {
             pars_f(file, src, &c);
         }
@@ -25,15 +25,15 @@ void parserr(char *fileName, info *src) {
     if (!src->indexV) free(src->array);
 
     fclose(file);
-    if (fabs(max) > 1) scale(src, (1 / max));  // scale normalization
+    // if (fabs(max) > 1) scale(src, (1 / max));  // scale normalization
 }
 
-static void pars_v(FILE *file, info *src, float *max) {
+static void pars_v(FILE *file, info *src) {
     src->array = realloc(src->array, (src->indexV + 3) * sizeof(float));
     fscanf(file, "%f %f %f", &src->array[src->indexV], &src->array[src->indexV + 1], &src->array[src->indexV + 2]);
-    if (fabs(src->array[src->indexV]) > *max) *max = fabs(src->array[src->indexV]);
-    if (fabs(src->array[src->indexV] + 1) > *max) *max = fabs(src->array[src->indexV] + 1);
-    if (fabs(src->array[src->indexV] + 2) > *max) *max = fabs(src->array[src->indexV] + 2);
+    if (fabs(src->array[src->indexV]) > src->maxV) src->maxV = fabs(src->array[src->indexV]);
+    if (fabs(src->array[src->indexV + 1]) > src->maxV) src->maxV = fabs(src->array[src->indexV + 1]);
+    if (fabs(src->array[src->indexV + 2]) > src->maxV) src->maxV = fabs(src->array[src->indexV + 2]);
     src->indexV += 3;
 }
 
