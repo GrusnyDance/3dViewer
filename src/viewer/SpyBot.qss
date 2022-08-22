@@ -68,12 +68,10 @@ QRadioButton::indicator::checked
 
 }
 
-
-
 /*-----QGroupBox-----*/
 QGroupBox
 {
-    border: 2px groove #6475B9;
+    border: 2px #2B3D50;
     border-radius: 10px;
     margin-top: 20px;
 
@@ -82,7 +80,7 @@ QGroupBox
 
 QGroupBox
 {
-        background-color: transparent;
+        background-color: #2B3D50;
         font-size: 16px;
 
 }
@@ -113,6 +111,7 @@ QGroupBox::title::disabled
 }
 
 
+
 /*-----QSlider-----*/
 
 QSlider::sub-page:horizontal {
@@ -141,7 +140,7 @@ QSlider::handle:horizontal {
 /*-----QPushButton-----*/
 QPushButton
 {
-	background-color: qlineargradient(spread:pad, x1:0, y1:0.511, x2:1, y2:0.511, stop:0 rgba(0, 172, 149, 255),stop:0.995192 rgba(54, 197, 177, 255));
+        background-color: #0CAC97;
 	color: #fff;
         font-size: 16px;
 	border: none;
@@ -153,7 +152,7 @@ QPushButton
 
 QPushButton::pressed
 {
-	background-color: qlineargradient(spread:pad, x1:0, y1:0.511, x2:1, y2:0.511, stop:0 rgba(0, 207, 179, 255),stop:1 rgba(70, 255, 230, 255));
+        background-color: #0B9986;
 
 }
 

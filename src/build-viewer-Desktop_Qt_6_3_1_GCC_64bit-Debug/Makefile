@@ -1089,6 +1089,17 @@ moc_mainwindow.cpp: ../viewer/mainwindow.h \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtCore/QHashFunctions \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtCore/QMetaType \
 		../viewer/ogl.h \
+		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtGui/QOpenGLFunctions \
+		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtGui/qopenglfunctions.h \
+		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtGui/qopengl.h \
+		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtCore/qt_windows.h \
+		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtGui/qopengles2ext.h \
+		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtGui/qopenglext.h \
+		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtGui/qopenglcontext.h \
+		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtCore/QScopedPointer \
+		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtGui/QSurfaceFormat \
+		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtGui/qsurfaceformat.h \
+		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtGui/qopenglcontext_platform.h \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtOpenGL/QtOpenGL \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtOpenGL/QtOpenGLDepends \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtCore/QtCore \
@@ -1159,7 +1170,6 @@ moc_mainwindow.cpp: ../viewer/mainwindow.h \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtCore/qidentityproxymodel.h \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtCore/qitemselectionmodel.h \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtCore/qjnienvironment.h \
-		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtCore/QScopedPointer \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtCore/qjniobject.h \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtCore/qjsonarray.h \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtCore/qjsonvalue.h \
@@ -1245,7 +1255,6 @@ moc_mainwindow.cpp: ../viewer/mainwindow.h \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtCore/QEvent \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtCore/QMargins \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtGui/qsurface.h \
-		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtGui/qsurfaceformat.h \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtGui/qclipboard.h \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtGui/qcolorspace.h \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtGui/qcolortransform.h \
@@ -1270,15 +1279,7 @@ moc_mainwindow.cpp: ../viewer/mainwindow.h \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtGui/qmovie.h \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtGui/qoffscreensurface.h \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtGui/qoffscreensurface_platform.h \
-		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtGui/qopengl.h \
-		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtCore/qt_windows.h \
-		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtGui/qopengles2ext.h \
-		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtGui/qopenglext.h \
-		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtGui/qopenglcontext.h \
-		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtGui/QSurfaceFormat \
-		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtGui/qopenglcontext_platform.h \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtGui/qopenglextrafunctions.h \
-		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtGui/qopenglfunctions.h \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtGui/qpagedpaintdevice.h \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtGui/qpagelayout.h \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtGui/qpagesize.h \
@@ -1333,6 +1334,8 @@ moc_mainwindow.cpp: ../viewer/mainwindow.h \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtGui/QOpenGLContext \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtGui/QImage \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtOpenGL/qtopenglversion.h \
+		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtOpenGLWidgets/QtOpenGLWidgets \
+		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtOpenGLWidgets/QtOpenGLWidgetsDepends \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtWidgets/QtWidgets \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtWidgets/QtWidgetsDepends \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtWidgets/qabstractbutton.h \
@@ -1461,24 +1464,20 @@ moc_mainwindow.cpp: ../viewer/mainwindow.h \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtWidgets/qwidgetaction.h \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtWidgets/qwizard.h \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtWidgets/qtwidgetsversion.h \
-		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtOpenGLWidgets/QtOpenGLWidgets \
-		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtOpenGLWidgets/QtOpenGLWidgetsDepends \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtOpenGLWidgets/qtopenglwidgetsglobal.h \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtOpenGLWidgets/qtopenglwidgetsexports.h \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtOpenGLWidgets/qopenglwidget.h \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtWidgets/QWidget \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtOpenGLWidgets/qtopenglwidgetsversion.h \
-		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtGui/QOpenGLFunctions \
 		../parser/3d.h \
 		moc_predefs.h \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/libexec/moc
 	/home/darika/Desktop/Qt_install/6.3.1/gcc_64/libexec/moc $(DEFINES) --include /home/darika/view/src/build-viewer-Desktop_Qt_6_3_1_GCC_64bit-Debug/moc_predefs.h -I/home/darika/Desktop/Qt_install/6.3.1/gcc_64/mkspecs/linux-g++ -I/home/darika/view/src/viewer -I/home/darika/Desktop/Qt_install/6.3.1/gcc_64/include -I/home/darika/Desktop/Qt_install/6.3.1/gcc_64/include/QtOpenGLWidgets -I/home/darika/Desktop/Qt_install/6.3.1/gcc_64/include/Qt3DExtras -I/home/darika/Desktop/Qt_install/6.3.1/gcc_64/include/Qt3DRender -I/home/darika/Desktop/Qt_install/6.3.1/gcc_64/include/QtOpenGL -I/home/darika/Desktop/Qt_install/6.3.1/gcc_64/include/QtWidgets -I/home/darika/Desktop/Qt_install/6.3.1/gcc_64/include/Qt3DInput -I/home/darika/Desktop/Qt_install/6.3.1/gcc_64/include/Qt3DLogic -I/home/darika/Desktop/Qt_install/6.3.1/gcc_64/include/Qt3DCore -I/home/darika/Desktop/Qt_install/6.3.1/gcc_64/include/QtGui -I/home/darika/Desktop/Qt_install/6.3.1/gcc_64/include/QtConcurrent -I/home/darika/Desktop/Qt_install/6.3.1/gcc_64/include/QtNetwork -I/home/darika/Desktop/Qt_install/6.3.1/gcc_64/include/QtCore -I. -I/usr/include/c++/11 -I/usr/include/x86_64-linux-gnu/c++/11 -I/usr/include/c++/11/backward -I/usr/lib/gcc/x86_64-linux-gnu/11/include -I/usr/local/include -I/usr/include/x86_64-linux-gnu -I/usr/include ../viewer/mainwindow.h -o moc_mainwindow.cpp
 
 moc_ogl.cpp: ../viewer/ogl.h \
-		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtOpenGL/QtOpenGL \
-		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtOpenGL/QtOpenGLDepends \
-		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtCore/QtCore \
-		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtCore/QtCoreDepends \
+		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtGui/QOpenGLFunctions \
+		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtGui/qopenglfunctions.h \
+		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtGui/qtguiglobal.h \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtCore/qglobal.h \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtCore/qconfig-bootstrapped.h \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtCore/qconfig.h \
@@ -1501,14 +1500,18 @@ moc_ogl.cpp: ../viewer/ogl.h \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtCore/qglobalstatic.h \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtCore/qnumeric.h \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtCore/qversiontagging.h \
-		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtCore/q20algorithm.h \
-		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtCore/q20functional.h \
-		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtCore/q20iterator.h \
-		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtCore/qabstractanimation.h \
-		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtCore/qobject.h \
-		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtCore/qobjectdefs.h \
+		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtGui/qtgui-config.h \
+		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtGui/qtguiexports.h \
+		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtGui/qopengl.h \
+		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtCore/qt_windows.h \
+		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtGui/qopengles2ext.h \
+		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtGui/qopenglext.h \
+		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtGui/qopenglcontext.h \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtCore/qnamespace.h \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtCore/qtmetamacros.h \
+		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtCore/QObject \
+		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtCore/qobject.h \
+		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtCore/qobjectdefs.h \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtCore/qobjectdefs_impl.h \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtCore/qstring.h \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtCore/qchar.h \
@@ -1550,14 +1553,15 @@ moc_ogl.cpp: ../viewer/ogl.h \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtCore/qmath.h \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtCore/qobject_impl.h \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtCore/qbindingstorage.h \
-		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtCore/qabstracteventdispatcher.h \
-		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtCore/qeventloop.h \
-		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtCore/qabstractitemmodel.h \
-		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtCore/qhash.h \
+		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtCore/QScopedPointer \
+		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtCore/qnativeinterface.h \
+		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtGui/QSurfaceFormat \
+		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtGui/qsurfaceformat.h \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtCore/qvariant.h \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtCore/qmap.h \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtCore/qshareddata.h \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtCore/qshareddata_impl.h \
+		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtCore/qhash.h \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtCore/qdebug.h \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtCore/qtextstream.h \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtCore/qstringconverter.h \
@@ -1565,6 +1569,20 @@ moc_ogl.cpp: ../viewer/ogl.h \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtCore/qcontiguouscache.h \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtCore/qsharedpointer.h \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtCore/qsharedpointer_impl.h \
+		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtGui/qopenglcontext_platform.h \
+		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtGui/qwindowdefs.h \
+		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtGui/qwindowdefs_win.h \
+		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtOpenGL/QtOpenGL \
+		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtOpenGL/QtOpenGLDepends \
+		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtCore/QtCore \
+		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtCore/QtCoreDepends \
+		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtCore/q20algorithm.h \
+		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtCore/q20functional.h \
+		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtCore/q20iterator.h \
+		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtCore/qabstractanimation.h \
+		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtCore/qabstracteventdispatcher.h \
+		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtCore/qeventloop.h \
+		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtCore/qabstractitemmodel.h \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtCore/qabstractnativeeventfilter.h \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtCore/qabstractproxymodel.h \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtCore/qanimationgroup.h \
@@ -1572,7 +1590,6 @@ moc_ogl.cpp: ../viewer/ogl.h \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtCore/QMutex \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtCore/qmutex.h \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtCore/qcoreapplication.h \
-		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtCore/qnativeinterface.h \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtCore/qcoreapplication_platform.h \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtCore/qfuture.h \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtCore/qfutureinterface.h \
@@ -1621,7 +1638,6 @@ moc_ogl.cpp: ../viewer/ogl.h \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtCore/qendian.h \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtCore/qfactoryinterface.h \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtCore/qfileselector.h \
-		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtCore/QObject \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtCore/QStringList \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtCore/qfilesystemwatcher.h \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtCore/qfuturesynchronizer.h \
@@ -1629,7 +1645,6 @@ moc_ogl.cpp: ../viewer/ogl.h \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtCore/qidentityproxymodel.h \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtCore/qitemselectionmodel.h \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtCore/qjnienvironment.h \
-		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtCore/QScopedPointer \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtCore/qjniobject.h \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtCore/qjsonarray.h \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtCore/qjsonvalue.h \
@@ -1699,15 +1714,10 @@ moc_ogl.cpp: ../viewer/ogl.h \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtCore/qtcoreversion.h \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtGui/QtGui \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtGui/QtGuiDepends \
-		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtGui/qtguiglobal.h \
-		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtGui/qtgui-config.h \
-		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtGui/qtguiexports.h \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtGui/qabstractfileiconprovider.h \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtGui/qicon.h \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtGui/qpixmap.h \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtGui/qpaintdevice.h \
-		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtGui/qwindowdefs.h \
-		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtGui/qwindowdefs_win.h \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtGui/qcolor.h \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtGui/qrgb.h \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtGui/qrgba64.h \
@@ -1753,7 +1763,6 @@ moc_ogl.cpp: ../viewer/ogl.h \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtCore/QEvent \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtCore/QMargins \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtGui/qsurface.h \
-		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtGui/qsurfaceformat.h \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtGui/qcursor.h \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtGui/qbitmap.h \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtGui/qclipboard.h \
@@ -1782,15 +1791,7 @@ moc_ogl.cpp: ../viewer/ogl.h \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtGui/qmovie.h \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtGui/qoffscreensurface.h \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtGui/qoffscreensurface_platform.h \
-		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtGui/qopengl.h \
-		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtCore/qt_windows.h \
-		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtGui/qopengles2ext.h \
-		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtGui/qopenglext.h \
-		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtGui/qopenglcontext.h \
-		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtGui/QSurfaceFormat \
-		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtGui/qopenglcontext_platform.h \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtGui/qopenglextrafunctions.h \
-		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtGui/qopenglfunctions.h \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtGui/qpagedpaintdevice.h \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtGui/qpagelayout.h \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtGui/qpagesize.h \
@@ -1845,6 +1846,8 @@ moc_ogl.cpp: ../viewer/ogl.h \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtGui/QOpenGLContext \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtGui/QImage \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtOpenGL/qtopenglversion.h \
+		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtOpenGLWidgets/QtOpenGLWidgets \
+		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtOpenGLWidgets/QtOpenGLWidgetsDepends \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtWidgets/QtWidgets \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtWidgets/QtWidgetsDepends \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtWidgets/qtwidgetsglobal.h \
@@ -1981,14 +1984,11 @@ moc_ogl.cpp: ../viewer/ogl.h \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtWidgets/qwidgetaction.h \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtWidgets/qwizard.h \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtWidgets/qtwidgetsversion.h \
-		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtOpenGLWidgets/QtOpenGLWidgets \
-		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtOpenGLWidgets/QtOpenGLWidgetsDepends \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtOpenGLWidgets/qtopenglwidgetsglobal.h \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtOpenGLWidgets/qtopenglwidgetsexports.h \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtOpenGLWidgets/qopenglwidget.h \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtWidgets/QWidget \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtOpenGLWidgets/qtopenglwidgetsversion.h \
-		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtGui/QOpenGLFunctions \
 		../parser/3d.h \
 		moc_predefs.h \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/libexec/moc
@@ -2160,6 +2160,17 @@ main.o: ../viewer/main.cpp ../viewer/mainwindow.h \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtCore/QHashFunctions \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtCore/QMetaType \
 		../viewer/ogl.h \
+		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtGui/QOpenGLFunctions \
+		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtGui/qopenglfunctions.h \
+		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtGui/qopengl.h \
+		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtCore/qt_windows.h \
+		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtGui/qopengles2ext.h \
+		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtGui/qopenglext.h \
+		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtGui/qopenglcontext.h \
+		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtCore/QScopedPointer \
+		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtGui/QSurfaceFormat \
+		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtGui/qsurfaceformat.h \
+		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtGui/qopenglcontext_platform.h \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtOpenGL/QtOpenGL \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtOpenGL/QtOpenGLDepends \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtCore/QtCore \
@@ -2230,7 +2241,6 @@ main.o: ../viewer/main.cpp ../viewer/mainwindow.h \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtCore/qidentityproxymodel.h \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtCore/qitemselectionmodel.h \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtCore/qjnienvironment.h \
-		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtCore/QScopedPointer \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtCore/qjniobject.h \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtCore/qjsonarray.h \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtCore/qjsonvalue.h \
@@ -2316,7 +2326,6 @@ main.o: ../viewer/main.cpp ../viewer/mainwindow.h \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtCore/QEvent \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtCore/QMargins \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtGui/qsurface.h \
-		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtGui/qsurfaceformat.h \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtGui/qclipboard.h \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtGui/qcolorspace.h \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtGui/qcolortransform.h \
@@ -2341,15 +2350,7 @@ main.o: ../viewer/main.cpp ../viewer/mainwindow.h \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtGui/qmovie.h \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtGui/qoffscreensurface.h \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtGui/qoffscreensurface_platform.h \
-		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtGui/qopengl.h \
-		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtCore/qt_windows.h \
-		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtGui/qopengles2ext.h \
-		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtGui/qopenglext.h \
-		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtGui/qopenglcontext.h \
-		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtGui/QSurfaceFormat \
-		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtGui/qopenglcontext_platform.h \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtGui/qopenglextrafunctions.h \
-		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtGui/qopenglfunctions.h \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtGui/qpagedpaintdevice.h \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtGui/qpagelayout.h \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtGui/qpagesize.h \
@@ -2404,6 +2405,8 @@ main.o: ../viewer/main.cpp ../viewer/mainwindow.h \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtGui/QOpenGLContext \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtGui/QImage \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtOpenGL/qtopenglversion.h \
+		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtOpenGLWidgets/QtOpenGLWidgets \
+		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtOpenGLWidgets/QtOpenGLWidgetsDepends \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtWidgets/QtWidgets \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtWidgets/QtWidgetsDepends \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtWidgets/qabstractbutton.h \
@@ -2532,14 +2535,11 @@ main.o: ../viewer/main.cpp ../viewer/mainwindow.h \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtWidgets/qwidgetaction.h \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtWidgets/qwizard.h \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtWidgets/qtwidgetsversion.h \
-		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtOpenGLWidgets/QtOpenGLWidgets \
-		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtOpenGLWidgets/QtOpenGLWidgetsDepends \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtOpenGLWidgets/qtopenglwidgetsglobal.h \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtOpenGLWidgets/qtopenglwidgetsexports.h \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtOpenGLWidgets/qopenglwidget.h \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtWidgets/QWidget \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtOpenGLWidgets/qtopenglwidgetsversion.h \
-		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtGui/QOpenGLFunctions \
 		../parser/3d.h \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtCore/QFile \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtWidgets/QApplication
@@ -2690,6 +2690,17 @@ mainwindow.o: ../viewer/mainwindow.cpp ../viewer/mainwindow.h \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtCore/QHashFunctions \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtCore/QMetaType \
 		../viewer/ogl.h \
+		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtGui/QOpenGLFunctions \
+		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtGui/qopenglfunctions.h \
+		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtGui/qopengl.h \
+		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtCore/qt_windows.h \
+		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtGui/qopengles2ext.h \
+		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtGui/qopenglext.h \
+		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtGui/qopenglcontext.h \
+		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtCore/QScopedPointer \
+		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtGui/QSurfaceFormat \
+		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtGui/qsurfaceformat.h \
+		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtGui/qopenglcontext_platform.h \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtOpenGL/QtOpenGL \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtOpenGL/QtOpenGLDepends \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtCore/QtCore \
@@ -2760,7 +2771,6 @@ mainwindow.o: ../viewer/mainwindow.cpp ../viewer/mainwindow.h \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtCore/qidentityproxymodel.h \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtCore/qitemselectionmodel.h \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtCore/qjnienvironment.h \
-		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtCore/QScopedPointer \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtCore/qjniobject.h \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtCore/qjsonarray.h \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtCore/qjsonvalue.h \
@@ -2846,7 +2856,6 @@ mainwindow.o: ../viewer/mainwindow.cpp ../viewer/mainwindow.h \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtCore/QEvent \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtCore/QMargins \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtGui/qsurface.h \
-		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtGui/qsurfaceformat.h \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtGui/qclipboard.h \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtGui/qcolorspace.h \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtGui/qcolortransform.h \
@@ -2871,15 +2880,7 @@ mainwindow.o: ../viewer/mainwindow.cpp ../viewer/mainwindow.h \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtGui/qmovie.h \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtGui/qoffscreensurface.h \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtGui/qoffscreensurface_platform.h \
-		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtGui/qopengl.h \
-		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtCore/qt_windows.h \
-		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtGui/qopengles2ext.h \
-		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtGui/qopenglext.h \
-		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtGui/qopenglcontext.h \
-		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtGui/QSurfaceFormat \
-		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtGui/qopenglcontext_platform.h \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtGui/qopenglextrafunctions.h \
-		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtGui/qopenglfunctions.h \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtGui/qpagedpaintdevice.h \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtGui/qpagelayout.h \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtGui/qpagesize.h \
@@ -2934,6 +2935,8 @@ mainwindow.o: ../viewer/mainwindow.cpp ../viewer/mainwindow.h \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtGui/QOpenGLContext \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtGui/QImage \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtOpenGL/qtopenglversion.h \
+		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtOpenGLWidgets/QtOpenGLWidgets \
+		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtOpenGLWidgets/QtOpenGLWidgetsDepends \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtWidgets/QtWidgets \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtWidgets/QtWidgetsDepends \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtWidgets/qabstractbutton.h \
@@ -3062,26 +3065,15 @@ mainwindow.o: ../viewer/mainwindow.cpp ../viewer/mainwindow.h \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtWidgets/qwidgetaction.h \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtWidgets/qwizard.h \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtWidgets/qtwidgetsversion.h \
-		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtOpenGLWidgets/QtOpenGLWidgets \
-		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtOpenGLWidgets/QtOpenGLWidgetsDepends \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtOpenGLWidgets/qtopenglwidgetsglobal.h \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtOpenGLWidgets/qtopenglwidgetsexports.h \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtOpenGLWidgets/qopenglwidget.h \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtWidgets/QWidget \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtOpenGLWidgets/qtopenglwidgetsversion.h \
-		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtGui/QOpenGLFunctions \
 		../parser/3d.h \
-		ui_mainwindow.h \
-		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtWidgets/QApplication \
-		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtWidgets/QGridLayout \
-		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtWidgets/QLabel \
-		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtWidgets/QLineEdit \
-		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtWidgets/QPushButton \
-		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtWidgets/QSlider \
-		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtWidgets/QSpacerItem \
-		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtGui/QScreen \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtWidgets/QFileDialog \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtOpenGLWidgets/QOpenGLWidget \
+		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtGui/QScreen \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/Qt3DCore/Qt3DCore \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/Qt3DCore/Qt3DCoreDepends \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtConcurrent/QtConcurrent \
@@ -3383,14 +3375,21 @@ mainwindow.o: ../viewer/mainwindow.cpp ../viewer/mainwindow.h \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/Qt3DExtras/qtorusgeometry.h \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/Qt3DExtras/qtorusgeometryview.h \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/Qt3DExtras/qtorusmesh.h \
-		../../../Desktop/Qt_install/6.3.1/gcc_64/include/Qt3DExtras/qt3dextrasversion.h
+		../../../Desktop/Qt_install/6.3.1/gcc_64/include/Qt3DExtras/qt3dextrasversion.h \
+		ui_mainwindow.h \
+		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtWidgets/QApplication \
+		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtWidgets/QGridLayout \
+		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtWidgets/QLabel \
+		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtWidgets/QLineEdit \
+		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtWidgets/QPushButton \
+		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtWidgets/QSlider \
+		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtWidgets/QSpacerItem
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o mainwindow.o ../viewer/mainwindow.cpp
 
 ogl.o: ../viewer/ogl.cpp ../viewer/ogl.h \
-		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtOpenGL/QtOpenGL \
-		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtOpenGL/QtOpenGLDepends \
-		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtCore/QtCore \
-		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtCore/QtCoreDepends \
+		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtGui/QOpenGLFunctions \
+		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtGui/qopenglfunctions.h \
+		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtGui/qtguiglobal.h \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtCore/qglobal.h \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtCore/qconfig-bootstrapped.h \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtCore/qconfig.h \
@@ -3413,14 +3412,18 @@ ogl.o: ../viewer/ogl.cpp ../viewer/ogl.h \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtCore/qglobalstatic.h \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtCore/qnumeric.h \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtCore/qversiontagging.h \
-		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtCore/q20algorithm.h \
-		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtCore/q20functional.h \
-		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtCore/q20iterator.h \
-		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtCore/qabstractanimation.h \
-		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtCore/qobject.h \
-		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtCore/qobjectdefs.h \
+		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtGui/qtgui-config.h \
+		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtGui/qtguiexports.h \
+		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtGui/qopengl.h \
+		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtCore/qt_windows.h \
+		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtGui/qopengles2ext.h \
+		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtGui/qopenglext.h \
+		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtGui/qopenglcontext.h \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtCore/qnamespace.h \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtCore/qtmetamacros.h \
+		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtCore/QObject \
+		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtCore/qobject.h \
+		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtCore/qobjectdefs.h \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtCore/qobjectdefs_impl.h \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtCore/qstring.h \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtCore/qchar.h \
@@ -3462,14 +3465,15 @@ ogl.o: ../viewer/ogl.cpp ../viewer/ogl.h \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtCore/qmath.h \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtCore/qobject_impl.h \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtCore/qbindingstorage.h \
-		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtCore/qabstracteventdispatcher.h \
-		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtCore/qeventloop.h \
-		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtCore/qabstractitemmodel.h \
-		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtCore/qhash.h \
+		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtCore/QScopedPointer \
+		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtCore/qnativeinterface.h \
+		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtGui/QSurfaceFormat \
+		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtGui/qsurfaceformat.h \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtCore/qvariant.h \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtCore/qmap.h \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtCore/qshareddata.h \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtCore/qshareddata_impl.h \
+		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtCore/qhash.h \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtCore/qdebug.h \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtCore/qtextstream.h \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtCore/qstringconverter.h \
@@ -3477,6 +3481,20 @@ ogl.o: ../viewer/ogl.cpp ../viewer/ogl.h \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtCore/qcontiguouscache.h \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtCore/qsharedpointer.h \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtCore/qsharedpointer_impl.h \
+		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtGui/qopenglcontext_platform.h \
+		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtGui/qwindowdefs.h \
+		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtGui/qwindowdefs_win.h \
+		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtOpenGL/QtOpenGL \
+		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtOpenGL/QtOpenGLDepends \
+		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtCore/QtCore \
+		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtCore/QtCoreDepends \
+		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtCore/q20algorithm.h \
+		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtCore/q20functional.h \
+		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtCore/q20iterator.h \
+		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtCore/qabstractanimation.h \
+		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtCore/qabstracteventdispatcher.h \
+		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtCore/qeventloop.h \
+		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtCore/qabstractitemmodel.h \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtCore/qabstractnativeeventfilter.h \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtCore/qabstractproxymodel.h \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtCore/qanimationgroup.h \
@@ -3484,7 +3502,6 @@ ogl.o: ../viewer/ogl.cpp ../viewer/ogl.h \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtCore/QMutex \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtCore/qmutex.h \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtCore/qcoreapplication.h \
-		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtCore/qnativeinterface.h \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtCore/qcoreapplication_platform.h \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtCore/qfuture.h \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtCore/qfutureinterface.h \
@@ -3533,7 +3550,6 @@ ogl.o: ../viewer/ogl.cpp ../viewer/ogl.h \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtCore/qendian.h \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtCore/qfactoryinterface.h \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtCore/qfileselector.h \
-		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtCore/QObject \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtCore/QStringList \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtCore/qfilesystemwatcher.h \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtCore/qfuturesynchronizer.h \
@@ -3541,7 +3557,6 @@ ogl.o: ../viewer/ogl.cpp ../viewer/ogl.h \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtCore/qidentityproxymodel.h \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtCore/qitemselectionmodel.h \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtCore/qjnienvironment.h \
-		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtCore/QScopedPointer \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtCore/qjniobject.h \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtCore/qjsonarray.h \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtCore/qjsonvalue.h \
@@ -3611,15 +3626,10 @@ ogl.o: ../viewer/ogl.cpp ../viewer/ogl.h \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtCore/qtcoreversion.h \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtGui/QtGui \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtGui/QtGuiDepends \
-		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtGui/qtguiglobal.h \
-		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtGui/qtgui-config.h \
-		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtGui/qtguiexports.h \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtGui/qabstractfileiconprovider.h \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtGui/qicon.h \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtGui/qpixmap.h \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtGui/qpaintdevice.h \
-		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtGui/qwindowdefs.h \
-		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtGui/qwindowdefs_win.h \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtGui/qcolor.h \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtGui/qrgb.h \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtGui/qrgba64.h \
@@ -3665,7 +3675,6 @@ ogl.o: ../viewer/ogl.cpp ../viewer/ogl.h \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtCore/QEvent \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtCore/QMargins \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtGui/qsurface.h \
-		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtGui/qsurfaceformat.h \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtGui/qcursor.h \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtGui/qbitmap.h \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtGui/qclipboard.h \
@@ -3694,15 +3703,7 @@ ogl.o: ../viewer/ogl.cpp ../viewer/ogl.h \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtGui/qmovie.h \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtGui/qoffscreensurface.h \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtGui/qoffscreensurface_platform.h \
-		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtGui/qopengl.h \
-		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtCore/qt_windows.h \
-		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtGui/qopengles2ext.h \
-		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtGui/qopenglext.h \
-		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtGui/qopenglcontext.h \
-		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtGui/QSurfaceFormat \
-		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtGui/qopenglcontext_platform.h \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtGui/qopenglextrafunctions.h \
-		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtGui/qopenglfunctions.h \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtGui/qpagedpaintdevice.h \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtGui/qpagelayout.h \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtGui/qpagesize.h \
@@ -3757,6 +3758,8 @@ ogl.o: ../viewer/ogl.cpp ../viewer/ogl.h \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtGui/QOpenGLContext \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtGui/QImage \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtOpenGL/qtopenglversion.h \
+		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtOpenGLWidgets/QtOpenGLWidgets \
+		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtOpenGLWidgets/QtOpenGLWidgetsDepends \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtWidgets/QtWidgets \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtWidgets/QtWidgetsDepends \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtWidgets/qtwidgetsglobal.h \
@@ -3893,14 +3896,11 @@ ogl.o: ../viewer/ogl.cpp ../viewer/ogl.h \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtWidgets/qwidgetaction.h \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtWidgets/qwizard.h \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtWidgets/qtwidgetsversion.h \
-		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtOpenGLWidgets/QtOpenGLWidgets \
-		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtOpenGLWidgets/QtOpenGLWidgetsDepends \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtOpenGLWidgets/qtopenglwidgetsglobal.h \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtOpenGLWidgets/qtopenglwidgetsexports.h \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtOpenGLWidgets/qopenglwidget.h \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtWidgets/QWidget \
 		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtOpenGLWidgets/qtopenglwidgetsversion.h \
-		../../../Desktop/Qt_install/6.3.1/gcc_64/include/QtGui/QOpenGLFunctions \
 		../parser/3d.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o ogl.o ../viewer/ogl.cpp
 
