@@ -3,6 +3,7 @@
 
 #include <QMainWindow>
 #include <Qt3DCore/QEntity>
+#include "qgifimage.h"
 
 #include "ogl.h"
 
@@ -37,6 +38,11 @@ class MainWindow : public QMainWindow {
   void RotatePressed();
   void ScalePressed();
 
+  void screenJPG();
+  void screenBMP();
+  void pressGIF();
+  void oneGif();
+
   void MoveUserInput();
   void RotateUserInput();
   void ScaleUserInput();
@@ -62,5 +68,9 @@ class MainWindow : public QMainWindow {
 
 private:
   Ui::MainWindow *ui;
+
+  int startTime, tmpTime;
+  QTimer *timer;
+  QGifImage gif;
 };
 #endif  // MAINWINDOW_H

@@ -46,6 +46,8 @@ MainWindow::MainWindow(QWidget *parent)
 
   connect(ui->Scale, SIGNAL(valueChanged(int)), this, SLOT(ScalePressed()));
 
+  connect(ui->Scale, SIGNAL(valueChanged(int)), this, SLOT(pressGIF()));
+
   connect(ui->DisplayMoveX, SIGNAL(returnPressed()), this,
           SLOT(MoveUserInput()));
   connect(ui->DisplayMoveY, SIGNAL(returnPressed()), this,
@@ -69,6 +71,61 @@ MainWindow::MainWindow(QWidget *parent)
 MainWindow::~MainWindow() {
   delete OGLWidget;
   delete ui;
+}
+
+void MainWindow::screenJPG() {
+    time_t now = time(0);
+    tm *time = localtime(&now);                              // QCoreApplication:: applicationDirPath ()
+    QString name = QCoreApplication::applicationFilePath() \
+            + QString::number(time->tm_hour) + \
+            "-" + QString::number(time->tm_min) + \
+            "-" + QString::number(time->tm_sec) + ".jpg";
+    QPixmap pixmap(OGLWidget->size() * 2);
+    pixmap.setDevicePixelRatio(2);
+    OGLWidget->render(&pixmap);
+    pixmap.save(name, "JPG", 100);
+}
+
+void MainWindow::screenBMP() {
+    time_t now = time(0);
+    tm *time = localtime(&now);                              // QCoreApplication:: applicationDirPath ()
+    QString name = QCoreApplication::applicationFilePath() \
+            + QString::number(time->tm_hour) + \
+            "-" + QString::number(time->tm_min) + \
+            "-" + QString::number(time->tm_sec) + ".bmp";
+    QPixmap pixmap(OGLWidget->size() * 2);
+    pixmap.setDevicePixelRatio(2);
+    OGLWidget->render(&pixmap);
+    pixmap.save(name, "BMP", 100);
+}
+
+void MainWindow::pressGIF() {
+    startTime = 0, tmpTime = 100;
+    timer = new QTimer(this);
+    connect(timer, SIGNAL(timeout()), this, SLOT(oneGif()));
+    timer->start(100);
+}
+
+void MainWindow::oneGif() {
+    if (startTime == tmpTime) {
+        QPixmap screenGIF(OGLWidget->size());
+        OGLWidget->render(&screenGIF);
+        QImage image;
+        image = screenGIF.toImage();
+        gif.addFrame(image, 100);
+        tmpTime += 100;
+    }
+    if (startTime == 5e3) {
+        time_t now = time(0);
+        tm *time = localtime(&now);
+        QString name = QCoreApplication::applicationFilePath() \
+                + QString::number(time->tm_hour) + \
+                "-" + QString::number(time->tm_min) + \
+                "-" + QString::number(time->tm_sec) + ".gif";
+        gif.save(name);
+        timer->stop();
+    }
+    startTime += 100;
 }
 
 void MainWindow::updateSliders() {

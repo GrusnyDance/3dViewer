@@ -31,7 +31,7 @@ class OGLW : public QOpenGLWidget, protected QOpenGLFunctions {
 
   QString FindFile;
 
-  info inff = {0, 0, 0, 0};  // переписать на указатель когда будет готов остальной код
+  info inff = {0, 0, 0, 0, 0};  // переписать на указатель когда будет готов остальной код
   int rotateBuffX = 0;
   int rotateBuffY = 0;
   int rotateBuffZ = 0;

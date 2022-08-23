@@ -1,4 +1,5 @@
 QT       += core gui opengl openglwidgets 3dcore 3dextras
+include(../QtGifImage-master/src/gifimage/qtgifimage.pri)
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 

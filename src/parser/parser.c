@@ -6,7 +6,6 @@ static int isnum(char c);
 
 void parserr(char *fileName, info *src) {
     FILE *file = fopen(fileName, "r");
-    float max = 0.0;
     src->indexF = 0;
     src->indexV = 0;
     char c = 'c', buff = 'b';
@@ -25,7 +24,7 @@ void parserr(char *fileName, info *src) {
     if (!src->indexV) free(src->array);
 
     fclose(file);
-    // if (fabs(max) > 1) scale(src, (1 / max));  // scale normalization
+    if (fabs(src->maxV) > 1) scale(src, (1 / src->maxV));  // scale normalization
 }
 
 static void pars_v(FILE *file, info *src) {
