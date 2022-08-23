@@ -839,7 +839,7 @@
         </spacer>
        </item>
        <item row="5" column="2" colspan="4">
-        <widget class="QSlider" name="Scale_7">
+        <widget class="QSlider" name="VertSizeSlider">
          <property name="sizePolicy">
           <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
            <horstretch>0</horstretch>
@@ -865,16 +865,19 @@
           </size>
          </property>
          <property name="minimum">
-          <number>0</number>
+          <number>20</number>
          </property>
          <property name="maximum">
-          <number>300</number>
+          <number>100</number>
          </property>
          <property name="singleStep">
           <number>1</number>
          </property>
          <property name="value">
-          <number>100</number>
+          <number>20</number>
+         </property>
+         <property name="sliderPosition">
+          <number>20</number>
          </property>
          <property name="orientation">
           <enum>Qt::Horizontal</enum>

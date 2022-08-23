@@ -247,7 +247,7 @@ void MainWindow::ScaleUserInput() {
 }
 
 
-// sparelis: refactoring needed
+// sparelis: refactoring + убрать все функции на цвет в отдельный файл
 void MainWindow::on_BackColorSlider_valueChanged(int value)
 {
     if (value / 204 == 0) {
@@ -345,19 +345,21 @@ void MainWindow::on_VertColorSlider_valueChanged(int value)
 
 
 
-void MainWindow::on_PerspectivePrButton_pressed(){OGLWidget->perspective = 1;}
+void MainWindow::on_PerspectivePrButton_pressed(){OGLWidget->perspective = 1; OGLWidget->update();}
 
-void MainWindow::on_OrthoPrButton_pressed(){OGLWidget->perspective = 0;}
+void MainWindow::on_OrthoPrButton_pressed(){OGLWidget->perspective = 0; OGLWidget->update();}
 
-void MainWindow::on_SolidEdgeButton_pressed(){OGLWidget->lineType = 0;};
+void MainWindow::on_SolidEdgeButton_pressed(){OGLWidget->lineType = 0; OGLWidget->update();}
 
-void MainWindow::on_DashedEdgeButton_pressed(){OGLWidget->lineType = 1;};
+void MainWindow::on_DashedEdgeButton_pressed(){OGLWidget->lineType = 1; OGLWidget->update();}
 
-void MainWindow::on_EdgeSizeSlider_valueChanged(int value){OGLWidget->lineWidth = value / 10.0;}
+void MainWindow::on_EdgeSizeSlider_valueChanged(int value){OGLWidget->lineWidth = value / 10.0; OGLWidget->update();}
 
-void MainWindow::on_CircleButton_pressed(){OGLWidget->pointType = 1;}
+void MainWindow::on_CircleButton_pressed(){OGLWidget->pointType = 1; OGLWidget->update();}
 
-void MainWindow::on_SquareButton_pressed(){OGLWidget->pointType = 2;}
+void MainWindow::on_SquareButton_pressed(){OGLWidget->pointType = 2; OGLWidget->update();}
 
-void MainWindow::on_NoButton_pressed(){OGLWidget->pointType = 0;}
+void MainWindow::on_NoButton_pressed(){OGLWidget->pointType = 0; OGLWidget->update();}
+
+void MainWindow::on_VertSizeSlider_valueChanged(int value){OGLWidget->pointSize = value / 10.0; OGLWidget->update();}
 
