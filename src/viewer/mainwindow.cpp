@@ -68,7 +68,6 @@ MainWindow::MainWindow(QWidget *parent)
           SLOT(ScaleUserInput()));
 
   connect(OGLWidget, SIGNAL(mouseMove()), this, SLOT(updateSliders()));
-
 }
 
 MainWindow::~MainWindow() {
@@ -77,60 +76,62 @@ MainWindow::~MainWindow() {
 }
 
 void MainWindow::screenJPG() {
-    time_t now = time(0);
-    tm *time = localtime(&now);                              // QCoreApplication:: applicationDirPath ()
-    QString name = QCoreApplication::applicationFilePath() \
-            + QString::number(time->tm_hour) + \
-            "-" + QString::number(time->tm_min) + \
-            "-" + QString::number(time->tm_sec) + ".jpg";
-    QPixmap pixmap(OGLWidget->size() * 2);
-    pixmap.setDevicePixelRatio(2);
-    OGLWidget->render(&pixmap);
-    pixmap.save(name, "JPG", 100);
+  time_t now = time(0);
+  tm *time = localtime(&now);  // QCoreApplication:: applicationDirPath ()
+  QString name = QCoreApplication::applicationFilePath() +
+                 QString::number(time->tm_hour) + "-" +
+                 QString::number(time->tm_min) + "-" +
+                 QString::number(time->tm_sec) + ".jpg";
+  QPixmap pixmap(OGLWidget->size() * 2);
+  pixmap.setDevicePixelRatio(2);
+  OGLWidget->render(&pixmap);
+  pixmap.save(name, "JPG", 100);
 }
 
 void MainWindow::screenBMP() {
-    time_t now = time(0);
-    tm *time = localtime(&now);                              // QCoreApplication:: applicationDirPath ()
-    QString name = QCoreApplication::applicationFilePath() \
-            + QString::number(time->tm_hour) + \
-            "-" + QString::number(time->tm_min) + \
-            "-" + QString::number(time->tm_sec) + ".bmp";
-    QPixmap pixmap(OGLWidget->size() * 2);
-    pixmap.setDevicePixelRatio(2);
-    OGLWidget->render(&pixmap);
-    pixmap.save(name, "BMP", 100);
+  time_t now = time(0);
+  tm *time = localtime(&now);  // QCoreApplication:: applicationDirPath ()
+  QString name = QCoreApplication::applicationFilePath() +
+                 QString::number(time->tm_hour) + "-" +
+                 QString::number(time->tm_min) + "-" +
+                 QString::number(time->tm_sec) + ".bmp";
+  QPixmap pixmap(OGLWidget->size() * 2);
+  pixmap.setDevicePixelRatio(2);
+  OGLWidget->render(&pixmap);
+  pixmap.save(name, "BMP", 100);
 }
 
 void MainWindow::pressGIF() {
-    startTime = 0, tmpTime = 100;
-    timer = new QTimer(this);
-    connect(timer, SIGNAL(timeout()), this, SLOT(oneGif()));
-    timer->start(100);
+  startTime = 0, tmpTime = 100;
+  timer = new QTimer(this);
+  connect(timer, SIGNAL(timeout()), this, SLOT(oneGif()));
+  timer->start(100);
 }
 
 void MainWindow::oneGif() {
-    if (startTime == tmpTime) {
-        QPixmap screenGIF(OGLWidget->size());  // *2
-//        screenGIF.setDevicePixelRatio(2);  // improves quality. mult the size by 2 line above ^
-        OGLWidget->render(&screenGIF);
-        QImage image;
-        image = screenGIF.toImage();
-        gif.addFrame(image, 100);
-//        float timePrint = (float)startTime / 1e3;  // GIF time in seconds with 0.1 second precision (50 updates)
-        tmpTime += 100;
-    }
-    if (startTime == 5e3) {
-        time_t now = time(0);
-        tm *time = localtime(&now);
-        QString name = QCoreApplication::applicationFilePath() \
-                + QString::number(time->tm_hour) + \
-                "-" + QString::number(time->tm_min) + \
-                "-" + QString::number(time->tm_sec) + ".gif";
-        gif.save(name);
-        timer->stop();
-    }
-    startTime += 100;
+  if (startTime == tmpTime) {
+    QPixmap screenGIF(OGLWidget->size());  // *2
+    //        screenGIF.setDevicePixelRatio(2);  // improves quality. mult the
+    //        size by 2 line above ^
+    OGLWidget->render(&screenGIF);
+    QImage image;
+    image = screenGIF.toImage();
+    gif.addFrame(image, 100);
+    //        float timePrint = (float)startTime / 1e3;  // GIF time in seconds
+    //        with 0.1 second precision (50 updates)
+    tmpTime += 100;
+  }
+  if (startTime == 5e3) {
+    time_t now = time(0);
+    tm *time = localtime(&now);
+    QString name = QCoreApplication::applicationFilePath() +
+                   QString::number(time->tm_hour) + "-" +
+                   QString::number(time->tm_min) + "-" +
+                   QString::number(time->tm_sec) + ".gif";
+    gif.save(name);
+    timer->stop();
+  }
+  startTime += 100;
 }
 
 void MainWindow::updateSliders() {
@@ -308,121 +309,138 @@ void MainWindow::ScaleUserInput() {
   }
 }
 
-
 // sparelis: refactoring + убрать все функции на цвет в отдельный файл
-void MainWindow::on_BackColorSlider_valueChanged(int value)
-{
-    if (value / 204 == 0) {
-        OGLWidget->backColor.setX(225);
-        OGLWidget->backColor.setY(51 + value);
-        OGLWidget->backColor.setZ(51);
-    } else if (value / 204 == 1) {
-        OGLWidget->backColor.setX(255 - (value % 204));
-        OGLWidget->backColor.setY(255);
-        OGLWidget->backColor.setZ(51);
-    } else if (value / 204 == 2) {
-        OGLWidget->backColor.setX(51);
-        OGLWidget->backColor.setY(255);
-        OGLWidget->backColor.setZ(51 + (value % 204));
-    } else if (value / 204 == 3) {
-        OGLWidget->backColor.setX(51);
-        OGLWidget->backColor.setY(255 - (value % 204));
-        OGLWidget->backColor.setZ(255);
-    } else if (value / 204 == 4) {
-        OGLWidget->backColor.setX(51 + (value % 204));
-        OGLWidget->backColor.setY(51);
-        OGLWidget->backColor.setZ(255);
-    } else if (value / 204 == 5) {
-        OGLWidget->backColor.setX(225);
-        OGLWidget->backColor.setY(51);
-        OGLWidget->backColor.setZ(255 - (value % 204));
-    }
+void MainWindow::on_BackColorSlider_valueChanged(int value) {
+  if (value / 204 == 0) {
+    OGLWidget->backColor.setX(225);
+    OGLWidget->backColor.setY(51 + value);
+    OGLWidget->backColor.setZ(51);
+  } else if (value / 204 == 1) {
+    OGLWidget->backColor.setX(255 - (value % 204));
+    OGLWidget->backColor.setY(255);
+    OGLWidget->backColor.setZ(51);
+  } else if (value / 204 == 2) {
+    OGLWidget->backColor.setX(51);
+    OGLWidget->backColor.setY(255);
+    OGLWidget->backColor.setZ(51 + (value % 204));
+  } else if (value / 204 == 3) {
+    OGLWidget->backColor.setX(51);
+    OGLWidget->backColor.setY(255 - (value % 204));
+    OGLWidget->backColor.setZ(255);
+  } else if (value / 204 == 4) {
+    OGLWidget->backColor.setX(51 + (value % 204));
+    OGLWidget->backColor.setY(51);
+    OGLWidget->backColor.setZ(255);
+  } else if (value / 204 == 5) {
+    OGLWidget->backColor.setX(225);
+    OGLWidget->backColor.setY(51);
+    OGLWidget->backColor.setZ(255 - (value % 204));
+  }
 
-    OGLWidget->update();
+  OGLWidget->update();
 }
 
+void MainWindow::on_EdgeColorSlider_valueChanged(int value) {
+  if (value / 204 == 0) {
+    OGLWidget->lineColor.setX(225. / 255);
+    OGLWidget->lineColor.setY((51 + value) / 255.);
+    OGLWidget->lineColor.setZ(51. / 255);
+  } else if (value / 204 == 1) {
+    OGLWidget->lineColor.setX((255 - (value % 204)) / 255.);
+    OGLWidget->lineColor.setY(255. / 255);
+    OGLWidget->lineColor.setZ(51. / 255);
+  } else if (value / 204 == 2) {
+    OGLWidget->lineColor.setX(51. / 255);
+    OGLWidget->lineColor.setY(255. / 255);
+    OGLWidget->lineColor.setZ((51 + (value % 204)) / 255.);
+  } else if (value / 204 == 3) {
+    OGLWidget->lineColor.setX(51. / 255);
+    OGLWidget->lineColor.setY((255 - (value % 204)) / 255.);
+    OGLWidget->lineColor.setZ(255. / 255);
+  } else if (value / 204 == 4) {
+    OGLWidget->lineColor.setX((51 + (value % 204)) / 255.);
+    OGLWidget->lineColor.setY(51. / 255);
+    OGLWidget->lineColor.setZ(255. / 255);
+  } else if (value / 204 == 5) {
+    OGLWidget->lineColor.setX(225. / 255);
+    OGLWidget->lineColor.setY(51. / 255);
+    OGLWidget->lineColor.setZ((255 - (value % 204)) / 255.);
+  }
 
-void MainWindow::on_EdgeColorSlider_valueChanged(int value)
-{
-    if (value / 204 == 0) {
-        OGLWidget->lineColor.setX(225);
-        OGLWidget->lineColor.setY(51 + value);
-        OGLWidget->lineColor.setZ(51);
-    } else if (value / 204 == 1) {
-        OGLWidget->lineColor.setX(255 - (value % 204));
-        OGLWidget->lineColor.setY(255);
-        OGLWidget->lineColor.setZ(51);
-    } else if (value / 204 == 2) {
-        OGLWidget->lineColor.setX(51);
-        OGLWidget->lineColor.setY(255);
-        OGLWidget->lineColor.setZ(51 + (value % 204));
-    } else if (value / 204 == 3) {
-        OGLWidget->lineColor.setX(51);
-        OGLWidget->lineColor.setY(255 - (value % 204));
-        OGLWidget->lineColor.setZ(255);
-    } else if (value / 204 == 4) {
-        OGLWidget->lineColor.setX(51 + (value % 204));
-        OGLWidget->lineColor.setY(51);
-        OGLWidget->lineColor.setZ(255);
-    } else if (value / 204 == 5) {
-        OGLWidget->lineColor.setX(225);
-        OGLWidget->lineColor.setY(51);
-        OGLWidget->lineColor.setZ(255 - (value % 204));
-    }
-
-    OGLWidget->update();
+  OGLWidget->update();
 }
 
+void MainWindow::on_VertColorSlider_valueChanged(int value) {
+  if (value / 204 == 0) {
+    OGLWidget->pointColor.setX(225. / 255);
+    OGLWidget->pointColor.setY((51 + value) / 255.);
+    OGLWidget->pointColor.setZ(51. / 255);
+  } else if (value / 204 == 1) {
+    OGLWidget->pointColor.setX((255 - (value % 204)) / 255.);
+    OGLWidget->pointColor.setY(255. / 255);
+    OGLWidget->pointColor.setZ(51. / 255);
+  } else if (value / 204 == 2) {
+    OGLWidget->pointColor.setX(51. / 255);
+    OGLWidget->pointColor.setY(255. / 255);
+    OGLWidget->pointColor.setZ((51 + (value % 204)) / 255.);
+  } else if (value / 204 == 3) {
+    OGLWidget->pointColor.setX(51. / 255);
+    OGLWidget->pointColor.setY((255 - (value % 204)) / 255.);
+    OGLWidget->pointColor.setZ(255. / 255);
+  } else if (value / 204 == 4) {
+    OGLWidget->pointColor.setX((51 + (value % 204)) / 255.);
+    OGLWidget->pointColor.setY(51. / 255);
+    OGLWidget->pointColor.setZ(255. / 255);
+  } else if (value / 204 == 5) {
+    OGLWidget->pointColor.setX(225. / 255);
+    OGLWidget->pointColor.setY(51. / 255);
+    OGLWidget->pointColor.setZ((255 - (value % 204)) / 255.);
+  }
 
-void MainWindow::on_VertColorSlider_valueChanged(int value)
-{
-    if (value / 204 == 0) {
-        OGLWidget->pointColor.setX(225);
-        OGLWidget->pointColor.setY(51 + value);
-        OGLWidget->pointColor.setZ(51);
-    } else if (value / 204 == 1) {
-        OGLWidget->pointColor.setX(255 - (value % 204));
-        OGLWidget->pointColor.setY(255);
-        OGLWidget->pointColor.setZ(51);
-    } else if (value / 204 == 2) {
-        OGLWidget->pointColor.setX(51);
-        OGLWidget->pointColor.setY(255);
-        OGLWidget->pointColor.setZ(51 + (value % 204));
-    } else if (value / 204 == 3) {
-        OGLWidget->pointColor.setX(51);
-        OGLWidget->pointColor.setY(255 - (value % 204));
-        OGLWidget->pointColor.setZ(255);
-    } else if (value / 204 == 4) {
-        OGLWidget->pointColor.setX(51 + (value % 204));
-        OGLWidget->pointColor.setY(51);
-        OGLWidget->pointColor.setZ(255);
-    } else if (value / 204 == 5) {
-        OGLWidget->pointColor.setX(225);
-        OGLWidget->pointColor.setY(51);
-        OGLWidget->pointColor.setZ(255 - (value % 204));
-    }
-
-    OGLWidget->update();
+  OGLWidget->update();
 }
 
+void MainWindow::on_PerspectivePrButton_pressed() {
+  OGLWidget->perspective = 1;
+  OGLWidget->update();
+}
 
+void MainWindow::on_OrthoPrButton_pressed() {
+  OGLWidget->perspective = 0;
+  OGLWidget->update();
+}
 
-void MainWindow::on_PerspectivePrButton_pressed(){OGLWidget->perspective = 1; OGLWidget->update();}
+void MainWindow::on_SolidEdgeButton_pressed() {
+  OGLWidget->lineType = 0;
+  OGLWidget->update();
+}
 
-void MainWindow::on_OrthoPrButton_pressed(){OGLWidget->perspective = 0; OGLWidget->update();}
+void MainWindow::on_DashedEdgeButton_pressed() {
+  OGLWidget->lineType = 1;
+  OGLWidget->update();
+}
 
-void MainWindow::on_SolidEdgeButton_pressed(){OGLWidget->lineType = 0; OGLWidget->update();}
+void MainWindow::on_EdgeSizeSlider_valueChanged(int value) {
+  OGLWidget->lineWidth = value / 10.0;
+  OGLWidget->update();
+}
 
-void MainWindow::on_DashedEdgeButton_pressed(){OGLWidget->lineType = 1; OGLWidget->update();}
+void MainWindow::on_CircleButton_pressed() {
+  OGLWidget->pointType = 1;
+  OGLWidget->update();
+}
 
-void MainWindow::on_EdgeSizeSlider_valueChanged(int value){OGLWidget->lineWidth = value / 10.0; OGLWidget->update();}
+void MainWindow::on_SquareButton_pressed() {
+  OGLWidget->pointType = 2;
+  OGLWidget->update();
+}
 
-void MainWindow::on_CircleButton_pressed(){OGLWidget->pointType = 1; OGLWidget->update();}
+void MainWindow::on_NoButton_pressed() {
+  OGLWidget->pointType = 0;
+  OGLWidget->update();
+}
 
-void MainWindow::on_SquareButton_pressed(){OGLWidget->pointType = 2; OGLWidget->update();}
-
-void MainWindow::on_NoButton_pressed(){OGLWidget->pointType = 0; OGLWidget->update();}
-
-void MainWindow::on_VertSizeSlider_valueChanged(int value){OGLWidget->pointSize = value / 10.0; OGLWidget->update();}
-
-
+void MainWindow::on_VertSizeSlider_valueChanged(int value) {
+  OGLWidget->pointSize = value / 10.0;
+  OGLWidget->update();
+}

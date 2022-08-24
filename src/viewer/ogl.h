@@ -17,20 +17,18 @@ class OGLW : public QOpenGLWidget, protected QOpenGLFunctions {
  public:
   OGLW(QWidget *parent = nullptr);
   ~OGLW();
-  //  void paintFigure();
-  //  void drawFigure();
-  int lineType = 1;  // 1 for stipple
+  int lineType = 1;     // 1 for stipple
   int perspective = 0;  // 1 for on perspective mode
   float lineWidth = 1;  // 1 is default and min, max 5
   float pointSize = 2;  // 1 is default, max 10, min 2
-  int pointType = 2;  // 0 - disable, 1 - circle, 2 - square
+  int pointType = 2;    // 0 - disable, 1 - circle, 2 - square
   QVector3D lineColor = {1, 1, 1};
   QVector3D pointColor = {1, 0, 0};
   QVector3D backColor = {27, 39, 50};
 
   QString FindFile;
 
-  info inff = {0, 0, 0, 0, 0};  // переписать на указатель когда будет готов остальной код
+  info inff = {0, 0, 0, 0, 0};
   int rotateBuffX = 0;
   int rotateBuffY = 0;
   int rotateBuffZ = 0;
@@ -39,6 +37,7 @@ class OGLW : public QOpenGLWidget, protected QOpenGLFunctions {
   QMatrix4x4 scaleM;
   QMatrix4x4 rotateM;
   QMatrix4x4 projM;
+  QMatrix4x4 normM;
   QMatrix4x4 perspectiveM;
   QMatrix4x4 makeRotateM(int a, int b, int c) {
     double cosa = cos(a * M_PI / 180);
@@ -53,7 +52,6 @@ class OGLW : public QOpenGLWidget, protected QOpenGLFunctions {
                       cosa * sinb * sing - sina * cosg, 0, -sinb, sina * cosb,
                       cosa * cosb, 0, 0, 0, 0, 1);
   }
-  //  int moveLoc;
 
  protected:
   void initializeGL() override;
@@ -61,9 +59,6 @@ class OGLW : public QOpenGLWidget, protected QOpenGLFunctions {
   void resizeGL(int w, int h) override;
 
  private:
-  //  float z;
-  //  QTimer tmr;
-  //  float xRot, yRot, zRot;
   QPoint mPos;
   void mousePressEvent(QMouseEvent *) override;
   void mouseMoveEvent(QMouseEvent *) override;
@@ -75,14 +70,7 @@ class OGLW : public QOpenGLWidget, protected QOpenGLFunctions {
   void toDefault();
   void fromFile();
 
-
-  int paintStart = 0;
-//  void BuildPerspProjMat(float *m, float fov, float aspect,
-//                         float znear, float zfar);
-  //    info *data;
-
  public slots:
-  //  void changeZ();
   void Allocate();
 
  signals:
