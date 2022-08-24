@@ -24,15 +24,16 @@ void parserr(char *fileName, info *src) {
     if (!src->indexV) free(src->array);
 
     fclose(file);
-    if (fabs(src->maxV) > 1) scale(src, (1 / src->maxV));  // scale normalization
+    // if (fabs(src->maxV) > 1) scale(src, (1 / src->maxV));  // scale normalization
 }
 
 static void pars_v(FILE *file, info *src) {
     src->array = realloc(src->array, (src->indexV + 3) * sizeof(float));
+    for (int k = 0; k < 3; k++) src->array[src->indexV + k] = 0;
     fscanf(file, "%f %f %f", &src->array[src->indexV], &src->array[src->indexV + 1], &src->array[src->indexV + 2]);
-    if (fabs(src->array[src->indexV]) > src->maxV) src->maxV = fabs(src->array[src->indexV]);
-    if (fabs(src->array[src->indexV + 1]) > src->maxV) src->maxV = fabs(src->array[src->indexV + 1]);
-    if (fabs(src->array[src->indexV + 2]) > src->maxV) src->maxV = fabs(src->array[src->indexV + 2]);
+    for (int k = 0; k < 3; k++) {
+        if (fabs(src->array[src->indexV + k]) > src->maxV) src->maxV = fabs(src->array[src->indexV + k]);
+    }
     src->indexV += 3;
 }
 
