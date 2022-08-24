@@ -31,7 +31,17 @@ MainWindow::MainWindow(QWidget *parent)
   ui->gridLayout_4->addWidget(OGLWidget, 0, 0);
 
   ui->widget->setStyleSheet("background-color: transparent;");
-  OGLWidget->lower();
+  ui->GifButton->setParent(OGLWidget);
+  ui->GifButton->raise();
+  ui->GifButton->setMinimumSize(OGLWidget->width() / 11, OGLWidget->height() / 25);
+
+  ui->JpgButton->setParent(OGLWidget);
+  ui->JpgButton->raise();
+  ui->JpgButton->setMinimumSize(OGLWidget->width() / 11, OGLWidget->height() / 25);
+
+  ui->BmpButton->setParent(OGLWidget);
+  ui->BmpButton->raise();
+  ui->BmpButton->setMinimumSize(OGLWidget->width() / 11, OGLWidget->height() / 25);
 
   connect(ui->FileButton, SIGNAL(pressed()), this, SLOT(FilePressed()));
   //    connect(ui->FileButton, SIGNAL(pressed()), OGLWidget, SLOT(Allocate()));
@@ -47,8 +57,8 @@ MainWindow::MainWindow(QWidget *parent)
   connect(ui->Scale, SIGNAL(valueChanged(int)), this, SLOT(ScalePressed()));
 
   connect(ui->GifButton, SIGNAL(pressed()), this, SLOT(pressGIF()));
-  connect(ui->ScreenButton, SIGNAL(pressed()), this, SLOT(screenBMP()));
-  connect(ui->ScreenButton, SIGNAL(pressed()), this, SLOT(screenJPG()));
+  connect(ui->BmpButton, SIGNAL(pressed()), this, SLOT(screenBMP()));
+  connect(ui->JpgButton, SIGNAL(pressed()), this, SLOT(screenJPG()));
 
   connect(ui->DisplayMoveX, SIGNAL(returnPressed()), this,
           SLOT(MoveUserInput()));

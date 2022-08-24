@@ -167,6 +167,16 @@ void OGLW::paintGL() {
 void OGLW::resizeGL(int w, int h) {
   projM.setToIdentity();
   projM.perspective(45.0f, GLfloat(w) / h, 0.01f, 100.0f);
+
+  float temp = this->width() / 11;
+  this->findChild<QPushButton *>("GifButton")->resize(this->width() / 11, this->height() / 25);
+  this->findChild<QPushButton *>("GifButton")->move(this->width() - temp - 30, 5);
+
+  this->findChild<QPushButton *>("BmpButton")->resize(this->width() / 11, this->height() / 25);
+  this->findChild<QPushButton *>("BmpButton")->move(this->width() - temp - 30 - temp - 17, 5);
+
+  this->findChild<QPushButton *>("JpgButton")->resize(this->width() / 11, this->height() / 25);
+  this->findChild<QPushButton *>("JpgButton")->move(this->width() - temp - 30 - temp - 17 - temp - 17, 5);
 }
 
 void OGLW::mousePressEvent(QMouseEvent *mo) { mPos = mo->pos(); }
