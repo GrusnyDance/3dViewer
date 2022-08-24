@@ -21,9 +21,6 @@ MainWindow::MainWindow(QWidget *parent)
   ui->FileName->setStyleSheet(
       "background-color: transparent; color: lavender;");
 
-  //    ui->DisplayVertices->setStyleSheet("background-color: transparent;");
-  //    ui->DisplayEdges->setStyleSheet("background-color: transparent;");
-
   QScreen *screen = QGuiApplication::primaryScreen();
   QRect screenGeometry = screen->geometry();
   int height = screenGeometry.height();
@@ -32,6 +29,9 @@ MainWindow::MainWindow(QWidget *parent)
 
   OGLWidget = new OGLW;
   ui->gridLayout_4->addWidget(OGLWidget, 0, 0);
+
+  ui->widget->setStyleSheet("background-color: transparent;");
+  OGLWidget->lower();
 
   connect(ui->FileButton, SIGNAL(pressed()), this, SLOT(FilePressed()));
   //    connect(ui->FileButton, SIGNAL(pressed()), OGLWidget, SLOT(Allocate()));
@@ -66,6 +66,7 @@ MainWindow::MainWindow(QWidget *parent)
           SLOT(ScaleUserInput()));
 
   connect(OGLWidget, SIGNAL(mouseMove()), this, SLOT(updateSliders()));
+
 }
 
 MainWindow::~MainWindow() {
@@ -419,4 +420,5 @@ void MainWindow::on_SquareButton_pressed(){OGLWidget->pointType = 2; OGLWidget->
 void MainWindow::on_NoButton_pressed(){OGLWidget->pointType = 0; OGLWidget->update();}
 
 void MainWindow::on_VertSizeSlider_valueChanged(int value){OGLWidget->pointSize = value / 10.0; OGLWidget->update();}
+
 

@@ -28,7 +28,6 @@ class OGLW : public QOpenGLWidget, protected QOpenGLFunctions {
   QVector3D pointColor = {1, 0, 0};
   QVector3D backColor = {27, 39, 50};
 
-
   QString FindFile;
 
   info inff = {0, 0, 0, 0, 0};  // переписать на указатель когда будет готов остальной код
