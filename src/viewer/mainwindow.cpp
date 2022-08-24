@@ -46,7 +46,9 @@ MainWindow::MainWindow(QWidget *parent)
 
   connect(ui->Scale, SIGNAL(valueChanged(int)), this, SLOT(ScalePressed()));
 
-  connect(ui->Scale, SIGNAL(valueChanged(int)), this, SLOT(pressGIF()));
+  connect(ui->GifButton, SIGNAL(pressed()), this, SLOT(pressGIF()));
+  connect(ui->ScreenButton, SIGNAL(pressed()), this, SLOT(screenBMP()));
+  connect(ui->ScreenButton, SIGNAL(pressed()), this, SLOT(screenJPG()));
 
   connect(ui->DisplayMoveX, SIGNAL(returnPressed()), this,
           SLOT(MoveUserInput()));
@@ -109,11 +111,13 @@ void MainWindow::pressGIF() {
 
 void MainWindow::oneGif() {
     if (startTime == tmpTime) {
-        QPixmap screenGIF(OGLWidget->size());
+        QPixmap screenGIF(OGLWidget->size());  // *2
+//        screenGIF.setDevicePixelRatio(2);  // improves quality. mult the size by 2 line above ^
         OGLWidget->render(&screenGIF);
         QImage image;
         image = screenGIF.toImage();
         gif.addFrame(image, 100);
+//        float timePrint = (float)startTime / 1e3;  // GIF time in seconds with 0.1 second precision (50 updates)
         tmpTime += 100;
     }
     if (startTime == 5e3) {
