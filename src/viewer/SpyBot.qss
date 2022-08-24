@@ -62,7 +62,7 @@ QRadioButton::indicator::checked
 {
         border: none;
         border-radius: 7px;
-        background-color: #525366;
+        background-color: #E0B700;
         width: 15px;
         height: 15px;
 
