@@ -3,7 +3,10 @@
 #include <cstdio>
 #include <fstream>
 
-OGLW::OGLW(QWidget *parent) : QOpenGLWidget(parent) { this->fromFile(); }
+OGLW::OGLW(QWidget *parent) : QOpenGLWidget(parent) {
+
+    this->fromFile();
+}
 
 OGLW::~OGLW() {
   if (ibo.isCreated()) ibo.destroy();

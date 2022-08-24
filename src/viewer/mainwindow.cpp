@@ -43,6 +43,7 @@ MainWindow::MainWindow(QWidget *parent)
   ui->BmpButton->raise();
   ui->BmpButton->setMinimumSize(OGLWidget->width() / 11, OGLWidget->height() / 25);
 
+  this->initSliders();
   connect(ui->FileButton, SIGNAL(pressed()), this, SLOT(FilePressed()));
   //    connect(ui->FileButton, SIGNAL(pressed()), OGLWidget, SLOT(Allocate()));
 
@@ -78,11 +79,28 @@ MainWindow::MainWindow(QWidget *parent)
           SLOT(ScaleUserInput()));
 
   connect(OGLWidget, SIGNAL(mouseMove()), this, SLOT(updateSliders()));
+
+
 }
 
 MainWindow::~MainWindow() {
   delete OGLWidget;
   delete ui;
+}
+
+
+void MainWindow::initSliders() {
+    ui->VertSizeSlider->setValue(OGLWidget->pointSize*10);
+    ui->EdgeSizeSlider->setValue(OGLWidget->lineWidth*10);
+    if (OGLWidget->pointType == 2) ui->CircleButton->toggle();
+    else if (OGLWidget->pointType == 1) ui->SquareButton->toggle();
+    else ui->NoButton->toggle();
+    if (OGLWidget->lineType) ui->DashedEdgeButton->toggle();
+    else ui->SolidEdgeButton->toggle();
+    if (OGLWidget->perspective) ui->PerspectivePrButton->toggle();
+    else ui->OrthoPrButton->toggle();
+
+    // sparelis: add color sliders processing
 }
 
 void MainWindow::screenJPG() {
