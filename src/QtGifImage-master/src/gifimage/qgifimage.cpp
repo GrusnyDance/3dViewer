@@ -223,7 +223,7 @@ bool QGifImagePrivate::load(QIODevice *device)
     return true;
 }
 
-bool QGifImagePrivate::save(QIODevice *device) const
+bool QGifImagePrivate::save(QIODevice *device, void **free) const
 {
     int error;
     GifFileType *gifFile = EGifOpen(device, writeToIODevice, &error);
@@ -244,6 +244,7 @@ bool QGifImagePrivate::save(QIODevice *device) const
 
     gifFile->ImageCount = frameInfos.size();
     gifFile->SavedImages = (SavedImage *)calloc(frameInfos.size(), sizeof(SavedImage));
+
     for (int idx=0; idx < frameInfos.size(); ++idx) {
         const QGifFrameInfoData frameInfo = frameInfos.at(idx);
         QImage image = frameInfo.image;
@@ -296,10 +297,16 @@ bool QGifImagePrivate::save(QIODevice *device) const
             gcbBlock.DelayTime = defaultDelayTime / 10;
 
         EGifGCBToSavedExtension(&gcbBlock, gifFile, idx);
+        free[idx] = data;
+        // free(gifImage->ImageDesc.ColorMap);
+        // free(data);  // ??????
     }
 
     EGifSpew(gifFile);
     //EGifCloseFile(gifFile);
+
+    // free(gifFile->SColorMap);
+    // free(gifFile->SavedImages);  // ??????
 
     return true;
 }
@@ -623,12 +630,12 @@ void QGifImage::setFrameTransparentColor(int index, const QColor &color)
     Returns \c true if the image was successfully saved; otherwise
     returns \c false.
 */
-bool QGifImage::save(const QString &fileName) const
+bool QGifImage::save(const QString &fileName, void **free) const
 {
     Q_D(const QGifImage);
     QFile file(fileName);
     if (file.open(QIODevice::WriteOnly))
-        return d->save(&file);
+        return d->save(&file, free);
 
     return false;
 }
@@ -638,11 +645,11 @@ bool QGifImage::save(const QString &fileName) const
 
     This function writes a QImage to the given \a device.
 */
-bool QGifImage::save(QIODevice *device) const
+bool QGifImage::save(QIODevice *device, void **free) const
 {
     Q_D(const QGifImage);
     if (device->openMode() | QIODevice::WriteOnly)
-        return d->save(device);
+        return d->save(device, free);
 
     return false;
 }

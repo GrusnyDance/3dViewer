@@ -138,7 +138,16 @@ void MainWindow::oneGif() {
                    QString::number(time->tm_hour) + "-" +
                    QString::number(time->tm_min) + "-" +
                    QString::number(time->tm_sec) + ".gif";
-    gif.save(name);
+
+    void **free = (void**)malloc(50* sizeof(void*));
+
+    gif.save(name, free);
+
+    for (int k = 0; k < 50; k++) {
+        std::free(free[k]);
+    }
+    std::free(free);
+
     timer->stop();
   }
   startTime += 100;
