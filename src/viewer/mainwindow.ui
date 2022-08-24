@@ -111,7 +111,7 @@
         </property>
         <property name="styleSheet">
          <string notr="true">QLineEdit {
-	color: white;
+	color: lavender;
 	background-color: transparent;
 }</string>
         </property>
@@ -150,7 +150,7 @@
         </property>
         <property name="styleSheet">
          <string notr="true">QLineEdit {
-	color: white;
+	color: lavender;
 	background-color: transparent;
 }</string>
         </property>
