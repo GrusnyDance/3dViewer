@@ -22,15 +22,18 @@ void parserr(char *fileName, info *src) {
     }
     if (!src->indexF) free(src->polygon);
     if (!src->indexV) free(src->array);
-
     fclose(file);
-    // if (fabs(src->maxV) > 1) scale(src, (1 / src->maxV));  // scale normalization
 }
 
 static void pars_v(FILE *file, info *src) {
     src->array = realloc(src->array, (src->indexV + 3) * sizeof(float));
+    if (src->array == NULL) {
+        printf("MEMORY ERROR");
+        exit(1);
+    }
     for (int k = 0; k < 3; k++) src->array[src->indexV + k] = 0;
-    fscanf(file, "%f %f %f", &src->array[src->indexV], &src->array[src->indexV + 1], &src->array[src->indexV + 2]);
+    fscanf(file, "%f %f %f", &src->array[src->indexV], \
+            &src->array[src->indexV + 1], &src->array[src->indexV + 2]);
     for (int k = 0; k < 3; k++) {
         if (fabs(src->array[src->indexV + k]) > src->maxV) src->maxV = fabs(src->array[src->indexV + k]);
     }
@@ -59,8 +62,6 @@ static void pars_f(FILE *file, info *src, char *c) {
                 src->indexF++;
             }
             src->polygon[src->indexF] = 0;
-            // fseek(file, -1, SEEK_CUR);
-            // fscanf(file, "%d", src->polygon[src->indexF]);
             while (isnum(*c)) {
                 src->polygon[src->indexF] *= 10;
                 src->polygon[src->indexF] += *c - 48;

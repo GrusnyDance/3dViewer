@@ -1,5 +1,5 @@
-#ifndef SRC_3D_H_
-#define SRC_3D_H_
+#ifndef SRC_PARSER_3D_H_
+#define SRC_PARSER_3D_H_
 #include <math.h>
 #include <stdio.h>
 #include <stdlib.h>
@@ -9,10 +9,10 @@
 #define SCALE_STEP 5.0
 
 typedef struct ddd {
-  unsigned int indexV;  // вершины
-  unsigned int indexF;  // ломаные
+  unsigned int indexV;
+  unsigned int indexF;
   float *array;
-  unsigned int *polygon;  // последний символ каждой строки 0
+  unsigned int *polygon;
   float maxV;
 } info;
 
@@ -28,4 +28,4 @@ void rotate_x(info *src, double turn);
 void rotate_y(info *src, double turn);
 void rotate_z(info *src, double turn);
 
-#endif  // SRC_3D_H_
+#endif  // SRC_PARSER_3D_H_
