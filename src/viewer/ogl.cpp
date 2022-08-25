@@ -20,8 +20,8 @@ void OGLW::toFile() {
   FILE *file = fopen("config.cfg", "w");
   if (file) {
     fprintf(file, "%d %d %f %f %d %f %f %f %f %f %f", lineType, perspective,
-            lineWidth, pointSize, pointType, lineColor[0], lineColor[1],
-            lineColor[2], pointColor[0], pointColor[1], pointColor[2]);
+            lineWidth, pointSize, pointType, lineColorV[0], lineColorV[1],
+            lineColorV[2], pointColorV[0], pointColorV[1], pointColorV[2]);
     fclose(file);
   }
 }
@@ -31,16 +31,18 @@ void OGLW::fromFile() {
   if (file) {
     int a = fscanf(file, "%d %d %f %f %d %f %f %f %f %f %f", &lineType,
                    &perspective, &lineWidth, &pointSize, &pointType,
-                   &lineColor[0], &lineColor[1], &lineColor[2], &pointColor[0],
-                   &pointColor[1], &pointColor[2]);
+                   &lineColorV[0], &lineColorV[1], &lineColorV[2], &pointColorV[0],
+                   &pointColorV[1], &pointColorV[2]);
     if (a != 11 || lineType > 1 || lineType < 0 || perspective > 1 ||
         perspective < 0 || lineWidth > 5 || lineWidth < 1 || pointSize > 10 ||
-        pointSize < 1 || pointType > 2 || pointType < 0 || lineColor.x() > 1 ||
-        lineColor.x() < 0 || lineColor.y() > 1 || lineColor.y() < 0 ||
-        lineColor.z() > 1 || lineColor.z() < 0 || pointColor.x() > 1 ||
-        pointColor.x() < 0 || pointColor.y() > 1 || pointColor.y() < 0 ||
-        pointColor.z() > 1 || pointColor.z() < 0)
+        pointSize < 1 || pointType > 2 || pointType < 0 || lineColorV.x() > 1 ||
+        lineColorV.x() < 0 || lineColorV.y() > 1 || lineColorV.y() < 0 ||
+        lineColorV.z() > 1 || lineColorV.z() < 0 || pointColorV.x() > 1 ||
+        pointColorV.x() < 0 || pointColorV.y() > 1 || pointColorV.y() < 0 ||
+        pointColorV.z() > 1 || pointColorV.z() < 0)
       this->toDefault();
+    lineColor.setRgbF(lineColorV.x(), lineColorV.y(), lineColorV.z());
+    pointColor.setRgbF(pointColorV.x(), pointColorV.y(), pointColorV.z());
     std::fclose(file);
   } else {
     this->toDefault();
@@ -133,6 +135,9 @@ void OGLW::paintGL() {
   if (vao.isCreated()) {
     prog->bind();
 
+    lineColorV = {lineColor.redF(), lineColor.greenF(), lineColor.blueF()};
+    pointColorV = {pointColor.redF(), pointColor.greenF(), pointColor.blueF()};
+
     perspectiveM.setToIdentity();
     projM = moveM * rotateM * scaleM * normM;
 
@@ -143,7 +148,7 @@ void OGLW::paintGL() {
 
     prog->setUniformValue(prog->uniformLocation("projection"), projM);
     prog->setUniformValue(prog->uniformLocation("persp"), perspectiveM);
-    prog->setUniformValue(prog->uniformLocation("color"), lineColor);
+    prog->setUniformValue(prog->uniformLocation("color"), lineColorV);
 
     if (lineType) {
       glEnable(GL_LINE_STIPPLE);
@@ -156,7 +161,7 @@ void OGLW::paintGL() {
     glDrawElements(GL_LINES, inff.indexF, GL_UNSIGNED_INT, 0);
 
     if (lineType) glDisable(GL_LINE_STIPPLE);
-    prog->setUniformValue(prog->uniformLocation("color"), pointColor);
+    prog->setUniformValue(prog->uniformLocation("color"), pointColorV);
 
     glPointSize(pointSize);
     if (pointType == 1) glEnable(GL_POINT_SMOOTH);

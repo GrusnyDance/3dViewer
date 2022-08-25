@@ -107,7 +107,8 @@ void MainWindow::initSliders() {
   else
     ui->OrthoPrButton->toggle();
 
-  // sparelis: add color sliders processing
+    ui->EdgeColorSlider->setValue(OGLWidget->lineColor.hslHue());
+    ui->VertColorSlider->setValue(OGLWidget->pointColor.hslHue());
 }
 
 void MainWindow::screenJPG() {
@@ -358,66 +359,17 @@ void MainWindow::ScaleUserInput() {
 
 // sparelis: refactoring + убрать все функции на цвет в отдельный файл
 void MainWindow::on_BackColorSlider_valueChanged(int value) {
-  OGLWidget->backgroundColor.setHsl(value, 86,50);
+  OGLWidget->backgroundColor.setHsl(value, 110,100);
   OGLWidget->update();
 }
 
 void MainWindow::on_EdgeColorSlider_valueChanged(int value) {
-  if (value / 204 == 0) {
-    OGLWidget->lineColor.setX(225. / 255);
-    OGLWidget->lineColor.setY((51 + value) / 255.);
-    OGLWidget->lineColor.setZ(51. / 255);
-  } else if (value / 204 == 1) {
-    OGLWidget->lineColor.setX((255 - (value % 204)) / 255.);
-    OGLWidget->lineColor.setY(255. / 255);
-    OGLWidget->lineColor.setZ(51. / 255);
-  } else if (value / 204 == 2) {
-    OGLWidget->lineColor.setX(51. / 255);
-    OGLWidget->lineColor.setY(255. / 255);
-    OGLWidget->lineColor.setZ((51 + (value % 204)) / 255.);
-  } else if (value / 204 == 3) {
-    OGLWidget->lineColor.setX(51. / 255);
-    OGLWidget->lineColor.setY((255 - (value % 204)) / 255.);
-    OGLWidget->lineColor.setZ(255. / 255);
-  } else if (value / 204 == 4) {
-    OGLWidget->lineColor.setX((51 + (value % 204)) / 255.);
-    OGLWidget->lineColor.setY(51. / 255);
-    OGLWidget->lineColor.setZ(255. / 255);
-  } else if (value / 204 == 5) {
-    OGLWidget->lineColor.setX(225. / 255);
-    OGLWidget->lineColor.setY(51. / 255);
-    OGLWidget->lineColor.setZ((255 - (value % 204)) / 255.);
-  }
-
+  OGLWidget->lineColor.setHsl(value, 255, 127);
   OGLWidget->update();
 }
 
 void MainWindow::on_VertColorSlider_valueChanged(int value) {
-  if (value / 204 == 0) {
-    OGLWidget->pointColor.setX(225. / 255);
-    OGLWidget->pointColor.setY((51 + value) / 255.);
-    OGLWidget->pointColor.setZ(51. / 255);
-  } else if (value / 204 == 1) {
-    OGLWidget->pointColor.setX((255 - (value % 204)) / 255.);
-    OGLWidget->pointColor.setY(255. / 255);
-    OGLWidget->pointColor.setZ(51. / 255);
-  } else if (value / 204 == 2) {
-    OGLWidget->pointColor.setX(51. / 255);
-    OGLWidget->pointColor.setY(255. / 255);
-    OGLWidget->pointColor.setZ((51 + (value % 204)) / 255.);
-  } else if (value / 204 == 3) {
-    OGLWidget->pointColor.setX(51. / 255);
-    OGLWidget->pointColor.setY((255 - (value % 204)) / 255.);
-    OGLWidget->pointColor.setZ(255. / 255);
-  } else if (value / 204 == 4) {
-    OGLWidget->pointColor.setX((51 + (value % 204)) / 255.);
-    OGLWidget->pointColor.setY(51. / 255);
-    OGLWidget->pointColor.setZ(255. / 255);
-  } else if (value / 204 == 5) {
-    OGLWidget->pointColor.setX(225. / 255);
-    OGLWidget->pointColor.setY(51. / 255);
-    OGLWidget->pointColor.setZ((255 - (value % 204)) / 255.);
-  }
+  OGLWidget->pointColor.setHsl(value, 255, 127);
 
   OGLWidget->update();
 }

@@ -22,9 +22,11 @@ class OGLW : public QOpenGLWidget, protected QOpenGLFunctions {
   float lineWidth = 1;  // 1 is default and min, max 5
   float pointSize = 2;  // 1 is default, max 10, min 2
   int pointType = 2;    // 0 - disable, 1 - circle, 2 - square
-  QVector3D lineColor = {1, 1, 1};
-  QVector3D pointColor = {1, 0, 0};
+  QVector3D lineColorV = {1, 1, 1};
+  QVector3D pointColorV = {1, 1, 1};
   QColor backgroundColor;
+  QColor lineColor;
+  QColor pointColor;
 
   QString FindFile;
 
