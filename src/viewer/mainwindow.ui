@@ -1497,10 +1497,10 @@ QPushButton::pressed
           </size>
          </property>
          <property name="minimum">
-          <number>1</number>
+          <number>0</number>
          </property>
          <property name="maximum">
-          <number>1224</number>
+          <number>360</number>
          </property>
          <property name="singleStep">
           <number>1</number>

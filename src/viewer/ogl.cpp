@@ -88,6 +88,8 @@ void OGLW::initializeGL() {
   scaleM.setToIdentity();
   rotateM.setToIdentity();
   normM.setToIdentity();
+
+  backgroundColor.setRgb(27, 39, 50);
 }
 
 void OGLW::Allocate() {
@@ -125,8 +127,7 @@ void OGLW::Allocate() {
 }
 
 void OGLW::paintGL() {
-  glClearColor(backColor.x() / 255.0, backColor.y() / 255.0,
-               backColor.z() / 255.0, 0.1f);
+  glClearColor(backgroundColor.redF(), backgroundColor.greenF(), backgroundColor.blueF(), 1.0f);
   glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
   if (vao.isCreated()) {

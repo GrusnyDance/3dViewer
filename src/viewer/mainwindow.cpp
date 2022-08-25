@@ -358,32 +358,7 @@ void MainWindow::ScaleUserInput() {
 
 // sparelis: refactoring + убрать все функции на цвет в отдельный файл
 void MainWindow::on_BackColorSlider_valueChanged(int value) {
-  if (value / 204 == 0) {
-    OGLWidget->backColor.setX(225);
-    OGLWidget->backColor.setY(51 + value);
-    OGLWidget->backColor.setZ(51);
-  } else if (value / 204 == 1) {
-    OGLWidget->backColor.setX(255 - (value % 204));
-    OGLWidget->backColor.setY(255);
-    OGLWidget->backColor.setZ(51);
-  } else if (value / 204 == 2) {
-    OGLWidget->backColor.setX(51);
-    OGLWidget->backColor.setY(255);
-    OGLWidget->backColor.setZ(51 + (value % 204));
-  } else if (value / 204 == 3) {
-    OGLWidget->backColor.setX(51);
-    OGLWidget->backColor.setY(255 - (value % 204));
-    OGLWidget->backColor.setZ(255);
-  } else if (value / 204 == 4) {
-    OGLWidget->backColor.setX(51 + (value % 204));
-    OGLWidget->backColor.setY(51);
-    OGLWidget->backColor.setZ(255);
-  } else if (value / 204 == 5) {
-    OGLWidget->backColor.setX(225);
-    OGLWidget->backColor.setY(51);
-    OGLWidget->backColor.setZ(255 - (value % 204));
-  }
-
+  OGLWidget->backgroundColor.setHsl(value, 86,50);
   OGLWidget->update();
 }
 
