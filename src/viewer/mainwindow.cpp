@@ -33,15 +33,18 @@ MainWindow::MainWindow(QWidget *parent)
   ui->widget->setStyleSheet("background-color: transparent;");
   ui->GifButton->setParent(OGLWidget);
   ui->GifButton->raise();
-  ui->GifButton->setMinimumSize(OGLWidget->width() / 11, OGLWidget->height() / 25);
+  ui->GifButton->setMinimumSize(OGLWidget->width() / 11,
+                                OGLWidget->height() / 25);
 
   ui->JpgButton->setParent(OGLWidget);
   ui->JpgButton->raise();
-  ui->JpgButton->setMinimumSize(OGLWidget->width() / 11, OGLWidget->height() / 25);
+  ui->JpgButton->setMinimumSize(OGLWidget->width() / 11,
+                                OGLWidget->height() / 25);
 
   ui->BmpButton->setParent(OGLWidget);
   ui->BmpButton->raise();
-  ui->BmpButton->setMinimumSize(OGLWidget->width() / 11, OGLWidget->height() / 25);
+  ui->BmpButton->setMinimumSize(OGLWidget->width() / 11,
+                                OGLWidget->height() / 25);
 
   this->initSliders();
   connect(ui->FileButton, SIGNAL(pressed()), this, SLOT(FilePressed()));
@@ -79,8 +82,6 @@ MainWindow::MainWindow(QWidget *parent)
           SLOT(ScaleUserInput()));
 
   connect(OGLWidget, SIGNAL(mouseMove()), this, SLOT(updateSliders()));
-
-
 }
 
 MainWindow::~MainWindow() {
@@ -88,19 +89,25 @@ MainWindow::~MainWindow() {
   delete ui;
 }
 
-
 void MainWindow::initSliders() {
-    ui->VertSizeSlider->setValue(OGLWidget->pointSize*10);
-    ui->EdgeSizeSlider->setValue(OGLWidget->lineWidth*10);
-    if (OGLWidget->pointType == 2) ui->CircleButton->toggle();
-    else if (OGLWidget->pointType == 1) ui->SquareButton->toggle();
-    else ui->NoButton->toggle();
-    if (OGLWidget->lineType) ui->DashedEdgeButton->toggle();
-    else ui->SolidEdgeButton->toggle();
-    if (OGLWidget->perspective) ui->PerspectivePrButton->toggle();
-    else ui->OrthoPrButton->toggle();
+  ui->VertSizeSlider->setValue(OGLWidget->pointSize * 10);
+  ui->EdgeSizeSlider->setValue(OGLWidget->lineWidth * 10);
+  if (OGLWidget->pointType == 2)
+    ui->CircleButton->toggle();
+  else if (OGLWidget->pointType == 1)
+    ui->SquareButton->toggle();
+  else
+    ui->NoButton->toggle();
+  if (OGLWidget->lineType)
+    ui->DashedEdgeButton->toggle();
+  else
+    ui->SolidEdgeButton->toggle();
+  if (OGLWidget->perspective)
+    ui->PerspectivePrButton->toggle();
+  else
+    ui->OrthoPrButton->toggle();
 
-    // sparelis: add color sliders processing
+  // sparelis: add color sliders processing
 }
 
 void MainWindow::screenJPG() {
@@ -157,12 +164,12 @@ void MainWindow::oneGif() {
                    QString::number(time->tm_min) + "-" +
                    QString::number(time->tm_sec) + ".gif";
 
-    void **free = (void**)malloc(50* sizeof(void*));
+    void **free = (void **)malloc(50 * sizeof(void *));
 
     gif.save(name, free);
 
     for (int k = 0; k < 50; k++) {
-        std::free(free[k]);
+      std::free(free[k]);
     }
     std::free(free);
 
@@ -348,31 +355,31 @@ void MainWindow::ScaleUserInput() {
 
 // sparelis: refactoring + убрать все функции на цвет в отдельный файл
 void MainWindow::on_BackColorSlider_valueChanged(int value) {
-  if (value / 204 == 0) {
-    OGLWidget->backColor.setX(225);
-    OGLWidget->backColor.setY(51 + value);
-    OGLWidget->backColor.setZ(51);
-  } else if (value / 204 == 1) {
-    OGLWidget->backColor.setX(255 - (value % 204));
-    OGLWidget->backColor.setY(255);
-    OGLWidget->backColor.setZ(51);
-  } else if (value / 204 == 2) {
-    OGLWidget->backColor.setX(51);
-    OGLWidget->backColor.setY(255);
-    OGLWidget->backColor.setZ(51 + (value % 204));
-  } else if (value / 204 == 3) {
-    OGLWidget->backColor.setX(51);
-    OGLWidget->backColor.setY(255 - (value % 204));
-    OGLWidget->backColor.setZ(255);
-  } else if (value / 204 == 4) {
-    OGLWidget->backColor.setX(51 + (value % 204));
-    OGLWidget->backColor.setY(51);
-    OGLWidget->backColor.setZ(255);
-  } else if (value / 204 == 5) {
-    OGLWidget->backColor.setX(225);
-    OGLWidget->backColor.setY(51);
-    OGLWidget->backColor.setZ(255 - (value % 204));
-  }
+    if (value / 204 == 0) {
+      OGLWidget->backColor.setX(225);
+      OGLWidget->backColor.setY(51 + value);
+      OGLWidget->backColor.setZ(51);
+    } else if (value / 204 == 1) {
+      OGLWidget->backColor.setX(255 - (value % 204));
+      OGLWidget->backColor.setY(255);
+      OGLWidget->backColor.setZ(51);
+    } else if (value / 204 == 2) {
+      OGLWidget->backColor.setX(51);
+      OGLWidget->backColor.setY(255);
+      OGLWidget->backColor.setZ(51 + (value % 204));
+    } else if (value / 204 == 3) {
+      OGLWidget->backColor.setX(51);
+      OGLWidget->backColor.setY(255 - (value % 204));
+      OGLWidget->backColor.setZ(255);
+    } else if (value / 204 == 4) {
+      OGLWidget->backColor.setX(51 + (value % 204));
+      OGLWidget->backColor.setY(51);
+      OGLWidget->backColor.setZ(255);
+    } else if (value / 204 == 5) {
+      OGLWidget->backColor.setX(225);
+      OGLWidget->backColor.setY(51);
+      OGLWidget->backColor.setZ(255 - (value % 204));
+    }
 
   OGLWidget->update();
 }

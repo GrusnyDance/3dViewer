@@ -126,7 +126,7 @@ void OGLW::Allocate() {
 
 void OGLW::paintGL() {
   glClearColor(backColor.x() / 255.0, backColor.y() / 255.0,
-               backColor.z() / 255.0, 1);
+               backColor.z() / 255.0, 0.1f);
   glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
   if (vao.isCreated()) {

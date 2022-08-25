@@ -1,0 +1,56 @@
+{
+  "homebrew_version": "3.3.5-3-g1a722a0",
+  "used_options": [
+
+  ],
+  "unused_options": [
+
+  ],
+  "built_as_bottle": true,
+  "poured_from_bottle": true,
+  "installed_as_dependency": false,
+  "installed_on_request": true,
+  "changed_files": [
+    "bin/gendesc",
+    "bin/genhtml",
+    "bin/geninfo",
+    "bin/genpng",
+    "bin/lcov",
+    "libexec/bin/gendesc",
+    "libexec/bin/genhtml",
+    "libexec/bin/geninfo",
+    "libexec/bin/genpng",
+    "libexec/bin/lcov",
+    "libexec/lib/perl5/darwin-thread-multi-2level/auto/JSON/.packlist",
+    "libexec/lib/perl5/darwin-thread-multi-2level/auto/PerlIO/gzip/.packlist"
+  ],
+  "time": 1651583175,
+  "source_modified_time": 1597241876,
+  "compiler": "clang",
+  "aliases": [
+
+  ],
+  "runtime_dependencies": [
+
+  ],
+  "source": {
+    "spec": "stable",
+    "versions": {
+      "stable": "1.15",
+      "head": null,
+      "version_scheme": 0
+    },
+    "path": "/Users/sparelis/.brew/Library/Taps/homebrew/homebrew-core/Formula/lcov.rb",
+    "tap_git_head": "239cad746ef40edcc070179c58dbb70a7d840157",
+    "tap": "homebrew/core"
+  },
+  "arch": "x86_64",
+  "built_on": {
+    "os": "Macintosh",
+    "os_version": "macOS 11.6",
+    "cpu_family": "penryn",
+    "xcode": "13.1",
+    "clt": "13.1.0.0.1.1633545042",
+    "preferred_perl": "5.30"
+  }
+}
