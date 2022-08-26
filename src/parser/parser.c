@@ -8,6 +8,7 @@ void parserr(char *fileName, info *src) {
     FILE *file = fopen(fileName, "r");
     src->indexF = 0;
     src->indexV = 0;
+    src->maxV = 0;
     char c = 'c', buff = 'b';
     src->array = calloc(1, sizeof(float));
     src->polygon = calloc(1, sizeof(unsigned));
