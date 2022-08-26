@@ -22,16 +22,6 @@ class MainWindow : public QMainWindow {
 
   OGLW *OGLWidget;
 
-  //    QString FindFile;
-
-  //    int scaleBuff = 0;
-  //    int moveBuffX = 0;
-  //    int moveBuffY = 0;
-  //    int moveBuffZ = 0;
-  //    int rotateBuffX = 0;
-  //    int rotateBuffY = 0;
-  //    int rotateBuffZ = 0;
-
  private slots:
   void FilePressed();
   void MovePressed();
@@ -71,6 +61,7 @@ private:
     void initSliders();
 
   int startTime, tmpTime;
+  const int GifFps = 10, GifLength = 5;
   QTimer *timer;
   QGifImage gif;
 };

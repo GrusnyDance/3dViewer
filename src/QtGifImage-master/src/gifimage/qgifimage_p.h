@@ -53,7 +53,7 @@ public:
     QGifImagePrivate(QGifImage *p);
     ~QGifImagePrivate();
     bool load(QIODevice *device);
-    bool save(QIODevice *device, void **free) const;
+    bool save(QIODevice *device) const;
     QVector<QRgb> colorTableFromColorMapObject(ColorMapObject *object, int transColorIndex=-1) const;
     ColorMapObject * colorTableToColorMapObject(QVector<QRgb> colorTable) const;
     QSize getCanvasSize() const;

@@ -140,7 +140,7 @@ void MainWindow::screenBMP() {
 }
 
 void MainWindow::pressGIF() {
-  startTime = 0, tmpTime = 100;
+  startTime = 0, tmpTime = 1000 / GifFps;;
   timer = new QTimer(this);
   connect(timer, SIGNAL(timeout()), this, SLOT(oneGif()));
   timer->start(100);
@@ -157,9 +157,9 @@ void MainWindow::oneGif() {
     gif.addFrame(image, 100);
     //        float timePrint = (float)startTime / 1e3;  // GIF time in seconds
     //        with 0.1 second precision (50 updates)
-    tmpTime += 100;
+    tmpTime += 1000 / GifFps;
   }
-  if (startTime == 5e3) {
+  if (startTime == 1000 * GifLength) {
     time_t now = time(0);
     tm *time = localtime(&now);
     QString path =
@@ -168,18 +168,11 @@ void MainWindow::oneGif() {
                    QString::number(time->tm_min) + "-" +
                    QString::number(time->tm_sec) + ".gif";
 
-    void **free = (void **)malloc(50 * sizeof(void *));
-
-    gif.save(name, free);
-
-    for (int k = 0; k < 50; k++) {
-      std::free(free[k]);
-    }
-    std::free(free);
+    gif.save(name);
 
     timer->stop();
   }
-  startTime += 100;
+  startTime += 1000 / GifFps;
 }
 
 void MainWindow::updateSliders() {

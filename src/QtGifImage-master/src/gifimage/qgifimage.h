@@ -69,8 +69,8 @@ public:
 
     bool load(QIODevice *device);
     bool load(const QString &fileName);
-    bool save(QIODevice *device, void **free) const;
-    bool save(const QString &fileName, void **free) const;
+    bool save(QIODevice *device) const;
+    bool save(const QString &fileName) const;
 
 private:
     QGifImagePrivate * const d_ptr;

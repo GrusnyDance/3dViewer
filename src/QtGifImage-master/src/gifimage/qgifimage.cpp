@@ -223,7 +223,7 @@ bool QGifImagePrivate::load(QIODevice *device)
     return true;
 }
 
-bool QGifImagePrivate::save(QIODevice *device, void **free) const
+bool QGifImagePrivate::save(QIODevice *device) const
 {
     int error;
     GifFileType *gifFile = EGifOpen(device, writeToIODevice, &error);
@@ -231,6 +231,8 @@ bool QGifImagePrivate::save(QIODevice *device, void **free) const
         qWarning(GifErrorString(error));
         return false;
     }
+
+    void **freee = (void**)calloc(frameInfos.size() * 3, sizeof(void*));
 
     QSize _canvasSize = getCanvasSize();
     gifFile->SWidth = _canvasSize.width();
@@ -263,10 +265,13 @@ bool QGifImagePrivate::save(QIODevice *device, void **free) const
         gifImage->ImageDesc.Height = image.height();
         gifImage->ImageDesc.Interlace = frameInfo.interlace;
 
-        if (!image.colorTable().isEmpty() && (image.colorTable() != globalColorTable))
+        if (!image.colorTable().isEmpty() && (image.colorTable() != globalColorTable)) {
             gifImage->ImageDesc.ColorMap = colorTableToColorMapObject(image.colorTable());
-        else
+            freee[(idx + 1) * 3] =  gifImage->ImageDesc.ColorMap->Colors;
+            freee[(idx + 1) * 2] = gifImage->ImageDesc.ColorMap;
+        } else {
             gifImage->ImageDesc.ColorMap = 0;
+        }
 
         GifByteType *data = (GifByteType *)malloc(image.width() * image.height() * sizeof(GifByteType));
         for (int row=0; row<image.height(); ++row) {
@@ -297,16 +302,14 @@ bool QGifImagePrivate::save(QIODevice *device, void **free) const
             gcbBlock.DelayTime = defaultDelayTime / 10;
 
         EGifGCBToSavedExtension(&gcbBlock, gifFile, idx);
-        free[idx] = data;
-        // free(gifImage->ImageDesc.ColorMap);
-        // free(data);  // ??????
+        freee[idx] = data;
     }
 
     EGifSpew(gifFile);
-    //EGifCloseFile(gifFile);
 
-    // free(gifFile->SColorMap);
-    // free(gifFile->SavedImages);  // ??????
+    for (int k = 0; k < frameInfos.size() * 3; k++) free(freee[k]);
+    free(freee);
+    // free(gifFile->SavedImages);
 
     return true;
 }
@@ -630,12 +633,12 @@ void QGifImage::setFrameTransparentColor(int index, const QColor &color)
     Returns \c true if the image was successfully saved; otherwise
     returns \c false.
 */
-bool QGifImage::save(const QString &fileName, void **free) const
+bool QGifImage::save(const QString &fileName) const
 {
     Q_D(const QGifImage);
     QFile file(fileName);
     if (file.open(QIODevice::WriteOnly))
-        return d->save(&file, free);
+        return d->save(&file);
 
     return false;
 }
@@ -645,11 +648,11 @@ bool QGifImage::save(const QString &fileName, void **free) const
 
     This function writes a QImage to the given \a device.
 */
-bool QGifImage::save(QIODevice *device, void **free) const
+bool QGifImage::save(QIODevice *device) const
 {
     Q_D(const QGifImage);
     if (device->openMode() | QIODevice::WriteOnly)
-        return d->save(device, free);
+        return d->save(device);
 
     return false;
 }
