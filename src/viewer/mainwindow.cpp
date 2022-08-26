@@ -140,10 +140,12 @@ void MainWindow::screenBMP() {
 }
 
 void MainWindow::pressGIF() {
-  startTime = 0, tmpTime = 1000 / GifFps;;
+  gif = new QGifImage;
+  gif->setDefaultDelay(1000 / GifFps);
+  startTime = 0, tmpTime = 1000 / GifFps;
   timer = new QTimer(this);
   connect(timer, SIGNAL(timeout()), this, SLOT(oneGif()));
-  timer->start(100);
+  timer->start(1000 / GifFps);
 }
 
 void MainWindow::oneGif() {
@@ -154,7 +156,7 @@ void MainWindow::oneGif() {
     OGLWidget->render(&screenGIF);
     QImage image;
     image = screenGIF.toImage();
-    gif.addFrame(image, 100);
+    gif->addFrame(image, 1000 / GifFps);
     //        float timePrint = (float)startTime / 1e3;  // GIF time in seconds
     //        with 0.1 second precision (50 updates)
     tmpTime += 1000 / GifFps;
@@ -167,8 +169,8 @@ void MainWindow::oneGif() {
     QString name = path + QString::number(time->tm_hour) + "-" +
                    QString::number(time->tm_min) + "-" +
                    QString::number(time->tm_sec) + ".gif";
-
-    gif.save(name);
+    gif->save(name);
+    free(gif);
 
     timer->stop();
   }

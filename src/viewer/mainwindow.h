@@ -63,6 +63,6 @@ private:
   int startTime, tmpTime;
   const int GifFps = 10, GifLength = 5;
   QTimer *timer;
-  QGifImage gif;
+  QGifImage *gif;
 };
 #endif  // MAINWINDOW_H
