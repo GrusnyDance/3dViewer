@@ -33,17 +33,17 @@ MainWindow::MainWindow(QWidget *parent)
   ui->widget->setStyleSheet("background-color: transparent;");
   ui->GifButton->setParent(OGLWidget);
   ui->GifButton->raise();
-  ui->GifButton->setMinimumSize(OGLWidget->width() / 11,
+  ui->GifButton->setMinimumSize(OGLWidget->width() / 13,
                                 OGLWidget->height() / 25);
 
   ui->JpgButton->setParent(OGLWidget);
   ui->JpgButton->raise();
-  ui->JpgButton->setMinimumSize(OGLWidget->width() / 11,
+  ui->JpgButton->setMinimumSize(OGLWidget->width() / 13,
                                 OGLWidget->height() / 25);
 
   ui->BmpButton->setParent(OGLWidget);
   ui->BmpButton->raise();
-  ui->BmpButton->setMinimumSize(OGLWidget->width() / 11,
+  ui->BmpButton->setMinimumSize(OGLWidget->width() / 13,
                                 OGLWidget->height() / 25);
 
   this->initSliders();
@@ -352,7 +352,6 @@ void MainWindow::ScaleUserInput() {
   }
 }
 
-// sparelis: refactoring + убрать все функции на цвет в отдельный файл
 void MainWindow::on_BackColorSlider_valueChanged(int value) {
   OGLWidget->backgroundColor.setHsl(value, 110,100);
   OGLWidget->update();
@@ -365,7 +364,6 @@ void MainWindow::on_EdgeColorSlider_valueChanged(int value) {
 
 void MainWindow::on_VertColorSlider_valueChanged(int value) {
   OGLWidget->pointColor.setHsl(value, 255, 127);
-
   OGLWidget->update();
 }
 

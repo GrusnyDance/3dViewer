@@ -135,7 +135,7 @@ void OGLW::paintGL() {
 
     int vertexLocation = prog.attributeLocation("position");
       prog.enableAttributeArray(vertexLocation);
-      prog.setAttributeBuffer(vertexLocation, GL_FLOAT, 0, 3, 10);
+      prog.setAttributeBuffer(vertexLocation, GL_FLOAT, 0, 3, 12);
 
     qDebug() << "line 130";
     glClear(GL_DEPTH_BUFFER_BIT | GL_COLOR_BUFFER_BIT);
