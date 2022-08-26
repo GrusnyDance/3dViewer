@@ -61,6 +61,7 @@ private:
     void initSliders();
 
   int startTime, tmpTime;
+  float timePrint;
   const int GifFps = 10, GifLength = 5;
   QTimer *timer;
   QGifImage *gif;

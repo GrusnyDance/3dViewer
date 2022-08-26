@@ -46,6 +46,11 @@ MainWindow::MainWindow(QWidget *parent)
   ui->BmpButton->setMinimumSize(OGLWidget->width() / 13,
                                 OGLWidget->height() / 25);
 
+  ui->Counter->setParent(OGLWidget);
+  ui->Counter->raise();
+  ui->Counter->setMinimumSize(OGLWidget->width() / 13,
+                                OGLWidget->height() / 23);
+
   this->initSliders();
   connect(ui->FileButton, SIGNAL(pressed()), this, SLOT(FilePressed()));
   //    connect(ui->FileButton, SIGNAL(pressed()), OGLWidget, SLOT(Allocate()));
@@ -157,7 +162,7 @@ void MainWindow::oneGif() {
     QImage image;
     image = screenGIF.toImage();
     gif->addFrame(image, 1000 / GifFps);
-    //        float timePrint = (float)startTime / 1e3;  // GIF time in seconds
+    timePrint = (float)startTime / 1e3;  // GIF time in seconds
     //        with 0.1 second precision (50 updates)
     tmpTime += 1000 / GifFps;
   }

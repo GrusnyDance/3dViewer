@@ -306,6 +306,7 @@ DIST          = ../../../../Qt/6.2.4/macos/mkspecs/features/spec_pre.prf \
 		../../../../Qt/6.2.4/macos/mkspecs/features/qt_config.prf \
 		../../../../Qt/6.2.4/macos/mkspecs/macx-clang/qmake.conf \
 		../../../../Qt/6.2.4/macos/mkspecs/features/spec_post.prf \
+		../viewer/.qmake.stash \
 		../../../../Qt/6.2.4/macos/mkspecs/features/exclusive_builds.prf \
 		../../../../Qt/6.2.4/macos/mkspecs/features/mac/sdk.prf \
 		../../../../Qt/6.2.4/macos/mkspecs/features/toolchain.prf \
@@ -363,7 +364,7 @@ TARGET        = viewer.app/Contents/MacOS/viewer
 EXPORT_QMAKE_MAC_SDK = macosx
 EXPORT_QMAKE_MAC_SDK_VERSION = 11.1
 EXPORT_QMAKE_XCODE_DEVELOPER_PATH = /Library/Developer/CommandLineTools
-EXPORT__QMAKE_STASH_ = 
+EXPORT__QMAKE_STASH_ = /Users/girlhasnoname/Desktop/hehe/src/build-viewer-Qt_6_2_4_for_macOS_aed33a-Debug/.qmake.stash
 EXPORT_VALID_ARCHS = x86_64 arm64
 EXPORT_DEFAULT_ARCHS = x86_64
 EXPORT_ARCHS = $(filter $(EXPORT_VALID_ARCHS), $(if $(ARCHS), $(ARCHS), $(if $(EXPORT_DEFAULT_ARCHS), $(EXPORT_DEFAULT_ARCHS), $(EXPORT_VALID_ARCHS))))
@@ -600,6 +601,7 @@ Makefile: ../viewer/viewer.pro ../../../../Qt/6.2.4/macos/mkspecs/macx-clang/qma
 		../../../../Qt/6.2.4/macos/mkspecs/features/qt_config.prf \
 		../../../../Qt/6.2.4/macos/mkspecs/macx-clang/qmake.conf \
 		../../../../Qt/6.2.4/macos/mkspecs/features/spec_post.prf \
+		.qmake.stash \
 		../../../../Qt/6.2.4/macos/mkspecs/features/exclusive_builds.prf \
 		../../../../Qt/6.2.4/macos/mkspecs/features/mac/sdk.prf \
 		../../../../Qt/6.2.4/macos/mkspecs/features/toolchain.prf \
@@ -866,6 +868,7 @@ Makefile: ../viewer/viewer.pro ../../../../Qt/6.2.4/macos/mkspecs/macx-clang/qma
 ../../../../Qt/6.2.4/macos/mkspecs/features/qt_config.prf:
 ../../../../Qt/6.2.4/macos/mkspecs/macx-clang/qmake.conf:
 ../../../../Qt/6.2.4/macos/mkspecs/features/spec_post.prf:
+.qmake.stash:
 ../../../../Qt/6.2.4/macos/mkspecs/features/exclusive_builds.prf:
 ../../../../Qt/6.2.4/macos/mkspecs/features/mac/sdk.prf:
 ../../../../Qt/6.2.4/macos/mkspecs/features/toolchain.prf:
@@ -952,6 +955,7 @@ clean: compiler_clean
 
 distclean: clean 
 	-$(DEL_FILE) -r viewer.app
+	-$(DEL_FILE) .qmake.stash
 	-$(DEL_FILE) Makefile
 
 

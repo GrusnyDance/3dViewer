@@ -949,73 +949,33 @@
           <height>25</height>
          </size>
         </property>
-        <layout class="QGridLayout" name="gridLayout_2" rowstretch="1,25" columnstretch="23,0,0,0,0,0,0" rowminimumheight="1,25">
-         <item row="0" column="6">
-          <spacer name="horizontalSpacer_10">
-           <property name="orientation">
-            <enum>Qt::Horizontal</enum>
-           </property>
-           <property name="sizeHint" stdset="0">
-            <size>
-             <width>40</width>
-             <height>20</height>
-            </size>
-           </property>
-          </spacer>
-         </item>
-         <item row="0" column="0">
-          <spacer name="horizontalSpacer_8">
-           <property name="orientation">
-            <enum>Qt::Horizontal</enum>
-           </property>
-           <property name="sizeHint" stdset="0">
-            <size>
-             <width>40</width>
-             <height>20</height>
-            </size>
-           </property>
-          </spacer>
-         </item>
-         <item row="0" column="5">
-          <widget class="QPushButton" name="JpgButton">
-           <property name="sizePolicy">
-            <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
-             <horstretch>0</horstretch>
-             <verstretch>0</verstretch>
-            </sizepolicy>
-           </property>
-           <property name="font">
-            <font>
-             <family>Arial</family>
-            </font>
-           </property>
-           <property name="styleSheet">
-            <string notr="true">QPushButton
+        <property name="font">
+         <font>
+          <family>Arial</family>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QLabel
 {
-        background-color:  #2B3D50;
+	background-color: transparent;
         color: lavender;
-        font-size: bold 14px;
-	border: none;
-	border-radius: 5px;
-	padding: 5px;
+        font-size: 25px;
 
-}
-
-
-QPushButton::pressed
-{
-        background-color: #39516A;
-
-}
-</string>
+}</string>
+        </property>
+        <layout class="QGridLayout" name="gridLayout_2" rowstretch="1,1,25" columnstretch="23,0,0,0,0,0,0" rowminimumheight="1,1,25">
+         <item row="0" column="2">
+          <spacer name="horizontalSpacer_11">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
            </property>
-           <property name="text">
-            <string>JPG</string>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>40</width>
+             <height>20</height>
+            </size>
            </property>
-           <property name="checkable">
-            <bool>true</bool>
-           </property>
-          </widget>
+          </spacer>
          </item>
          <item row="0" column="3">
           <widget class="QPushButton" name="BmpButton">
@@ -1076,6 +1036,63 @@ QPushButton::pressed
            </property>
           </widget>
          </item>
+         <item row="0" column="6">
+          <spacer name="horizontalSpacer_10">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>40</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item row="0" column="4">
+          <spacer name="horizontalSpacer_9">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>40</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item row="1" column="5">
+          <widget class="QLabel" name="Counter">
+           <property name="styleSheet">
+            <string notr="true">QLabel
+{
+	background-color: transparent;
+        color: lavender;
+        font-size: 27px;
+}</string>
+           </property>
+           <property name="text">
+            <string>5</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="0">
+          <spacer name="horizontalSpacer_8">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>40</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
          <item row="0" column="1">
           <widget class="QPushButton" name="GifButton">
            <property name="sizePolicy">
@@ -1115,21 +1132,49 @@ QPushButton::pressed
            </property>
           </widget>
          </item>
-         <item row="0" column="4">
-          <spacer name="horizontalSpacer_9">
-           <property name="orientation">
-            <enum>Qt::Horizontal</enum>
+         <item row="0" column="5">
+          <widget class="QPushButton" name="JpgButton">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
            </property>
-           <property name="sizeHint" stdset="0">
-            <size>
-             <width>40</width>
-             <height>20</height>
-            </size>
+           <property name="font">
+            <font>
+             <family>Arial</family>
+            </font>
            </property>
-          </spacer>
+           <property name="styleSheet">
+            <string notr="true">QPushButton
+{
+        background-color:  #2B3D50;
+        color: lavender;
+        font-size: bold 14px;
+	border: none;
+	border-radius: 5px;
+	padding: 5px;
+
+}
+
+
+QPushButton::pressed
+{
+        background-color: #39516A;
+
+}
+</string>
+           </property>
+           <property name="text">
+            <string>JPG</string>
+           </property>
+           <property name="checkable">
+            <bool>true</bool>
+           </property>
+          </widget>
          </item>
-         <item row="1" column="3">
-          <spacer name="verticalSpacer_11">
+         <item row="2" column="5">
+          <spacer name="verticalSpacer_4">
            <property name="orientation">
             <enum>Qt::Vertical</enum>
            </property>
@@ -1141,15 +1186,15 @@ QPushButton::pressed
            </property>
           </spacer>
          </item>
-         <item row="0" column="2">
-          <spacer name="horizontalSpacer_11">
+         <item row="1" column="3" rowspan="2">
+          <spacer name="verticalSpacer_11">
            <property name="orientation">
-            <enum>Qt::Horizontal</enum>
+            <enum>Qt::Vertical</enum>
            </property>
            <property name="sizeHint" stdset="0">
             <size>
-             <width>40</width>
-             <height>20</height>
+             <width>20</width>
+             <height>40</height>
             </size>
            </property>
           </spacer>

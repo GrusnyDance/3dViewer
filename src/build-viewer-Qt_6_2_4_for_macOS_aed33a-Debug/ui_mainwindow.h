@@ -79,14 +79,16 @@ public:
     QGridLayout *gridLayout_4;
     QWidget *widget;
     QGridLayout *gridLayout_2;
-    QSpacerItem *horizontalSpacer_10;
-    QSpacerItem *horizontalSpacer_8;
-    QPushButton *JpgButton;
-    QPushButton *BmpButton;
-    QPushButton *GifButton;
-    QSpacerItem *horizontalSpacer_9;
-    QSpacerItem *verticalSpacer_11;
     QSpacerItem *horizontalSpacer_11;
+    QPushButton *BmpButton;
+    QSpacerItem *horizontalSpacer_10;
+    QSpacerItem *horizontalSpacer_9;
+    QLabel *Counter;
+    QSpacerItem *horizontalSpacer_8;
+    QPushButton *GifButton;
+    QPushButton *JpgButton;
+    QSpacerItem *verticalSpacer_4;
+    QSpacerItem *verticalSpacer_11;
     QGroupBox *groupBox_6;
     QGridLayout *gridLayout_12;
     QSlider *MoveY;
@@ -572,50 +574,27 @@ public:
         widget->setSizePolicy(sizePolicy2);
         widget->setMinimumSize(QSize(0, 25));
         widget->setBaseSize(QSize(0, 25));
-        gridLayout_2 = new QGridLayout(widget);
-        gridLayout_2->setObjectName(QString::fromUtf8("gridLayout_2"));
-        horizontalSpacer_10 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
-
-        gridLayout_2->addItem(horizontalSpacer_10, 0, 6, 1, 1);
-
-        horizontalSpacer_8 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
-
-        gridLayout_2->addItem(horizontalSpacer_8, 0, 0, 1, 1);
-
-        JpgButton = new QPushButton(widget);
-        JpgButton->setObjectName(QString::fromUtf8("JpgButton"));
-        QSizePolicy sizePolicy3(QSizePolicy::Minimum, QSizePolicy::Preferred);
-        sizePolicy3.setHorizontalStretch(0);
-        sizePolicy3.setVerticalStretch(0);
-        sizePolicy3.setHeightForWidth(JpgButton->sizePolicy().hasHeightForWidth());
-        JpgButton->setSizePolicy(sizePolicy3);
         QFont font4;
         font4.setFamilies({QString::fromUtf8("Arial")});
-        JpgButton->setFont(font4);
-        JpgButton->setStyleSheet(QString::fromUtf8("QPushButton\n"
+        widget->setFont(font4);
+        widget->setStyleSheet(QString::fromUtf8("QLabel\n"
 "{\n"
-"        background-color:  #2B3D50;\n"
+"	background-color: transparent;\n"
 "        color: lavender;\n"
-"        font-size: bold 14px;\n"
-"	border: none;\n"
-"	border-radius: 5px;\n"
-"	padding: 5px;\n"
+"        font-size: 25px;\n"
 "\n"
-"}\n"
-"\n"
-"\n"
-"QPushButton::pressed\n"
-"{\n"
-"        background-color: #39516A;\n"
-"\n"
-"}\n"
-""));
-        JpgButton->setCheckable(true);
+"}"));
+        gridLayout_2 = new QGridLayout(widget);
+        gridLayout_2->setObjectName(QString::fromUtf8("gridLayout_2"));
+        horizontalSpacer_11 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
 
-        gridLayout_2->addWidget(JpgButton, 0, 5, 1, 1);
+        gridLayout_2->addItem(horizontalSpacer_11, 0, 2, 1, 1);
 
         BmpButton = new QPushButton(widget);
         BmpButton->setObjectName(QString::fromUtf8("BmpButton"));
+        QSizePolicy sizePolicy3(QSizePolicy::Minimum, QSizePolicy::Preferred);
+        sizePolicy3.setHorizontalStretch(0);
+        sizePolicy3.setVerticalStretch(0);
         sizePolicy3.setHeightForWidth(BmpButton->sizePolicy().hasHeightForWidth());
         BmpButton->setSizePolicy(sizePolicy3);
         BmpButton->setFont(font4);
@@ -647,6 +626,30 @@ public:
 
         gridLayout_2->addWidget(BmpButton, 0, 3, 1, 1);
 
+        horizontalSpacer_10 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        gridLayout_2->addItem(horizontalSpacer_10, 0, 6, 1, 1);
+
+        horizontalSpacer_9 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        gridLayout_2->addItem(horizontalSpacer_9, 0, 4, 1, 1);
+
+        Counter = new QLabel(widget);
+        Counter->setObjectName(QString::fromUtf8("Counter"));
+        Counter->setStyleSheet(QString::fromUtf8("QLabel\n"
+"{\n"
+"	background-color: transparent;\n"
+"        color: lavender;\n"
+"        font-size: 27px;\n"
+"}"));
+        Counter->setAlignment(Qt::AlignCenter);
+
+        gridLayout_2->addWidget(Counter, 1, 5, 1, 1);
+
+        horizontalSpacer_8 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        gridLayout_2->addItem(horizontalSpacer_8, 0, 0, 1, 1);
+
         GifButton = new QPushButton(widget);
         GifButton->setObjectName(QString::fromUtf8("GifButton"));
         sizePolicy3.setHeightForWidth(GifButton->sizePolicy().hasHeightForWidth());
@@ -676,23 +679,48 @@ public:
 
         gridLayout_2->addWidget(GifButton, 0, 1, 1, 1);
 
-        horizontalSpacer_9 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+        JpgButton = new QPushButton(widget);
+        JpgButton->setObjectName(QString::fromUtf8("JpgButton"));
+        sizePolicy3.setHeightForWidth(JpgButton->sizePolicy().hasHeightForWidth());
+        JpgButton->setSizePolicy(sizePolicy3);
+        JpgButton->setFont(font4);
+        JpgButton->setStyleSheet(QString::fromUtf8("QPushButton\n"
+"{\n"
+"        background-color:  #2B3D50;\n"
+"        color: lavender;\n"
+"        font-size: bold 14px;\n"
+"	border: none;\n"
+"	border-radius: 5px;\n"
+"	padding: 5px;\n"
+"\n"
+"}\n"
+"\n"
+"\n"
+"QPushButton::pressed\n"
+"{\n"
+"        background-color: #39516A;\n"
+"\n"
+"}\n"
+""));
+        JpgButton->setCheckable(true);
 
-        gridLayout_2->addItem(horizontalSpacer_9, 0, 4, 1, 1);
+        gridLayout_2->addWidget(JpgButton, 0, 5, 1, 1);
+
+        verticalSpacer_4 = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Expanding);
+
+        gridLayout_2->addItem(verticalSpacer_4, 2, 5, 1, 1);
 
         verticalSpacer_11 = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Expanding);
 
-        gridLayout_2->addItem(verticalSpacer_11, 1, 3, 1, 1);
-
-        horizontalSpacer_11 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
-
-        gridLayout_2->addItem(horizontalSpacer_11, 0, 2, 1, 1);
+        gridLayout_2->addItem(verticalSpacer_11, 1, 3, 2, 1);
 
         gridLayout_2->setRowStretch(0, 1);
-        gridLayout_2->setRowStretch(1, 25);
+        gridLayout_2->setRowStretch(1, 1);
+        gridLayout_2->setRowStretch(2, 25);
         gridLayout_2->setColumnStretch(0, 23);
         gridLayout_2->setRowMinimumHeight(0, 1);
-        gridLayout_2->setRowMinimumHeight(1, 25);
+        gridLayout_2->setRowMinimumHeight(1, 1);
+        gridLayout_2->setRowMinimumHeight(2, 25);
 
         gridLayout_4->addWidget(widget, 0, 0, 1, 1);
 
@@ -1020,9 +1048,10 @@ public:
         SquareButton->setText(QCoreApplication::translate("MainWindow", "Square", nullptr));
         NoButton->setText(QCoreApplication::translate("MainWindow", "No", nullptr));
         CircleButton->setText(QCoreApplication::translate("MainWindow", "Circle", nullptr));
-        JpgButton->setText(QCoreApplication::translate("MainWindow", "JPG", nullptr));
         BmpButton->setText(QCoreApplication::translate("MainWindow", "BMP", nullptr));
+        Counter->setText(QCoreApplication::translate("MainWindow", "5", nullptr));
         GifButton->setText(QCoreApplication::translate("MainWindow", "GIF", nullptr));
+        JpgButton->setText(QCoreApplication::translate("MainWindow", "JPG", nullptr));
         groupBox_6->setTitle(QCoreApplication::translate("MainWindow", "Move", nullptr));
         label_12->setText(QCoreApplication::translate("MainWindow", "Y", nullptr));
         label_11->setText(QCoreApplication::translate("MainWindow", "Z", nullptr));

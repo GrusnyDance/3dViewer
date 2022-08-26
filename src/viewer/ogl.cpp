@@ -178,14 +178,17 @@ void OGLW::resizeGL(int w, int h) {
   projM.perspective(45.0f, GLfloat(w) / h, 0.01f, 100.0f);
 
   float temp = this->width() / 13;
-  this->findChild<QPushButton *>("GifButton")->resize(this->width() / 13, this->height() / 25);
+  this->findChild<QPushButton *>("GifButton")->resize(temp, this->height() / 25);
   this->findChild<QPushButton *>("GifButton")->move(this->width() - temp - 70, 5);
 
-  this->findChild<QPushButton *>("BmpButton")->resize(this->width() / 13, this->height() / 25);
+  this->findChild<QPushButton *>("BmpButton")->resize(temp, this->height() / 25);
   this->findChild<QPushButton *>("BmpButton")->move(this->width() - temp - 70 - temp - 14, 5);
 
-  this->findChild<QPushButton *>("JpgButton")->resize(this->width() / 13, this->height() / 25);
+  this->findChild<QPushButton *>("JpgButton")->resize(temp, this->height() / 25);
   this->findChild<QPushButton *>("JpgButton")->move(this->width() - temp - 70 - temp - 14 - temp - 14, 5);
+
+  this->findChild<QLabel *>("Counter")->resize(temp, this->height() / 23);
+  this->findChild<QLabel *>("Counter")->move(this->width() - temp - 70, 5 + (this->height() / 25) + 10);
 }
 
 void OGLW::mousePressEvent(QMouseEvent *mo) { mPos = mo->pos(); }
