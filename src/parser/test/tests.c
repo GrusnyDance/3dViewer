@@ -347,3 +347,4 @@ int main(void) {
   srunner_free(suite_runner);
   return (failed_count == 0) ? EXIT_SUCCESS : EXIT_FAILURE;
 }
+
