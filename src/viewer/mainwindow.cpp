@@ -164,6 +164,7 @@ void MainWindow::oneGif() {
     gif->addFrame(image, 1000 / GifFps);
     timePrint = (float)startTime / 1e3;  // GIF time in seconds
     //        with 0.1 second precision (50 updates)
+    ui->Counter->setNum((int)(timePrint + 1));
     tmpTime += 1000 / GifFps;
   }
   if (startTime == 1000 * GifLength) {
@@ -178,6 +179,7 @@ void MainWindow::oneGif() {
     free(gif);
 
     timer->stop();
+    ui->Counter->setText("");
   }
   startTime += 1000 / GifFps;
 }
