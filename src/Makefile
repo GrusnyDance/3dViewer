@@ -26,9 +26,6 @@ install:
 #example 'make install QMAKE_PATH=/Users/girlhasnoname/Qt/6.2.4/macos/bin/qmake'
 	sh build/script1.sh $(QMAKE_PATH)
 
-run: install
-	viewer.app/Contents/MacOS/./viewer
-
 uninstall:
 	rm -rf viewer.app
 
@@ -68,4 +65,4 @@ clean_tests:
 	rm -rf out
 
 
-.PHONY: all install run uninstall clean dvi dist gcov_report clean_tests
+.PHONY: all install uninstall clean dvi dist gcov_report clean_tests
