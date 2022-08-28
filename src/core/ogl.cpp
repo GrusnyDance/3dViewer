@@ -17,7 +17,14 @@ OGLW::~OGLW() {
 }
 
 void OGLW::toFile() {
-  FILE *file = fopen("config.cfg", "w");
+    QDir d = QFileInfo(PROJECT_PATH).absoluteDir();
+    d.setPath(QDir::cleanPath(d.filePath(QStringLiteral(".."))));
+    QString path = d.path();
+    QString name = path + "/config.cfg";
+
+    QByteArray ba = name.toLocal8Bit();
+    char *c_str = ba.data();
+  FILE *file = fopen(c_str, "w");
   if (file) {
     fprintf(file, "%d %d %f %f %d %f %f %f %f %f %f", lineType, perspective,
             lineWidth, pointSize, pointType, lineColorV[0], lineColorV[1],
@@ -27,7 +34,14 @@ void OGLW::toFile() {
 }
 
 void OGLW::fromFile() {
-  FILE *file = fopen("config.cfg", "r");
+    QDir d = QFileInfo(PROJECT_PATH).absoluteDir();
+    d.setPath(QDir::cleanPath(d.filePath(QStringLiteral(".."))));
+    QString path = d.path();
+    QString name = path + "/config.cfg";
+
+    QByteArray ba = name.toLocal8Bit();
+    char *c_str = ba.data();
+  FILE *file = fopen(c_str, "r");
   if (file) {
     int a = fscanf(file, "%d %d %f %f %d %f %f %f %f %f %f", &lineType,
                    &perspective, &lineWidth, &pointSize, &pointType,

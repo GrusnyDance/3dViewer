@@ -118,7 +118,7 @@ void MainWindow::initSliders() {
 
 void MainWindow::screenJPG() {
   time_t now = time(0);
-  tm *time = localtime(&now);  // QCoreApplication:: applicationDirPath ()
+  tm *time = localtime(&now);
 
   QDir d = QFileInfo(PROJECT_PATH).absoluteDir();
   d.setPath(QDir::cleanPath(d.filePath(QStringLiteral(".."))));
@@ -135,7 +135,7 @@ void MainWindow::screenJPG() {
 
 void MainWindow::screenBMP() {
   time_t now = time(0);
-  tm *time = localtime(&now);  // QCoreApplication:: applicationDirPath ()
+  tm *time = localtime(&now);
 
   QDir d = QFileInfo(PROJECT_PATH).absoluteDir();
   d.setPath(QDir::cleanPath(d.filePath(QStringLiteral(".."))));
