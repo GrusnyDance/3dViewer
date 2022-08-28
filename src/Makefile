@@ -18,8 +18,9 @@ OBJ_GCOV_DIR := obj_gcov
 OBJECTS_GCOV := $(addprefix obj_gcov/,$(SOURCES_TEST:.c=.o))
 HEADER = parser/3d.h
 
-
 all: install run
+
+
 
 install:
 #example 'make install QMAKE_PATH=/Users/girlhasnoname/Qt/6.2.4/macos/bin/qmake'
@@ -32,7 +33,7 @@ uninstall:
 	rm -rf viewer.app
 
 clean:
-	# make clean_tests
+	make clean_tests
 	rm -rf viewer* build/.*q* \
 	build/*.o build/*.h \
 	build/*.cpp build/Makefile \
@@ -51,7 +52,7 @@ create_dir:
 test: parser/test/tests.c $(HEADER) $(OBJECTS_GCOV)
 	$(CC) $< $(OBJ_GCOV_DIR)/*.o -o $@ $(LCHECK) $(LDFLAGS) $(GCOVFLAGS)
 	./$@
-	@mv *gcda *gcno $(OBJ_GCOV_DIR)/
+	rm f *tests*
 
 gcov_report: test
 	@rm -f $(OBJ_GCOV_DIR)/*tests*
@@ -60,29 +61,11 @@ gcov_report: test
 
 $(OBJ_GCOV_DIR)/%.o: %.c $(HEADER) create_dir
 	@$(CC) $(GCOVFLAGS) -c $< -o obj_gcov/$(subst /,_,$@)
-	# @mv *.o *gcno $(OBJ_GCOV_DIR)/
-
-
-
-
-# tests: $(TEST_OBJ)
-# 	checkmk clean_mode=1 test/test.check > test/test.c
-# 	$(CC) source/backend.h $(TEST_OBJ) test/test.c -o test/exec -lcheck $(LIN_FLAGS) $(GCOVFLAGS) $(LDFLAGS)
-# 	test/./exec
 
 clean_tests: 
-	rm -rf test/exec* test/test.c
-	rm -rf test/obj/* test/coverage*
-	rm -rf test/out
-
-# gcov_report:
-# 	make tests
-# 	test/lcov/bin/./lcov -c -d test/obj/. -o test/coverage.info
-# 	test/lcov/bin/./genhtml test/coverage.info --output-directory test/out
-# 	open test/out/index.html
-
-# test/obj/%.o: source/%.c source/backend.h
-# 	$(CC) $(GCOVFLAGS) -c $< -o $@
+	rm -rf obj_gcov
+	rm -rf test *gcda *gcno
+	rm -rf out
 
 
 .PHONY: all install run uninstall clean dvi dist gcov_report clean_tests
