@@ -1066,7 +1066,7 @@ QPushButton::pressed
           <widget class="QLabel" name="Counter">
            <property name="font">
             <font>
-             <family>Sans Serif</family>
+             <family>Arial</family>
              <pointsize>-1</pointsize>
             </font>
            </property>
@@ -1079,7 +1079,7 @@ QPushButton::pressed
 }</string>
            </property>
            <property name="text">
-            <string> </string>
+            <string/>
            </property>
            <property name="alignment">
             <set>Qt::AlignCenter</set>

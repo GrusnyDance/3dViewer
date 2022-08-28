@@ -119,9 +119,12 @@ void MainWindow::initSliders() {
 void MainWindow::screenJPG() {
   time_t now = time(0);
   tm *time = localtime(&now);  // QCoreApplication:: applicationDirPath ()
-  QString path = QCoreApplication::applicationFilePath().remove("build/app") +
-                 "screenshots/";
-  QString name = path + QString::number(time->tm_hour) + "-" +
+
+  QDir d = QFileInfo(PROJECT_PATH).absoluteDir();
+  d.setPath(QDir::cleanPath(d.filePath(QStringLiteral(".."))));
+  QString path = d.path();
+
+  QString name = path +  "/screenshots/" + QString::number(time->tm_hour) + "-" +
                  QString::number(time->tm_min) + "-" +
                  QString::number(time->tm_sec) + ".jpg";
   QPixmap pixmap(OGLWidget->size() * 2);
@@ -133,9 +136,12 @@ void MainWindow::screenJPG() {
 void MainWindow::screenBMP() {
   time_t now = time(0);
   tm *time = localtime(&now);  // QCoreApplication:: applicationDirPath ()
-  QString path = QCoreApplication::applicationFilePath().remove("build/app") +
-                 "screenshots/";
-  QString name = path + QString::number(time->tm_hour) + "-" +
+
+  QDir d = QFileInfo(PROJECT_PATH).absoluteDir();
+  d.setPath(QDir::cleanPath(d.filePath(QStringLiteral(".."))));
+  QString path = d.path();
+
+  QString name = path +  "/screenshots/" + QString::number(time->tm_hour) + "-" +
                  QString::number(time->tm_min) + "-" +
                  QString::number(time->tm_sec) + ".bmp";
   QPixmap pixmap(OGLWidget->size() * 2);
@@ -170,9 +176,10 @@ void MainWindow::oneGif() {
   if (startTime == 1000 * GifLength) {
     time_t now = time(0);
     tm *time = localtime(&now);
-    QString path =
-        QCoreApplication::applicationFilePath().remove("build/app") + "gifs/";
-    QString name = path + QString::number(time->tm_hour) + "-" +
+    QDir d = QFileInfo(PROJECT_PATH).absoluteDir();
+    d.setPath(QDir::cleanPath(d.filePath(QStringLiteral(".."))));
+    QString path = d.path();
+    QString name = path + "/gifs/" + QString::number(time->tm_hour) + "-" +
                    QString::number(time->tm_min) + "-" +
                    QString::number(time->tm_sec) + ".gif";
     gif->save(name);
