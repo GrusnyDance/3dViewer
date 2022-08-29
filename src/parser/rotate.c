@@ -3,7 +3,7 @@
 
 void rotate_x(info *src, double turn) {
     turn *= M_PI / 180;
-    for (unsigned k = 1; k < src->indexV * 3; k += 3) {
+    for (unsigned k = 1; k < src->indexV; k += 3) {
         double y =  src->array[k];
         src->array[k] *= cos(turn);
         src->array[k] += src->array[k + 1] * sin(turn);
@@ -14,7 +14,7 @@ void rotate_x(info *src, double turn) {
 
 void rotate_y(info *src, double turn) {
     turn *= M_PI / 180;
-    for (unsigned int k = 0; k < src->indexV * 3; k += 3) {
+    for (unsigned int k = 0; k < src->indexV; k += 3) {
         double x = src->array[k];
         src->array[k] *= cos(turn);
         src->array[k] -= src->array[k + 2] * sin(turn);
@@ -25,7 +25,7 @@ void rotate_y(info *src, double turn) {
 
 void rotate_z(info *src, double turn) {
     turn *= M_PI / 180;
-    for (unsigned int k = 0; k < src->indexV * 3; k += 3) {
+    for (unsigned int k = 0; k < src->indexV; k += 3) {
         double x = src->array[k];
         src->array[k] *= cos(turn);
         src->array[k] += src->array[k + 1] * sin(turn);
