@@ -49,7 +49,7 @@ create_dir:
 test: parser/test/tests.c $(HEADER) $(OBJECTS_GCOV)
 	$(CC) $< $(OBJ_GCOV_DIR)/*.o -o $@ $(LCHECK) $(LDFLAGS) $(GCOVFLAGS)
 	./$@
-	rm f *tests*
+	@rm -f *tests*
 
 gcov_report: test
 	@rm -f $(OBJ_GCOV_DIR)/*tests*
