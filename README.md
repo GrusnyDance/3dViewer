@@ -1,6 +1,10 @@
 # 3DViewer v1.0
 
-![](view_screencast.m4v)
+
+
+https://user-images.githubusercontent.com/97830151/187762296-81b6b5cf-e60f-4937-a23e-b444a2277105.mov
+
+
 
 ## Part 1. 3DViewer
 
