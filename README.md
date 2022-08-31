@@ -37,3 +37,12 @@ Program to visualise 3D wireframe models:
 
 - The program allows saving the captured (rendered) images as bmp and jpeg files.
 - The program allows recording small screencasts by a special button - the current custom affine transformation of the loaded object into gif-animation (640x480, 10fps, 5s).
+
+## Launch
+
+To launch the program, download repository, then type `make install QMAKE_PATH='path/to/qmake/on/your/PC'`.
+The app cannot be build on any OS except Mac currently, any pull requests that facilitate portability are welcome.
+
+## Credits
+
+@kolesnikoff17 & @zamiraylov are best team🌸
