@@ -44,5 +44,4 @@ To launch the program, download repository, then type `make install QMAKE_PATH='
 The app cannot be build on any OS except Mac currently, any pull requests that facilitate portability are welcome.
 
 ## Credits
-
-@kolesnikoff17 & @zamiraylov are best team🌸
+[@kolesnikoff17](https://github.com/kolesnikoff17) & [@zamiraylov](https://github.com/maykitbo) are best team🌸
