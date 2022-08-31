@@ -37,9 +37,6 @@ clean:
 	build/viewer.app build/.tmp \
 	rm -rf *.gz build/*bak
 
-dvi:
-	open doc/doc.pdf
-
 dist:
 	sh build/script2.sh
 
@@ -50,11 +47,6 @@ test: parser/test/tests.c $(HEADER) $(OBJECTS_GCOV)
 	$(CC) $< $(OBJ_GCOV_DIR)/*.o -o $@ $(LCHECK) $(LDFLAGS) $(GCOVFLAGS)
 	./$@
 	@rm -f *tests*
-
-gcov_report: test
-	@rm -f $(OBJ_GCOV_DIR)/*tests*
-	@lcov/bin/./lcov -c -d $(OBJ_GCOV_DIR)/. -o $(OBJ_GCOV_DIR)/coverage.info
-	@lcov/bin/./genhtml $(OBJ_GCOV_DIR)/coverage.info --output-directory out
 
 $(OBJ_GCOV_DIR)/%.o: %.c $(HEADER) create_dir
 	@$(CC) $(GCOVFLAGS) -c $< -o obj_gcov/$(subst /,_,$@)
