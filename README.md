@@ -4,20 +4,16 @@
 
 ## Part 1. 3DViewer
 
-You need to develop a program to visualise 3D wireframe models:
+Program to visualise 3D wireframe models:
 
-- The program must be developed in C language of C11 standard using gcc compiler. You can use any additional QT libraries and modules
-- The program code must be located in the src folder
-- The program must be built with Makefile which contains standard set of targets for GNU-programs: all, install, uninstall, clean, dvi, dist, tests, gcov. Installation directory could be arbitrary, except the building one
-- The program must be developed according to the principles of structured programming
-- Prepare full coverage of modules related to model loading and affine transformations with unit-tests
-- There should be only one model on the screen at a time
-- The program must provide the ability to:
+- The program is developed in C language of C11 standard using gcc compiler. QT libraries are a part of project.
+- Only one model can be viewed on the screen at a time.
+- The program provides the ability to:
     - Load a wireframe model from an obj file (vertices and surfaces list support only).
     - Translate the model by a given distance in relation to the X, Y, Z axes.
     - Rotate the model by a given angle relative to its X, Y, Z axes.
     - Scale the model by a given value.
-- GUI implementation, based on any GUI library with API for C89/C99/C11 (GTK+, Nuklear, raygui, microui, libagar, libui, IUP, LCUI, CEF, Qt, etc.)
+- GUI implementation is based on QT library with API for C89/C99/C11 (GTK+, Nuklear, raygui, microui, libagar, libui, IUP, LCUI, CEF, Qt, etc.)
 - The graphical user interface must contain:
     - A button to select the model file and a field to output its name.
     - A visualisation area for the wireframe model.
